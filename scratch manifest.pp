@@ -14,5 +14,22 @@ node 'appserver01' {
 	}
 }
 
+service { "name":
+	ensure     => running,
+	enable     => true,
+	hasrestart => true,
+	hasstatus  => true,
+	# pattern    => 'name',
+}
+
+file { 'name':
+	ensure => file,
+	owner  => owner,
+	group  => group,
+	mode   => mode,
+	source => 'puppet:///modules/class/file.txt';
+}
+ 
+
 
 
