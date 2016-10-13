@@ -12,4 +12,6 @@ Get-Alias
 
 # restart-computer
 
+get-service | Where-Object Status -EQ $args[0]
+
 
