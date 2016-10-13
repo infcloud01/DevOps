@@ -2,4 +2,3 @@
 function srv () {
    get-service | Where-Object Status -EQ $args[0] 
 }
-
