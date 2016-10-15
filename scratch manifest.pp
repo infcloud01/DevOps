@@ -71,6 +71,12 @@ service { 'puppet':
 puppet module install theurbanpenguin/puppet_vim
 puppet apply -e " include puppet_vim "
 
+#install ntp module
+puppet module install puppetlabs-ntp
+#install ntp module
+puppet module install puppetlabs-ntp
+
+
 puppet describe user --short
 
 Puppet is a Declarative Language
