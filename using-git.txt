@@ -1,3 +1,6 @@
 git add ./path-to-file or . for the current directory
 git commit
 git push
+
+#pull down changes
+git pull
