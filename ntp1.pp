@@ -16,6 +16,6 @@ file { '/etc/ntp.conf':
 service { 'NTP_Service':
   ensure => 'running',
   enable => 'true',
-  name   => 'ntp',
+  name   => 'ntpd',
 }
 

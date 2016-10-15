@@ -1,4 +1,4 @@
 include '::ntp'
 #class { '::ntp':
-  #servers => [ 'pool.ntpd.com'],
- #}
+#  servers => [ 'pool.ntpd.com'],
+# }
