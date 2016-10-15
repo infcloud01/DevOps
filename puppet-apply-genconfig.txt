@@ -1,0 +1,1381 @@
+# The configuration file for user.  Note that this file
+# is likely to have unused settings in it; any setting that's
+# valid anywhere in Puppet can be in any config file, even if it's not used.
+# 
+# Every section can specify three special parameters: owner, group, and mode.
+# These parameters affect the required permissions of any files specified after
+# their specification.  Puppet will sometimes use these parameters to check its
+# own configured state, so they can be used to make Puppet a bit more self-managing.
+# 
+# The file format supports octothorpe-commented lines, but not partial-line comments.
+# 
+# Generated on 2016-10-15 03:38:26 +0000.
+# 
+[user]
+    # Whether to enable a pre-Facter 3.0 release of native Facter (distributed as
+    # the "cfacter" package). This is not necessary if Facter 3.0 or later is installed.
+    # This setting is deprecated, as Facter 3 is now the default in puppet-agent.
+    # cfacter = false
+
+    # The main Puppet configuration directory.  The default for this setting
+    # is calculated based on the user.  If the process is running as root or
+    # the user that Puppet is supposed to run as, it defaults to a system
+    # directory, but if it's running as any other user, it defaults to being
+    # in the user's home directory.
+    # The default value is '/etc/puppetlabs/puppet'.
+    confdir = /etc/puppetlabs/puppet
+
+    # The main Puppet code directory.  The default for this setting
+    # is calculated based on the user.  If the process is running as root or
+    # the user that Puppet is supposed to run as, it defaults to a system
+    # directory, but if it's running as any other user, it defaults to being
+    # in the user's home directory.
+    # The default value is '/etc/puppetlabs/code'.
+    codedir = /etc/puppetlabs/code
+
+    # Where Puppet stores dynamic and growing data.  The default for this
+    # setting is calculated specially, like `confdir`_.
+    # The default value is '/opt/puppetlabs/puppet/cache'.
+    vardir = /opt/puppetlabs/puppet/cache
+
+    # The name of the application, if we are running as one.  The
+    # default is essentially $0 without the path or `.rb`.
+    # The default value is 'apply'.
+    name = apply
+
+    # The directory in which to store log files
+    # The default value is '/var/log/puppetlabs/puppet'.
+    logdir = /var/log/puppetlabs/puppet
+
+    # Default logging level for messages from Puppet. Allowed values are:
+    # 
+    # * debug
+    # * info
+    # * notice
+    # * warning
+    # * err
+    # * alert
+    # * emerg
+    # * crit
+    # The default value is 'notice'.
+    # log_level = notice
+
+    # A comma-separated list of warning types to suppress. If large numbers
+    # of warnings are making Puppet's logs too large or difficult to use, you
+    # can temporarily silence them with this setting.
+    # 
+    # If you are preparing to upgrade Puppet to a new major version, you
+    # should re-enable all warnings for a while.
+    # 
+    # Valid values for this setting are:
+    # 
+    # * `deprecations` --- disables deprecation warnings.
+    # * `undefined_variables` --- disables warnings about non existing variables.
+    # * `undefined_resources` --- disables warnings about non existing resources.
+    # The default value is '[]'.
+    # disable_warnings = []
+
+    # The strictness level of puppet. Allowed values are:
+    # 
+    # * off     - do not perform extra validation, do not report
+    # * warning - perform extra validation, report as warning (default)
+    # * error   - perform extra validation, fail with error
+    # 
+    # The strictness level is for both language semantics and runtime
+    # evaluation validation. In addition to controlling the behavior with
+    # this master switch some individual warnings may also be controlled
+    # by the disable_warnings setting.
+    # 
+    # No new validations will be added to a micro (x.y.z) release,
+    # but may be added in minor releases (x.y.0). In major releases
+    # it expected that most (if not all) strictness validation become
+    # standard behavior.
+    # The default value is 'warning'.
+    # strict = warning
+
+    # The scheduling priority of the process.  Valid values are 'high',
+    # 'normal', 'low', or 'idle', which are mapped to platform-specific
+    # values.  The priority can also be specified as an integer value and
+    # will be passed as is, e.g. -5.  Puppet must be running as a privileged
+    # user in order to increase scheduling priority.
+    # priority = 
+
+    # Whether to print stack traces on some errors
+    # trace = false
+
+    # Whether to enable experimental performance profiling
+    # profile = false
+
+    # Whether to compile a static catalog.
+    # The default value is 'true'.
+    # static_catalogs = true
+
+    # Whether the agent specified environment should be considered authoritative,
+    # causing the run to fail if the retrieved catalog does not match it.
+    # strict_environment_mode = false
+
+    # Whether log files should always flush to disk.
+    # The default value is 'true'.
+    # autoflush = true
+
+    # What syslog facility to use when logging to syslog.
+    # Syslog has a fixed list of valid facilities, and you must
+    # choose one of those; you cannot just make one up.
+    # The default value is 'daemon'.
+    # syslogfacility = daemon
+
+    # The directory where Puppet state is stored.  Generally,
+    # this directory can be removed without causing harm (although it
+    # might result in spurious service restarts).
+    # The default value is '$vardir/state'.
+    statedir = /opt/puppetlabs/puppet/cache/state
+
+    # Where Puppet PID files are kept.
+    # The default value is '/var/run/puppetlabs'.
+    rundir = /var/run/puppetlabs
+
+    # Whether to just print a manifest to stdout and exit.  Only makes
+    # sense when specified on the command line as `--genmanifest`.  Takes into account arguments specified
+    # on the CLI.
+    # genmanifest = false
+
+    # Print the value of a specific configuration setting.  If the name of a
+    # setting is provided for this, then the value is printed and puppet
+    # exits.  Comma-separate multiple values.  For a list of all values,
+    # specify 'all'.
+    # The default value is ''.
+    # configprint = 
+
+    # Whether to use colors when logging to the console.  Valid values are
+    # `ansi` (equivalent to `true`), `html`, and `false`, which produces no color.
+    # Defaults to false on Windows, as its console does not support ansi colors.
+    # The default value is 'ansi'.
+    # color = ansi
+
+    # Whether to create the necessary user and group that puppet agent will run as.
+    # mkusers = false
+
+    # Whether Puppet should manage the owner, group, and mode of files it uses internally
+    # The default value is 'true'.
+    # manage_internal_file_permissions = true
+
+    # Perform one configuration run and exit, rather than spawning a long-running
+    # daemon. This is useful for interactively running puppet agent, or
+    # running puppet agent from cron.
+    # onetime = false
+
+    # The shell search path.  Defaults to whatever is inherited
+    # from the parent process.
+    # 
+    # This setting can only be set in the `[main]` section of puppet.conf; it cannot
+    # be set in `[master]`, `[agent]`, or an environment config section.
+    # The default value is 'none'.
+    # path = none
+
+    # An extra search path for Puppet.  This is only useful
+    # for those files that Puppet will load on demand, and is only
+    # guaranteed to work for those cases.  In fact, the autoload
+    # mechanism is responsible for making sure this directory
+    # is in Ruby's search path
+    # The default value is '$vardir/lib'.
+    libdir = /opt/puppetlabs/puppet/cache/lib
+
+    # The environment Puppet is running in.  For clients
+    # (e.g., `puppet agent`) this determines the environment itself, which
+    # is used to find modules and much more.  For servers (i.e., `puppet master`)
+    # this provides the default environment for nodes we know nothing about.
+    # The default value is 'production'.
+    # environment = production
+
+    # A search path for directory environments, as a list of directories
+    # separated by the system path separator character. (The POSIX path separator
+    # is ':', and the Windows path separator is ';'.)
+    # 
+    # This setting must have a value set to enable **directory environments.** The
+    # recommended value is `$codedir/environments`. For more details, see
+    # <https://docs.puppet.com/puppet/latest/reference/environments.html>
+    # The default value is '$codedir/environments'.
+    environmentpath = /etc/puppetlabs/code/environments
+
+    # This setting is deprecated and has been replaced by always_retry_plugins.
+    # 
+    # Affects how we cache attempts to load Puppet 'features'.  If false, then
+    # calls to `Puppet.features.<feature>?` will always attempt to load the
+    # feature (which can be an expensive operation) unless it has already been
+    # loaded successfully.  This makes it possible for a single agent run to,
+    # e.g., install a package that provides the underlying capabilities for
+    # a feature, and then later load that feature during the same run (even if
+    # the feature had been tested earlier and had not been available).
+    # 
+    # If this setting is set to true, then features will only be checked once,
+    # and if they are not available, the negative result is cached and returned
+    # for all subsequent attempts to load the feature.  This behavior is almost
+    # always appropriate for the server, and can result in a significant performance
+    # improvement for features that are checked frequently.
+    # always_cache_features = false
+
+    # Affects how we cache attempts to load Puppet resource types and features.  If
+    # true, then calls to `Puppet.type.<type>?` `Puppet.feature.<feature>?`
+    # will always attempt to load the type or feature (which can be an
+    # expensive operation) unless it has already been loaded successfully.
+    # This makes it possible for a single agent run to, e.g., install a
+    # package that provides the underlying capabilities for a type or feature,
+    # and then later load that type or feature during the same run (even if
+    # the type or feature had been tested earlier and had not been available).
+    # 
+    # If this setting is set to false, then types and features will only be
+    # checked once, and if they are not available, the negative result is
+    # cached and returned for all subsequent attempts to load the type or
+    # feature.  This behavior is almost always appropriate for the server,
+    # and can result in a significant performance improvement for types and
+    # features that are checked frequently.
+    # The default value is 'true'.
+    # always_retry_plugins = true
+
+    # Which arguments to pass to the diff command when printing differences between
+    # files. The command to use can be chosen with the `diff` setting.
+    # The default value is '-u'.
+    diff_args = -u
+
+    # Which diff command to use when printing differences between files. This setting
+    # has no default value on Windows, as standard `diff` is not available, but Puppet can use many
+    # third-party diff tools.
+    # The default value is 'diff'.
+    # diff = diff
+
+    # Whether to log and report a contextual diff when files are being replaced.
+    # This causes partial file contents to pass through Puppet's normal
+    # logging and reporting system, so this setting should be used with
+    # caution if you are sending Puppet's reports to an insecure
+    # destination. This feature currently requires the `diff/lcs` Ruby
+    # library.
+    # show_diff = false
+
+    # Whether to send the process into the background.  This defaults
+    # to true on POSIX systems, and to false on Windows (where Puppet
+    # currently cannot daemonize).
+    # The default value is 'true'.
+    # daemonize = true
+
+    # The maximum allowed UID.  Some platforms use negative UIDs
+    # but then ship with tools that do not know how to handle signed ints,
+    # so the UIDs show up as huge numbers that can then not be fed back into
+    # the system.  This is a hackish way to fail in a slightly more useful
+    # way when that happens.
+    # The default value is '4294967290'.
+    # maximum_uid = 4294967290
+
+    # The YAML file containing indirector route configuration.
+    # The default value is '$confdir/routes.yaml'.
+    route_file = /etc/puppetlabs/puppet/routes.yaml
+
+    # Where to find information about nodes.
+    # The default value is 'plain'.
+    node_terminus = plain
+
+    # How to store cached nodes.
+    # Valid values are (none), 'json', 'msgpack', 'yaml' or write only yaml ('write_only_yaml').
+    # The master application defaults to 'write_only_yaml', all others to none.
+    # node_cache_terminus = 
+
+    # Where to retrieve information about data.
+    # The default value is 'hiera'.
+    data_binding_terminus = hiera
+
+    # The hiera configuration file. Puppet only reads this file on startup, so you must restart the puppet master every time you edit it.
+    # The default value is '/etc/puppetlabs/puppet/hiera.yaml'.
+    hiera_config = /etc/puppetlabs/puppet/hiera.yaml
+
+    # The binder configuration file. Puppet reads this file on each request to configure the bindings system.
+    # If set to nil (the default), a $confdir/binder_config.yaml is optionally loaded. If it does not exists, a default configuration
+    # is used. If the setting :binding_config is specified, it must reference a valid and existing yaml file.
+    # binder_config = 
+
+    # Where to get node catalogs.  This is useful to change if, for instance,
+    # you'd like to pre-compile catalogs and store them in memcached or some other easily-accessed store.
+    # The default value is 'compiler'.
+    catalog_terminus = compiler
+
+    # How to store cached catalogs. Valid values are 'json', 'msgpack' and 'yaml'. The agent application defaults to 'json'.
+    # catalog_cache_terminus = 
+
+    # The node facts terminus.
+    # The default value is 'facter'.
+    # facts_terminus = facter
+
+    # The default source for files if no server is given in a
+    # uri, e.g. puppet:///file. The default of `rest` causes the file to be
+    # retrieved using the `server` setting. When running `apply` the default
+    # is `file_server`, causing requests to be filled locally.
+    # The default value is 'file_server'.
+    default_file_terminus = file_server
+
+    # The HTTP proxy host to use for outgoing connections.  Note: You
+    # may need to use a FQDN for the server hostname when using a proxy. Environment variable
+    # http_proxy or HTTP_PROXY will override this value
+    # The default value is 'none'.
+    # http_proxy_host = none
+
+    # The HTTP proxy port to use for outgoing connections
+    # The default value is '3128'.
+    # http_proxy_port = 3128
+
+    # The user name for an authenticated HTTP proxy. Requires the `http_proxy_host` setting.
+    # The default value is 'none'.
+    # http_proxy_user = none
+
+    # The password for the user of an authenticated HTTP proxy.
+    # Requires the `http_proxy_user` setting.
+    # 
+    # Note that passwords must be valid when used as part of a URL. If a password
+    # contains any characters with special meanings in URLs (as specified by RFC 3986
+    # section 2.2), they must be URL-encoded. (For example, `#` would become `%23`.)
+    # The default value is 'none'.
+    # http_proxy_password = none
+
+    # The maximum amount of time a persistent HTTP connection can remain idle in the connection pool, before it is closed.  This timeout should be shorter than the keepalive timeout used on the HTTP server, e.g. Apache KeepAliveTimeout directive.
+    # This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '4s'.
+    http_keepalive_timeout = 4
+
+    # Whether to write HTTP request and responses to stderr. This should never be used in a production environment.
+    # http_debug = false
+
+    # The maximum amount of time to wait when establishing an HTTP connection. The default
+    # value is 2 minutes.
+    # This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '2m'.
+    http_connect_timeout = 120
+
+    # The time to wait for one block to be read from an HTTP connection. If nothing is
+    # read after the elapsed interval then the connection will be closed. The default value is unlimited.
+    # This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # http_read_timeout = 
+
+    # The minimum time to wait between checking for updates in
+    # configuration files.  This timeout determines how quickly Puppet checks whether
+    # a file (such as manifests or templates) has changed on disk. This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '15s'.
+    filetimeout = 15
+
+    # How long the Puppet master should cache data it loads from an
+    # environment.
+    # This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # A value of `0` will disable caching. This setting can also be set to
+    # `unlimited`, which will cache environments until the master is restarted
+    # or told to refresh the cache.
+    # 
+    # You should change this setting once your Puppet deployment is doing
+    # non-trivial work. We chose the default value of `0` because it lets new
+    # users update their code without any extra steps, but it lowers the
+    # performance of your Puppet master.
+    # 
+    # We recommend setting this to `unlimited` and explicitly refreshing your
+    # Puppet master as part of your code deployment process.
+    # 
+    # * With Puppet Server, you should refresh environments by calling the
+    #   `environment-cache` API endpoint. See the docs for the Puppet Server
+    #   administrative API.
+    # * With a Rack Puppet master, you should restart the web server or the
+    #   application server. Passenger lets you touch a `restart.txt` file to
+    #   refresh an application without restarting Apache; see the Passenger docs
+    #   for details.
+    # 
+    # We don't recommend using any value other than `0` or `unlimited`, since
+    # most Puppet masters use a pool of Ruby interpreters which all have their
+    # own cache timers. When these timers drift out of sync, agents can be served
+    # inconsistent catalogs.
+    # The default value is '0'.
+    environment_timeout = 0
+
+    # The name of a registered environment data provider used when obtaining environment
+    # specific data. The three built in and registered providers are 'none' (no data), 'function' (data
+    # obtained by calling the function 'environment::data()') and 'hiera' (data obtained using a data
+    # provider configured using a hiera.yaml file in root of the environment).
+    # Other environment data providers may be registered in modules on the module path. For such
+    # custom data providers see the respective module documentation.
+    # The default value is 'none'.
+    # environment_data_provider = none
+
+    # A command to run before every agent run.  If this command returns a non-zero
+    # return code, the entire Puppet run will fail.
+    # The default value is ''.
+    # prerun_command = 
+
+    # A command to run after every agent run.  If this command returns a non-zero
+    # return code, the entire Puppet run will be considered to have failed, even though it might have
+    # performed work during the normal run.
+    # The default value is ''.
+    # postrun_command = 
+
+    # Freezes the 'main' class, disallowing any code to be added to it.  This
+    # essentially means that you can't have any code outside of a node,
+    # class, or definition other than in the site manifest.
+    # freeze_main = false
+
+    # When enabled, Puppet creates a protected top-scope variable called $server_facts.
+    # This variable name can't be re-used in any local scope, and can't be overridden
+    # by agent-provided facts.
+    # 
+    # The $server_facts variable is a hash, containing server-provided information
+    # like the current node's environment and the version of Puppet running on the server.
+    # trusted_server_facts = false
+
+    # The directory where catalog previews per node are generated.
+    # The default value is '$vardir/preview'.
+    preview_outputdir = /opt/puppetlabs/puppet/cache/preview
+
+    # Whether the application management feature is on or off. You must restart Puppet Server after changing this setting.
+    # app_management = false
+
+    # The name to use when handling certificates. When a node
+    # requests a certificate from the CA puppet master, it uses the value of the
+    # `certname` setting as its requested Subject CN.
+    # 
+    # This is the name used when managing a node's permissions in
+    # [auth.conf](https://docs.puppetlabs.com/puppet/latest/reference/config_file_auth.html).
+    # In most cases, it is also used as the node's name when matching
+    # [node definitions](https://docs.puppetlabs.com/puppet/latest/reference/lang_node_definitions.html)
+    # and requesting data from an ENC. (This can be changed with the `node_name_value`
+    # and `node_name_fact` settings, although you should only do so if you have
+    # a compelling reason.)
+    # 
+    # A node's certname is available in Puppet manifests as `$trusted['certname']`. (See
+    # [Facts and Built-In Variables](https://docs.puppetlabs.com/puppet/latest/reference/lang_facts_and_builtin_vars.html)
+    # for more details.)
+    # 
+    # * For best compatibility, you should limit the value of `certname` to
+    #   only use letters, numbers, periods, underscores, and dashes. (That is,
+    #   it should match `/A[a-z0-9._-]+Z/`.)
+    # * The special value `ca` is reserved, and can't be used as the certname
+    #   for a normal node.
+    # 
+    # Defaults to the node's fully qualified domain name.
+    # The default value is '35773e8e00ba.us-west-2.compute.internal'.
+    certname = 35773e8e00ba.us-west-2.compute.internal
+
+    # A comma-separated list of alternate DNS names for Puppet Server. These are extra
+    # hostnames (in addition to its `certname`) that the server is allowed to use when
+    # serving agents. Puppet checks this setting when automatically requesting a
+    # certificate for Puppet agent or Puppet Server, and when manually generating a
+    # certificate with `puppet cert generate`.
+    # 
+    # In order to handle agent requests at a given hostname (like
+    # "puppet.example.com"), Puppet Server needs a certificate that proves it's
+    # allowed to use that name; if a server shows a certificate that doesn't include
+    # its hostname, Puppet agents will refuse to trust it. If you use a single
+    # hostname for Puppet traffic but load-balance it to multiple Puppet Servers, each
+    # of those servers needs to include the official hostname in its list of extra
+    # names.
+    # 
+    # **Note:** The list of alternate names is locked in when the server's
+    # certificate is signed. If you need to change the list later, you can't just
+    # change this setting; you also need to:
+    # 
+    # * On the server: Stop Puppet Server.
+    # * On the CA server: Revoke and clean the server's old certificate. (`puppet cert clean <NAME>`)
+    # * On the server: Delete the old certificate (and any old certificate signing requests)
+    #   from the [ssldir](https://docs.puppetlabs.com/puppet/latest/reference/dirs_ssldir.html).
+    # * On the server: Run `puppet agent -t --ca_server <CA HOSTNAME>` to request a new certificate
+    # * On the CA server: Sign the certificate request, explicitly allowing alternate names
+    #   (`puppet cert sign --allow-dns-alt-names <NAME>`).
+    # * On the server: Run `puppet agent -t --ca_server <CA HOSTNAME>` to retrieve the cert.
+    # * On the server: Start Puppet Server again.
+    # 
+    # To see all the alternate names your servers are using, log into your CA server
+    # and run `puppet cert list -a`, then check the output for `(alt names: ...)`.
+    # Most agent nodes should NOT have alternate names; the only certs that should
+    # have them are Puppet Server nodes that you want other agents to trust.
+    # The default value is ''.
+    # dns_alt_names = 
+
+    # An optional file containing custom attributes to add to certificate signing
+    # requests (CSRs). You should ensure that this file does not exist on your CA
+    # puppet master; if it does, unwanted certificate extensions may leak into
+    # certificates created with the `puppet cert generate` command.
+    # 
+    # If present, this file must be a YAML hash containing a `custom_attributes` key
+    # and/or an `extension_requests` key. The value of each key must be a hash, where
+    # each key is a valid OID and each value is an object that can be cast to a string.
+    # 
+    # Custom attributes can be used by the CA when deciding whether to sign the
+    # certificate, but are then discarded. Attribute OIDs can be any OID value except
+    # the standard CSR attributes (i.e. attributes described in RFC 2985 section 5.4).
+    # This is useful for embedding a pre-shared key for autosigning policy executables
+    # (see the `autosign` setting), often by using the `1.2.840.113549.1.9.7`
+    # ("challenge password") OID.
+    # 
+    # Extension requests will be permanently embedded in the final certificate.
+    # Extension OIDs must be in the "ppRegCertExt" (`1.3.6.1.4.1.34380.1.1`) or
+    # "ppPrivCertExt" (`1.3.6.1.4.1.34380.1.2`) OID arcs. The ppRegCertExt arc is
+    # reserved for four of the most common pieces of data to embed: `pp_uuid` (`.1`),
+    # `pp_instance_id` (`.2`), `pp_image_name` (`.3`), and `pp_preshared_key` (`.4`)
+    # --- in the YAML file, these can be referred to by their short descriptive names
+    # instead of their full OID. The ppPrivCertExt arc is unregulated, and can be used
+    # for site-specific extensions.
+    # The default value is '$confdir/csr_attributes.yaml'.
+    csr_attributes = /etc/puppetlabs/puppet/csr_attributes.yaml
+
+    # The certificate directory.
+    # The default value is '$ssldir/certs'.
+    certdir = /etc/puppetlabs/puppet/ssl/certs
+
+    # Where SSL certificates are kept.
+    # The default value is '$confdir/ssl'.
+    ssldir = /etc/puppetlabs/puppet/ssl
+
+    # The public key directory.
+    # The default value is '$ssldir/public_keys'.
+    publickeydir = /etc/puppetlabs/puppet/ssl/public_keys
+
+    # Where host certificate requests are stored.
+    # The default value is '$ssldir/certificate_requests'.
+    requestdir = /etc/puppetlabs/puppet/ssl/certificate_requests
+
+    # The private key directory.
+    # The default value is '$ssldir/private_keys'.
+    privatekeydir = /etc/puppetlabs/puppet/ssl/private_keys
+
+    # Where the client stores private certificate information.
+    # The default value is '$ssldir/private'.
+    privatedir = /etc/puppetlabs/puppet/ssl/private
+
+    # Where puppet agent stores the password for its private key.
+    # Generally unused.
+    # The default value is '$privatedir/password'.
+    passfile = /etc/puppetlabs/puppet/ssl/private/password
+
+    # Where individual hosts store and look for their certificate requests.
+    # The default value is '$ssldir/csr_$certname.pem'.
+    hostcsr = /etc/puppetlabs/puppet/ssl/csr_35773e8e00ba.us-west-2.compute.internal.pem
+
+    # Where individual hosts store and look for their certificates.
+    # The default value is '$certdir/$certname.pem'.
+    hostcert = /etc/puppetlabs/puppet/ssl/certs/35773e8e00ba.us-west-2.compute.internal.pem
+
+    # Where individual hosts store and look for their private key.
+    # The default value is '$privatekeydir/$certname.pem'.
+    hostprivkey = /etc/puppetlabs/puppet/ssl/private_keys/35773e8e00ba.us-west-2.compute.internal.pem
+
+    # Where individual hosts store and look for their public key.
+    # The default value is '$publickeydir/$certname.pem'.
+    hostpubkey = /etc/puppetlabs/puppet/ssl/public_keys/35773e8e00ba.us-west-2.compute.internal.pem
+
+    # Where each client stores the CA certificate.
+    # The default value is '$certdir/ca.pem'.
+    localcacert = /etc/puppetlabs/puppet/ssl/certs/ca.pem
+
+    # Certificate authorities who issue server certificates.  SSL servers will not be
+    # considered authentic unless they possess a certificate issued by an authority
+    # listed in this file.  If this setting has no value then the Puppet master's CA
+    # certificate (localcacert) will be used.
+    # ssl_client_ca_auth = 
+
+    # Certificate authorities who issue client certificates.  SSL clients will not be
+    # considered authentic unless they possess a certificate issued by an authority
+    # listed in this file.  If this setting has no value then the Puppet master's CA
+    # certificate (localcacert) will be used.
+    # ssl_server_ca_auth = 
+
+    # Where the host's certificate revocation list can be found.
+    # This is distinct from the certificate authority's CRL.
+    # The default value is '$ssldir/crl.pem'.
+    hostcrl = /etc/puppetlabs/puppet/ssl/crl.pem
+
+    # Whether certificate revocation should be supported by downloading a
+    # Certificate Revocation List (CRL)
+    # to all clients.  If enabled, CA chaining will almost definitely not work.
+    # The default value is 'true'.
+    # certificate_revocation = true
+
+    # Which digest algorithm to use for file resources and the filebucket.
+    # Valid values are md5, sha256. Default is md5.
+    # The default value is 'md5'.
+    # digest_algorithm = md5
+
+    # Checksum types supported by this agent for use in file resources of a
+    # static catalog. Values must be comma-separated. Valid types are md5,
+    # md5lite, sha256, sha256lite, sha1, sha1lite, mtime, ctime.
+    # The default value is '["md5", "sha256"]'.
+    # supported_checksum_types = ["md5", "sha256"]
+
+    # Where Puppet should store plugins that it pulls down from the central
+    # server.
+    # The default value is '$libdir'.
+    plugindest = /opt/puppetlabs/puppet/cache/lib
+
+    # From where to retrieve plugins.  The standard Puppet `file` type
+    # is used for retrieval, so anything that is a valid file source can
+    # be used here.
+    # The default value is 'puppet:///plugins'.
+    # pluginsource = puppet:///plugins
+
+    # Where Puppet should store external facts that are being handled by pluginsync
+    # The default value is '$vardir/facts.d'.
+    pluginfactdest = /opt/puppetlabs/puppet/cache/facts.d
+
+    # Where to retrieve external facts for pluginsync
+    # The default value is 'puppet:///pluginfacts'.
+    # pluginfactsource = puppet:///pluginfacts
+
+    # Whether plugins should be synced with the central server. This setting is
+    # deprecated.
+    # The default value is 'true'.
+    # pluginsync = true
+
+    # What files to ignore when pulling down plugins.
+    # The default value is '.svn CVS .git'.
+    # pluginsignore = .svn CVS .git
+
+    # Where Puppet should look for facts.  Multiple directories should
+    # be separated by the system path separator character. (The POSIX path
+    # separator is ':', and the Windows path separator is ';'.)
+    # The default value is '$vardir/lib/facter:$vardir/facts'.
+    factpath = /opt/puppetlabs/puppet/cache/lib/facter:/opt/puppetlabs/puppet/cache/facts
+
+    # An external command that can produce node information.  The command's output
+    # must be a YAML dump of a hash, and that hash must have a `classes` key and/or
+    # a `parameters` key, where `classes` is an array or hash and
+    # `parameters` is a hash.  For unknown nodes, the command should
+    # exit with a non-zero exit code.
+    # 
+    # This command makes it straightforward to store your node mapping
+    # information in other data sources like databases.
+    # The default value is 'none'.
+    # external_nodes = none
+
+    # The module repository
+    # The default value is 'https://forgeapi.puppetlabs.com'.
+    # module_repository = https://forgeapi.puppetlabs.com
+
+    # The directory into which module tool data is stored
+    # The default value is '$vardir/puppet-module'.
+    module_working_dir = /opt/puppetlabs/puppet/cache/puppet-module
+
+    # The directory which the skeleton for module tool generate is stored.
+    # The default value is '$module_working_dir/skeleton'.
+    module_skeleton_dir = /opt/puppetlabs/puppet/cache/puppet-module/skeleton
+
+    # The authorization key to connect to the Puppet Forge. Leave blank for unauthorized or license based connections
+    # forge_authorization = 
+
+    # Extra module groups to request from the Puppet Forge. This is an internal setting, and users should never change it.
+    # module_groups = 
+
+    # The name to use the Certificate Authority certificate.
+    # The default value is 'Puppet CA: $certname'.
+    ca_name = Puppet CA: 35773e8e00ba.us-west-2.compute.internal
+
+    # The root directory for the certificate authority.
+    # The default value is '$ssldir/ca'.
+    cadir = /etc/puppetlabs/puppet/ssl/ca
+
+    # The CA certificate.
+    # The default value is '$cadir/ca_crt.pem'.
+    cacert = /etc/puppetlabs/puppet/ssl/ca/ca_crt.pem
+
+    # The CA private key.
+    # The default value is '$cadir/ca_key.pem'.
+    cakey = /etc/puppetlabs/puppet/ssl/ca/ca_key.pem
+
+    # The CA public key.
+    # The default value is '$cadir/ca_pub.pem'.
+    capub = /etc/puppetlabs/puppet/ssl/ca/ca_pub.pem
+
+    # The certificate revocation list (CRL) for the CA. Will be used if present but otherwise ignored.
+    # The default value is '$cadir/ca_crl.pem'.
+    cacrl = /etc/puppetlabs/puppet/ssl/ca/ca_crl.pem
+
+    # Where the CA stores private certificate information.
+    # The default value is '$cadir/private'.
+    caprivatedir = /etc/puppetlabs/puppet/ssl/ca/private
+
+    # Where the CA stores certificate requests
+    # The default value is '$cadir/requests'.
+    csrdir = /etc/puppetlabs/puppet/ssl/ca/requests
+
+    # Where the CA stores signed certificates.
+    # The default value is '$cadir/signed'.
+    signeddir = /etc/puppetlabs/puppet/ssl/ca/signed
+
+    # Where the CA stores the password for the private key.
+    # The default value is '$caprivatedir/ca.pass'.
+    capass = /etc/puppetlabs/puppet/ssl/ca/private/ca.pass
+
+    # Where the serial number for certificates is stored.
+    # The default value is '$cadir/serial'.
+    serial = /etc/puppetlabs/puppet/ssl/ca/serial
+
+    # Whether (and how) to autosign certificate requests. This setting
+    # is only relevant on a puppet master acting as a certificate authority (CA).
+    # 
+    # Valid values are true (autosigns all certificate requests; not recommended),
+    # false (disables autosigning certificates), or the absolute path to a file.
+    # 
+    # The file specified in this setting may be either a **configuration file**
+    # or a **custom policy executable.** Puppet will automatically determine
+    # what it is: If the Puppet user (see the `user` setting) can execute the
+    # file, it will be treated as a policy executable; otherwise, it will be
+    # treated as a config file.
+    # 
+    # If a custom policy executable is configured, the CA puppet master will run it
+    # every time it receives a CSR. The executable will be passed the subject CN of the
+    # request _as a command line argument,_ and the contents of the CSR in PEM format
+    # _on stdin._ It should exit with a status of 0 if the cert should be autosigned
+    # and non-zero if the cert should not be autosigned.
+    # 
+    # If a certificate request is not autosigned, it will persist for review. An admin
+    # user can use the `puppet cert sign` command to manually sign it, or can delete
+    # the request.
+    # 
+    # For info on autosign configuration files, see
+    # [the guide to Puppet's config files](http://docs.puppetlabs.com/puppet/latest/reference/config_about_settings.html).
+    # The default value is '$confdir/autosign.conf'.
+    autosign = /etc/puppetlabs/puppet/autosign.conf
+
+    # Whether to allow a new certificate
+    # request to overwrite an existing certificate.
+    # allow_duplicate_certs = false
+
+    # The default TTL for new certificates.
+    # This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '5y'.
+    ca_ttl = 157680000
+
+    # This setting has no effect and will be removed in a future Puppet version.
+    # The default value is '4096'.
+    # req_bits = 4096
+
+    # The bit length of keys.
+    # The default value is '4096'.
+    # keylength = 4096
+
+    # The inventory file. This is a text file to which the CA writes a
+    # complete listing of all certificates.
+    # The default value is '$cadir/inventory.txt'.
+    cert_inventory = /etc/puppetlabs/puppet/ssl/ca/inventory.txt
+
+    # The name of the puppet config file.
+    # The default value is 'puppet.conf'.
+    # config_file_name = puppet.conf
+
+    # The configuration file for the current puppet application.
+    # The default value is '$confdir/${config_file_name}'.
+    config = /etc/puppetlabs/puppet/puppet.conf
+
+    # The file containing the PID of a running process.
+    # This file is intended to be used by service management frameworks
+    # and monitoring systems to determine if a puppet process is still in
+    # the process table.
+    # The default value is '$rundir/${run_mode}.pid'.
+    pidfile = /var/run/puppetlabs/user.pid
+
+    # The address a listening server should bind to.
+    # The default value is '0.0.0.0'.
+    # bindaddress = 0.0.0.0
+
+    # The entry-point manifest for puppet master. This can be one file
+    # or a directory of manifests to be evaluated in alphabetical order. Puppet manages
+    # this path as a directory if one exists or if the path ends with a / or \.
+    # 
+    # Setting a global value for `manifest` in puppet.conf is not allowed
+    # (but it can be overridden from the commandline). Please use
+    # directory environments instead. If you need to use something other than the
+    # environment's `manifests` directory as the main manifest, you can set
+    # `manifest` in environment.conf. For more info, see
+    # <https://docs.puppet.com/puppet/latest/reference/environments.html>
+    # manifest = 
+
+    # The search path for modules, as a list of directories separated by the system
+    # path separator character. (The POSIX path separator is ':', and the
+    # Windows path separator is ';'.)
+    # 
+    # Setting a global value for `modulepath` in puppet.conf is not allowed
+    # (but it can be overridden from the commandline). Please use
+    # directory environments instead. If you need to use something other than the
+    # default modulepath of `<ACTIVE ENVIRONMENT'S MODULES DIR>:$basemodulepath`,
+    # you can set `modulepath` in environment.conf. For more info, see
+    # <https://docs.puppet.com/puppet/latest/reference/environments.html>
+    # The default value is ''.
+    # modulepath = 
+
+    # How to determine the configuration version.  By default, it will be the
+    # time that the configuration is parsed, but you can provide a shell script to override how the
+    # version is determined.  The output of this script will be added to every log message in the
+    # reports, allowing you to correlate changes on your hosts to the source version on the server.
+    # 
+    # Setting a global value for config_version in puppet.conf is not allowed
+    # (but it can be overridden from the commandline). Please set a
+    # per-environment value in environment.conf instead. For more info, see
+    # <https://docs.puppet.com/puppet/latest/reference/environments.html>
+    # The default value is ''.
+    # config_version = 
+
+    # The user puppet master should run as.
+    # The default value is 'puppet'.
+    # user = puppet
+
+    # The group puppet master should run as.
+    # The default value is 'puppet'.
+    # group = puppet
+
+    # The default main manifest for directory environments. Any environment that
+    # doesn't set the `manifest` setting in its `environment.conf` file will use
+    # this manifest.
+    # 
+    # This setting's value can be an absolute or relative path. An absolute path
+    # will make all environments default to the same main manifest; a relative
+    # path will allow each environment to use its own manifest, and Puppet will
+    # resolve the path relative to each environment's main directory.
+    # 
+    # In either case, the path can point to a single file or to a directory of
+    # manifests to be evaluated in alphabetical order.
+    # The default value is './manifests'.
+    # default_manifest = ./manifests
+
+    # Whether to disallow an environment-specific main manifest. When set
+    # to `true`, Puppet will use the manifest specified in the `default_manifest` setting
+    # for all environments. If an environment specifies a different main manifest in its
+    # `environment.conf` file, catalog requests for that environment will fail with an error.
+    # 
+    # This setting requires `default_manifest` to be set to an absolute path.
+    # disable_per_environment_manifest = false
+
+    # Code to parse directly.  This is essentially only used
+    # by `puppet`, and should only be set if you're writing your own Puppet
+    # executable.
+    # The default value is ''.
+    # code = 
+
+    # Where the puppet master web server saves its access log. This is
+    # only used when running a WEBrick puppet master. When puppet master is
+    # running under a Rack server like Passenger, that web server will have
+    # its own logging behavior.
+    # The default value is '$logdir/masterhttp.log'.
+    masterhttplog = /var/log/puppetlabs/puppet/masterhttp.log
+
+    # The port for puppet master traffic. For puppet master,
+    # this is the port to listen on; for puppet agent, this is the port
+    # to make requests on. Both applications use this setting to get the port.
+    # The default value is '8140'.
+    # masterport = 8140
+
+    # How the puppet master determines the client's identity
+    # and sets the 'hostname', 'fqdn' and 'domain' facts for use in the manifest,
+    # in particular for determining which 'node' statement applies to the client.
+    # Possible values are 'cert' (use the subject's CN in the client's
+    # certificate) and 'facter' (use the hostname that the client
+    # reported in its facts)
+    # The default value is 'cert'.
+    # node_name = cert
+
+    # Where FileBucket files are stored.
+    # The default value is '$vardir/bucket'.
+    bucketdir = /opt/puppetlabs/puppet/cache/bucket
+
+    # The configuration file that defines the rights to the different
+    # rest indirections.  This can be used as a fine-grained
+    # authorization system for `puppet master`.
+    # The default value is '$confdir/auth.conf'.
+    rest_authconfig = /etc/puppetlabs/puppet/auth.conf
+
+    # Whether the master should function as a certificate authority.
+    # The default value is 'true'.
+    # ca = true
+
+    # File that provides mapping between custom SSL oids and user-friendly names
+    # The default value is '$confdir/custom_trusted_oid_mapping.yaml'.
+    trusted_oid_mapping_file = /etc/puppetlabs/puppet/custom_trusted_oid_mapping.yaml
+
+    # The search path for **global** modules. Should be specified as a
+    # list of directories separated by the system path separator character. (The
+    # POSIX path separator is ':', and the Windows path separator is ';'.)
+    # 
+    # These are the modules that will be used by _all_ environments. Note that
+    # the `modules` directory of the active environment will have priority over
+    # any global directories. For more info, see
+    # <https://docs.puppet.com/puppet/latest/reference/environments.html>
+    # The default value is '$codedir/modules:/opt/puppetlabs/puppet/modules'.
+    basemodulepath = /etc/puppetlabs/code/modules:/opt/puppetlabs/puppet/modules
+
+    # The header containing an authenticated client's SSL DN.
+    # This header must be set by the proxy to the authenticated client's SSL
+    # DN (e.g., `/CN=puppet.puppetlabs.com`).  Puppet will parse out the Common
+    # Name (CN) from the Distinguished Name (DN) and use the value of the CN
+    # field for authorization.
+    # 
+    # Note that the name of the HTTP header gets munged by the web server
+    # common gateway interface: an `HTTP_` prefix is added, dashes are converted
+    # to underscores, and all letters are uppercased.  Thus, to use the
+    # `X-Client-DN` header, this setting should be `HTTP_X_CLIENT_DN`.
+    # The default value is 'HTTP_X_CLIENT_DN'.
+    # ssl_client_header = HTTP_X_CLIENT_DN
+
+    # The header containing the status message of the client
+    # verification. This header must be set by the proxy to 'SUCCESS' if the
+    # client successfully authenticated, and anything else otherwise.
+    # 
+    # Note that the name of the HTTP header gets munged by the web server
+    # common gateway interface: an `HTTP_` prefix is added, dashes are converted
+    # to underscores, and all letters are uppercased.  Thus, to use the
+    # `X-Client-Verify` header, this setting should be
+    # `HTTP_X_CLIENT_VERIFY`.
+    # The default value is 'HTTP_X_CLIENT_VERIFY'.
+    # ssl_client_verify_header = HTTP_X_CLIENT_VERIFY
+
+    # The directory in which YAML data is stored, usually in a subdirectory.
+    # The default value is '$vardir/yaml'.
+    yamldir = /opt/puppetlabs/puppet/cache/yaml
+
+    # The directory in which serialized data is stored, usually in a subdirectory.
+    # The default value is '$vardir/server_data'.
+    server_datadir = /opt/puppetlabs/puppet/cache/server_data
+
+    # The list of report handlers to use. When using multiple report handlers,
+    # their names should be comma-separated, with whitespace allowed. (For example,
+    # `reports = http, store`.)
+    # 
+    # This setting is relevant to puppet master and puppet apply. The puppet
+    # master will call these report handlers with the reports it receives from
+    # agent nodes, and puppet apply will call them with its own report. (In
+    # all cases, the node applying the catalog must have `report = true`.)
+    # 
+    # See the report reference for information on the built-in report
+    # handlers; custom report handlers can also be loaded from modules.
+    # (Report handlers are loaded from the lib directory, at
+    # `puppet/reports/NAME.rb`.)
+    # The default value is 'store'.
+    # reports = store
+
+    # The directory in which to store reports. Each node gets
+    # a separate subdirectory in this directory. This setting is only
+    # used when the `store` report processor is enabled (see the
+    # `reports` setting).
+    # The default value is '$vardir/reports'.
+    reportdir = /opt/puppetlabs/puppet/cache/reports
+
+    # The URL that reports should be forwarded to. This setting
+    # is only used when the `http` report processor is enabled (see the
+    # `reports` setting).
+    # The default value is 'http://localhost:3000/reports/upload'.
+    # reporturl = http://localhost:3000/reports/upload
+
+    # Where the fileserver configuration is stored.
+    # The default value is '$confdir/fileserver.conf'.
+    fileserverconfig = /etc/puppetlabs/puppet/fileserver.conf
+
+    # Whether to only search for the complete
+    # hostname as it is in the certificate when searching for node information
+    # in the catalogs.
+    # strict_hostname_checking = false
+
+    # Whether to store each client's configuration, including catalogs, facts,
+    # and related data. This also enables the import and export of resources in
+    # the Puppet language - a mechanism for exchange resources between nodes.
+    # 
+    # By default this uses the 'puppetdb' backend.
+    # 
+    # You can adjust the backend using the storeconfigs_backend setting.
+    # storeconfigs = false
+
+    # Configure the backend terminus used for StoreConfigs.
+    # By default, this uses the PuppetDB store, which must be installed
+    # and configured before turning on StoreConfigs.
+    # The default value is 'puppetdb'.
+    storeconfigs_backend = puppetdb
+
+    # The root directory of devices' $vardir.
+    # The default value is '$vardir/devices'.
+    devicedir = /opt/puppetlabs/puppet/cache/devices
+
+    # Path to the device config file for puppet device.
+    # The default value is '$confdir/device.conf'.
+    deviceconfig = /etc/puppetlabs/puppet/device.conf
+
+    # The explicit value used for the node name for all requests the agent
+    # makes to the master. WARNING: This setting is mutually exclusive with
+    # node_name_fact.  Changing this setting also requires changes to the default
+    # auth.conf configuration on the Puppet Master.  Please see
+    # http://links.puppetlabs.com/node_name_value for more information.
+    # The default value is '$certname'.
+    node_name_value = 35773e8e00ba.us-west-2.compute.internal
+
+    # The fact name used to determine the node name used for all requests the agent
+    # makes to the master. WARNING: This setting is mutually exclusive with
+    # node_name_value.  Changing this setting also requires changes to the default
+    # auth.conf configuration on the Puppet Master.  Please see
+    # http://links.puppetlabs.com/node_name_fact for more information.
+    # The default value is ''.
+    # node_name_fact = 
+
+    # Where puppet agent and puppet master store state associated
+    # with the running configuration.  In the case of puppet master,
+    # this file reflects the state discovered through interacting
+    # with clients.
+    # The default value is '$statedir/state.yaml'.
+    statefile = /opt/puppetlabs/puppet/cache/state/state.yaml
+
+    # Transactional storage file for persisting data between
+    # transactions for the purposes of infering information (such as
+    # corrective_change) on new data received.
+    # The default value is '$statedir/transactionstore.yaml'.
+    transactionstorefile = /opt/puppetlabs/puppet/cache/state/transactionstore.yaml
+
+    # The directory in which client-side YAML data is stored.
+    # The default value is '$vardir/client_yaml'.
+    clientyamldir = /opt/puppetlabs/puppet/cache/client_yaml
+
+    # The directory in which serialized data is stored on the client.
+    # The default value is '$vardir/client_data'.
+    client_datadir = /opt/puppetlabs/puppet/cache/client_data
+
+    # The file in which puppet agent stores a list of the classes
+    # associated with the retrieved configuration.  Can be loaded in
+    # the separate `puppet` executable using the `--loadclasses`
+    # option.
+    # The default value is '$statedir/classes.txt'.
+    classfile = /opt/puppetlabs/puppet/cache/state/classes.txt
+
+    # The file in which puppet agent stores a list of the resources
+    # associated with the retrieved configuration.
+    # The default value is '$statedir/resources.txt'.
+    resourcefile = /opt/puppetlabs/puppet/cache/state/resources.txt
+
+    # The fallback log file. This is only used when the `--logdest` option
+    # is not specified AND Puppet is running on an operating system where both
+    # the POSIX syslog service and the Windows Event Log are unavailable. (Currently,
+    # no supported operating systems match that description.)
+    # 
+    # Despite the name, both puppet agent and puppet master will use this file
+    # as the fallback logging destination.
+    # 
+    # For control over logging destinations, see the `--logdest` command line
+    # option in the manual pages for puppet master, puppet agent, and puppet
+    # apply. You can see man pages by running `puppet <SUBCOMMAND> --help`,
+    # or read them online at https://docs.puppetlabs.com/puppet/latest/reference/man/.
+    # The default value is '$logdir/puppetd.log'.
+    puppetdlog = /var/log/puppetlabs/puppet/puppetd.log
+
+    # The puppet master server to which the puppet agent should connect.
+    # The default value is 'puppet'.
+    # server = puppet
+
+    # The list of puppet master servers to which the puppet agent should connect,
+    # in the order that they will be tried.
+    # The default value is '[]'.
+    # server_list = []
+
+    # Whether the server will search for SRV records in DNS for the current domain.
+    # use_srv_records = false
+
+    # The domain which will be queried to find the SRV records of servers to use.
+    # The default value is 'us-west-2.compute.internal'.
+    srv_domain = us-west-2.compute.internal
+
+    # Boolean; whether puppet agent should ignore schedules.  This is useful
+    # for initial puppet agent runs.
+    # ignoreschedules = false
+
+    # Boolean; whether to generate the default schedule resources. Setting this to
+    # false is useful for keeping external report processors clean of skipped schedule resources.
+    # The default value is 'true'.
+    # default_schedules = true
+
+    # Whether to apply catalogs in noop mode, which allows Puppet to
+    # partially simulate a normal run. This setting affects puppet agent and
+    # puppet apply.
+    # 
+    # When running in noop mode, Puppet will check whether each resource is in sync,
+    # like it does when running normally. However, if a resource attribute is not in
+    # the desired state (as declared in the catalog), Puppet will take no
+    # action, and will instead report the changes it _would_ have made. These
+    # simulated changes will appear in the report sent to the puppet master, or
+    # be shown on the console if running puppet agent or puppet apply in the
+    # foreground. The simulated changes will not send refresh events to any
+    # subscribing or notified resources, although Puppet will log that a refresh
+    # event _would_ have been sent.
+    # 
+    # **Important note:**
+    # [The `noop` metaparameter](https://docs.puppetlabs.com/puppet/latest/reference/metaparameter.html#noop)
+    # allows you to apply individual resources in noop mode, and will override
+    # the global value of the `noop` setting. This means a resource with
+    # `noop => false` _will_ be changed if necessary, even when running puppet
+    # agent with `noop = true` or `--noop`. (Conversely, a resource with
+    # `noop => true` will only be simulated, even when noop mode is globally disabled.)
+    # noop = false
+
+    # How often puppet agent applies the catalog.
+    # Note that a runinterval of 0 means "run continuously" rather than
+    # "never run." If you want puppet agent to never run, you should start
+    # it with the `--no-client` option. This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '30m'.
+    runinterval = 1800
+
+    # The server to use for certificate
+    # authority requests.  It's a separate server because it cannot
+    # and does not need to horizontally scale.
+    # The default value is '$server'.
+    ca_server = puppet
+
+    # The port to use for the certificate authority.
+    # The default value is '$masterport'.
+    ca_port = 8140
+
+    # The preferred means of serializing
+    # ruby instances for passing over the wire.  This won't guarantee that all
+    # instances will be serialized using this method, since not all classes
+    # can be guaranteed to support this format, but it will be used for all
+    # classes that support it.
+    # The default value is 'pson'.
+    # preferred_serialization_format = pson
+
+    # A lock file to indicate that a puppet agent catalog run is currently in progress.
+    # The file contains the pid of the process that holds the lock on the catalog run.
+    # The default value is '$statedir/agent_catalog_run.lock'.
+    agent_catalog_run_lockfile = /opt/puppetlabs/puppet/cache/state/agent_catalog_run.lock
+
+    # A lock file to indicate that puppet agent runs have been administratively
+    # disabled.  File contains a JSON object with state information.
+    # The default value is '$statedir/agent_disabled.lock'.
+    agent_disabled_lockfile = /opt/puppetlabs/puppet/cache/state/agent_disabled.lock
+
+    # Whether to use the cached configuration when the remote
+    # configuration will not compile.  This option is useful for testing
+    # new configurations, where you want to fix the broken configuration
+    # rather than reverting to a known-good one.
+    # The default value is 'true'.
+    # usecacheonfailure = true
+
+    # Whether to only use the cached catalog rather than compiling a new catalog
+    # on every run.  Puppet can be run with this enabled by default and then selectively
+    # disabled when a recompile is desired.
+    # use_cached_catalog = false
+
+    # Skip searching for classes and definitions that were missing during a
+    # prior compilation. The list of missing objects is maintained per-environment and
+    # persists until the environment is cleared or the master is restarted.
+    # ignoremissingtypes = false
+
+    # This setting has no effect and will be removed in a future Puppet version.
+    # ignorecache = false
+
+    # The maximum time to delay before runs.  Defaults to being the same as the
+    # run interval. This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '$runinterval'.
+    splaylimit = 1800
+
+    # Whether to sleep for a pseudo-random (but consistent) amount of time before
+    # a run.
+    # 
+    # For example, without `splay` enabled, your agent checks in every 30
+    # minutes at :01 and :31 past the hour. After enabling `splay`, the agent
+    # will wait the pseudorandom sleep time, say eight minutes, and then check
+    # in every 30 minutes, at :09 and :39 after the hour. If you restart the
+    # same agent at 12:45 PM, it will wait its eight minutes, and check in at
+    # 12:52 PM, and every 30 minutes after that, at 1:22 PM, 1:52 PM, and so
+    # on. Other agents will have different sleep times, and so will check in
+    # at different times even if they are all restarted at the same time.
+    # splay = false
+
+    # Where FileBucket files are stored locally.
+    # The default value is '$vardir/clientbucket'.
+    clientbucketdir = /opt/puppetlabs/puppet/cache/clientbucket
+
+    # How long the client should wait for the configuration to be retrieved
+    # before considering it a failure. This setting is deprecated and has been replaced
+    # by http_connect_timeout and http_read_timeout.
+    # This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '2m'.
+    configtimeout = 120
+
+    # The server to send transaction reports to.
+    # The default value is '$server'.
+    report_server = puppet
+
+    # The port to communicate with the report_server.
+    # The default value is '$masterport'.
+    report_port = 8140
+
+    # Whether to send reports after every transaction.
+    # The default value is 'true'.
+    # report = true
+
+    # Where puppet agent stores the last run report summary in yaml format.
+    # The default value is '$statedir/last_run_summary.yaml'.
+    lastrunfile = /opt/puppetlabs/puppet/cache/state/last_run_summary.yaml
+
+    # Where puppet agent stores the last run report in yaml format.
+    # The default value is '$statedir/last_run_report.yaml'.
+    lastrunreport = /opt/puppetlabs/puppet/cache/state/last_run_report.yaml
+
+    # Whether to create .dot graph files, which let you visualize the
+    # dependency and containment relationships in Puppet's catalog. You
+    # can load and view these files with tools like
+    # [OmniGraffle](http://www.omnigroup.com/applications/omnigraffle/) (OS X)
+    # or [graphviz](http://www.graphviz.org/) (multi-platform).
+    # 
+    # Graph files are created when _applying_ a catalog, so this setting
+    # should be used on nodes running `puppet agent` or `puppet apply`.
+    # 
+    # The `graphdir` setting determines where Puppet will save graphs. Note
+    # that we don't save graphs for historical runs; Puppet will replace the
+    # previous .dot files with new ones every time it applies a catalog.
+    # 
+    # See your graphing software's documentation for details on opening .dot
+    # files. If you're using GraphViz's `dot` command, you can do a quick PNG
+    # render with `dot -Tpng <DOT FILE> -o <OUTPUT FILE>`.
+    # graph = false
+
+    # Where to save .dot-format graphs (when the `graph` setting is enabled).
+    # The default value is '$statedir/graphs'.
+    graphdir = /opt/puppetlabs/puppet/cache/state/graphs
+
+    # How frequently puppet agent should ask for a signed certificate.
+    # 
+    # When starting for the first time, puppet agent will submit a certificate
+    # signing request (CSR) to the server named in the `ca_server` setting
+    # (usually the puppet master); this may be autosigned, or may need to be
+    # approved by a human, depending on the CA server's configuration.
+    # 
+    # Puppet agent cannot apply configurations until its approved certificate is
+    # available. Since the certificate may or may not be available immediately,
+    # puppet agent will repeatedly try to fetch it at this interval. You can
+    # turn off waiting for certificates by specifying a time of 0, in which case
+    # puppet agent will exit if it cannot get a cert.
+    # This setting can be a time interval in seconds (30 or 30s), minutes (30m), hours (6h), days (2d), or years (5y).
+    # The default value is '2m'.
+    waitforcert = 120
+
+    # How unrelated resources should be ordered when applying a catalog.
+    # Allowed values are `title-hash`, `manifest`, and `random`. This
+    # setting affects puppet agent and puppet apply, but not puppet master.
+    # 
+    # * `manifest` (the default) will use the order in which the resources were
+    #   declared in their manifest files.
+    # * `title-hash` (the default in 3.x) will order resources randomly, but
+    #   will use the same order across runs and across nodes. It is only of
+    #   value if you're migrating from 3.x and have errors running with
+    #   `manifest`.
+    # * `random` will order resources randomly and change their order with each
+    #   run. This can work like a fuzzer for shaking out undeclared dependencies.
+    # 
+    # Regardless of this setting's value, Puppet will always obey explicit
+    # dependencies set with the before/require/notify/subscribe metaparameters
+    # and the `->`/`~>` chaining arrows; this setting only affects the relative
+    # ordering of _unrelated_ resources.
+    # The default value is 'manifest'.
+    # ordering = manifest
+
+    # During an inspect run, whether to archive files whose contents are audited to a file bucket.
+    # archive_files = false
+
+    # During an inspect run, the file bucket server to archive files to if archive_files is set.
+    # The default value is '$server'.
+    archive_file_server = puppet
+
+    # Tags to use to find resources.  If this is set, then
+    # only resources tagged with the specified tags will be applied.
+    # Values must be comma-separated.
+    # The default value is ''.
+    # tags = 
+
+    # Tags to use to filter resources.  If this is set, then
+    # only resources not tagged with the specified tags will be applied.
+    # Values must be comma-separated.
+    # The default value is ''.
+    # skip_tags = 
+
+    # Whether each resource should log when it is
+    # being evaluated.  This allows you to interactively see exactly
+    # what is being done.
+    # evaltrace = false
+
+    # Whether to print a transaction summary.
+    # summarize = false
+
+    # Whether SSL should be used when searching for nodes.
+    # Defaults to false because SSL usually requires certificates
+    # to be set up on the client side.
+    # ldapssl = false
+
+    # Whether TLS should be used when searching for nodes.
+    # Defaults to false because TLS usually requires certificates
+    # to be set up on the client side.
+    # ldaptls = false
+
+    # The LDAP server.  Only used if `node_terminus` is set to `ldap`.
+    # The default value is 'ldap'.
+    # ldapserver = ldap
+
+    # The LDAP port.  Only used if `node_terminus` is set to `ldap`.
+    # The default value is '389'.
+    # ldapport = 389
+
+    # The search string used to find an LDAP node.
+    # The default value is '(&(objectclass=puppetClient)(cn=%s))'.
+    # ldapstring = (&(objectclass=puppetClient)(cn=%s))
+
+    # The LDAP attributes to use to define Puppet classes.  Values
+    # should be comma-separated.
+    # The default value is 'puppetclass'.
+    # ldapclassattrs = puppetclass
+
+    # The LDAP attributes that should be stacked to arrays by adding
+    # the values in all hierarchy elements of the tree.  Values
+    # should be comma-separated.
+    # The default value is 'puppetvar'.
+    # ldapstackedattrs = puppetvar
+
+    # The LDAP attributes to include when querying LDAP for nodes.  All
+    # returned attributes are set as variables in the top-level scope.
+    # Multiple values should be comma-separated.  The value 'all' returns
+    # all attributes.
+    # The default value is 'all'.
+    # ldapattrs = all
+
+    # The attribute to use to define the parent node.
+    # The default value is 'parentnode'.
+    # ldapparentattr = parentnode
+
+    # The user to use to connect to LDAP.  Must be specified as a
+    # full DN.
+    # The default value is ''.
+    # ldapuser = 
+
+    # The password to use to connect to LDAP.
+    # The default value is ''.
+    # ldappassword = 
+
+    # The search base for LDAP searches.  It's impossible to provide
+    # a meaningful default here, although the LDAP libraries might
+    # have one already set.  Generally, it should be the 'ou=Hosts'
+    # branch under your main directory.
+    # The default value is ''.
+    # ldapbase = 
+
+    # Sets the max number of logged/displayed parser validation errors in case
+    # multiple errors have been detected. A value of 0 is the same as a value of 1; a
+    # minimum of one error is always raised.  The count is per manifest.
+    # The default value is '10'.
+    # max_errors = 10
+
+    # Sets the max number of logged/displayed parser validation warnings in
+    # case multiple warnings have been detected. A value of 0 blocks logging of
+    # warnings.  The count is per manifest.
+    # The default value is '10'.
+    # max_warnings = 10
+
+    # Sets the max number of logged/displayed parser validation deprecation
+    # warnings in case multiple deprecation warnings have been detected. A value of 0
+    # blocks the logging of deprecation warnings.  The count is per manifest.
+    # The default value is '10'.
+    # max_deprecations = 10
+
+    # Makes the parser raise errors when referencing unknown variables. (This does not affect
+    # referencing variables that are explicitly set to undef).
+    # strict_variables = false
+
+    # Whether to document all resources when using `puppet doc` to
+    # generate manifest documentation.
+    # document_all = false
+
