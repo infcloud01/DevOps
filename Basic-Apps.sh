@@ -1,3 +1,5 @@
+#Install vim
+yum install -y vim
 #Install git
 yum install -y git
 #Install powershell
