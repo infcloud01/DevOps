@@ -29,6 +29,27 @@ file { 'name':
 	mode   => mode,
 	source => 'puppet:///modules/class/file.txt';
 }
+
+service {"smtp":
+	ensure     => running,
+	enable     => true,
+	hasrestart => true,
+	hasstatus  => true,
+	# pattern    =>"smtp',
+}
+
+#validate a puppet file
+puppet parser validate file.pp
+
+file { '/etc/motd':
+	ensure => file,
+	owner  => root,
+	group  => root,
+	#mode   => mode,
+	#source => 'puppet:///modules/class/file.txt';
+}
+
+
  
 
 
