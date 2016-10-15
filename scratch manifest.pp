@@ -1,3 +1,8 @@
+#The big three 
+package
+file
+service
+
 node 'appserver01' {
 	package { 'ntp':
 	ensure => 'installed',
@@ -65,6 +70,25 @@ service { 'puppet':
 #vim module for puppet
 puppet module install theurbanpenguin/puppet_vim
 puppet apply -e " include puppet_vim "
+
+puppet describe user --short
+
+Puppet is a Declarative Language
+Configuration components are organized into resources
+
+Resources are grouped into collections
+
+Resources are made up of a type, title and a series of attributes:
+
+	file { "/etc/hosts":
+		owner => "root";
+		group => "root:
+	}
+Type is file
+
+Title is /etc/hosts
+
+Attributes define the owner and group is root
 
 
 
