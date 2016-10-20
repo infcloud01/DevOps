@@ -1,0 +1,242 @@
+
+user
+====
+Manage users.  This type is mostly built to manage system
+users, so it is lacking some features useful for managing normal
+users.
+This resource type uses the prescribed native tools for creating
+groups and generally uses POSIX APIs for retrieving information
+about them.  It does not directly modify `/etc/passwd` or anything.
+**Autorequires:** If Puppet is managing the user's primary group (as
+provided in the `gid` attribute), the user resource will autorequire
+that group. If Puppet is managing any role accounts corresponding to the
+user's roles, the user resource will autorequire those role accounts.
+
+
+Parameters
+----------
+
+- **allowdupe**
+    Whether to allow duplicate UIDs. Defaults to `false`.
+    Valid values are `true`, `false`, `yes`, `no`. 
+
+- **attribute_membership**
+    Whether specified attribute value pairs should be treated as the
+    **complete list** (`inclusive`) or the **minimum list** (`minimum`) of
+    attribute/value pairs for the user. Defaults to `minimum`.
+    Valid values are `inclusive`, `minimum`. 
+
+- **attributes**
+    Specify AIX attributes for the user in an array of attribute = value
+    pairs.
+Requires features manages_aix_lam.
+
+- **auth_membership**
+    Whether specified auths should be considered the **complete list**
+    (`inclusive`) or the **minimum list** (`minimum`) of auths the user
+    has. Defaults to `minimum`.
+Valid values are `inclusive`, `minimum`. 
+
+- **auths**
+    The auths the user has.  Multiple auths should be
+    specified as an array.
+Requires features manages_solaris_rbac.
+
+- **comment**
+    A description of the user.  Generally the user's full name.
+
+- **ensure**
+    The basic state that the object should be in.
+    Valid values are `present`, `absent`, `role`. 
+
+- **expiry**
+    The expiry date for this user. Must be provided in
+    a zero-padded YYYY-MM-DD format --- e.g. 2010-02-19.
+    If you want to ensure the user account never expires,
+    you can pass the special value `absent`.
+    Valid values are `absent`. Values can match `/^\d{4}-\d{2}-\d{2}$/`.
+    Requires features manages_expiry.
+
+- **forcelocal**
+    Forces the management of local accounts when accounts are also
+    being managed by some other NSS
+    Valid values are `true`, `false`, `yes`, `no`. 
+    Requires features libuser.
+
+- **gid**
+    The user's primary group.  Can be specified numerically or by name.
+    This attribute is not supported on Windows systems; use the `groups`
+    attribute instead. (On Windows, designating a primary group is only
+    meaningful for domain accounts, which Puppet does not currently manage.)
+
+- **groups**
+    The groups to which the user belongs.  The primary group should
+    not be listed, and groups should be identified by name rather than by
+    GID.  Multiple groups should be specified as an array.
+
+- **home**
+    The home directory of the user.  The directory must be created
+    separately and is not currently checked for existence.
+
+- **ia_load_module**
+    The name of the I&A module to use to manage this user.
+    Requires features manages_aix_lam.
+
+- **iterations**
+    This is the number of iterations of a chained computation of the
+    [PBKDF2 password hash](https://en.wikipedia.org/wiki/PBKDF2). This
+    parameter
+    is used in OS X, and is required for managing passwords on OS X 10.8 and
+    newer.
+Requires features manages_password_salt.
+
+- **key_membership**
+    Whether specified key/value pairs should be considered the
+    **complete list** (`inclusive`) or the **minimum list** (`minimum`) of
+    the user's attributes. Defaults to `minimum`.
+    Valid values are `inclusive`, `minimum`. 
+
+- **keys**
+    Specify user attributes in an array of key = value pairs.
+    Requires features manages_solaris_rbac.
+
+- **loginclass**
+    The name of login class to which the user belongs.
+    Requires features manages_loginclass.
+
+- **managehome**
+    Whether to manage the home directory when managing the user.
+    This will create the home directory when `ensure => present`, and
+    delete the home directory when `ensure => absent`. Defaults to `false`.
+    Valid values are `true`, `false`, `yes`, `no`. 
+
+- **membership**
+    Whether specified groups should be considered the **complete list**
+    (`inclusive`) or the **minimum list** (`minimum`) of groups to which
+    the user belongs. Defaults to `minimum`.
+    Valid values are `inclusive`, `minimum`. 
+
+- **name**
+    The user name. While naming limitations vary by operating system,
+    it is advisable to restrict names to the lowest common denominator,
+    which is a maximum of 8 characters beginning with a letter.
+    Note that Puppet considers user names to be case-sensitive, regardless
+    of the platform's own rules; be sure to always use the same case when
+    referring to a given user.
+
+- **password**
+    The user's password, in whatever encrypted format the local system
+    requires. Consult your operating system's documentation for acceptable
+    password
+    encryption formats and requirements.
+    * Mac OS X 10.5 and 10.6, and some older Linux distributions, use salted
+    SHA1
+      hashes. You can use Puppet's built-in `sha1` function to generate a
+    salted SHA1
+      hash from a password.
+    * Mac OS X 10.7 (Lion), and many recent Linux distributions, use salted
+    SHA512
+      hashes. The Puppet Labs [stdlib][] module contains a
+    `str2saltedsha512` function
+      which can generate password hashes for these operating systems.
+    * OS X 10.8 and higher use salted SHA512 PBKDF2 hashes. When managing
+    passwords
+      on these systems, the `salt` and `iterations` attributes need to be
+    specified as
+      well as the password.
+    * Windows passwords can only be managed in cleartext, as there is no
+    Windows API
+      for setting the password hash.
+    [stdlib]: https://github.com/puppetlabs/puppetlabs-stdlib/
+    Enclose any value that includes a dollar sign ($) in single quotes (')
+    to avoid
+    accidental variable interpolation.
+Requires features manages_passwords.
+
+- **password_max_age**
+    The maximum number of days a password may be used before it must be
+    changed.
+Requires features manages_password_age.
+
+- **password_min_age**
+    The minimum number of days a password must be used before it may be
+    changed.
+Requires features manages_password_age.
+
+- **profile_membership**
+    Whether specified roles should be treated as the **complete list**
+    (`inclusive`) or the **minimum list** (`minimum`) of roles
+    of which the user is a member. Defaults to `minimum`.
+    Valid values are `inclusive`, `minimum`. 
+
+- **profiles**
+    The profiles the user has.  Multiple profiles should be
+    specified as an array.
+Requires features manages_solaris_rbac.
+
+- **project**
+    The name of the project associated with a user.
+    Requires features manages_solaris_rbac.
+
+- **purge_ssh_keys**
+    Whether to purge authorized SSH keys for this user if they are not
+    managed
+    with the `ssh_authorized_key` resource type. Allowed values are:
+    * `false` (default) --- don't purge SSH keys for this user.
+    * `true` --- look for keys in the `.ssh/authorized_keys` file in the
+    user's
+      home directory. Purge any keys that aren't managed as
+    `ssh_authorized_key`
+      resources.
+    * An array of file paths --- look for keys in all of the files listed.
+    Purge
+      any keys that aren't managed as `ssh_authorized_key` resources. If any
+    of
+      these paths starts with `~` or `%h`, that token will be replaced with
+      the user's home directory.
+Valid values are `true`, `false`. 
+
+- **role_membership**
+    Whether specified roles should be considered the **complete list**
+    (`inclusive`) or the **minimum list** (`minimum`) of roles the user
+    has. Defaults to `minimum`.
+Valid values are `inclusive`, `minimum`. 
+
+- **roles**
+    The roles the user has.  Multiple roles should be
+    specified as an array.
+Requires features manages_solaris_rbac.
+
+- **salt**
+    This is the 32-byte salt used to generate the PBKDF2 password used in
+    OS X. This field is required for managing passwords on OS X >= 10.8.
+    Requires features manages_password_salt.
+
+- **shell**
+    The user's login shell.  The shell must exist and be
+    executable.
+    This attribute cannot be managed on Windows systems.
+    Requires features manages_shell.
+
+- **system**
+    Whether the user is a system user, according to the OS's criteria;
+    on most platforms, a UID less than or equal to 500 indicates a system
+    user. This parameter is only used when the resource is created and will
+    not affect the UID when the user is present. Defaults to `false`.
+    Valid values are `true`, `false`, `yes`, `no`. 
+
+- **uid**
+    The user ID; must be specified numerically. If no user ID is
+    specified when creating a new user, then one will be chosen
+    automatically. This will likely result in the same user having
+    different UIDs on different systems, which is not recommended. This is
+    especially noteworthy when managing the same user on both Darwin and
+    other platforms, since Puppet does UID generation on Darwin, but
+    the underlying tools do so on other platforms.
+    On Windows, this property is read-only and will return the user's
+    security identifier (SID).
+
+Providers
+---------
+    aix, directoryservice, hpuxuseradd, ldap, openbsd, pw, user_role_add,
+    useradd, windows_adsi
