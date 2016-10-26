@@ -14,4 +14,6 @@ Get-Alias
 
 get-service | Where-Object Status -EQ $args[0]
 
+Enter-PSSession 'computername'
+
 

@@ -1,7 +1,7 @@
 #Powershell script to remove a user from a remote computer's local group#
 #########################################################################
 $Computer = $env:COMPUTERNAME
-$GroupName = 'MyGroup'
+$GroupName = 'Mygroup'
 $ADSI = [ADSI] ("WinNT://$Computer")
 $Group = $ADSI.Children.Find($GroupName, 'group')
 
