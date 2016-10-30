@@ -4,3 +4,7 @@ git push
 
 #pull down changes
 git pull
+
+git config --global http.proxy http://proxy.co
+
+
