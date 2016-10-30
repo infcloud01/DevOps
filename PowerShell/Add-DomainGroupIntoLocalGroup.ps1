@@ -8,6 +8,6 @@ $GroupName = $args[1]
 #Get the domain group object
 $DomainGroup =[ADSI]"WinNT://$env:USERDOMAIN/$GroupName,group"
 #Get the Local Group object 
-$LocalGroup=[ADSI]"WinNT://$server/MyGroup,group"
+$LocalGroup=[ADSI]"WinNT://$server/MyGroup,group" #Change MyGroup to your local group name
 #Assign the DomainGroup to the LocalGroup
 $LocalGroup.Add($DomainGroup.Path)
