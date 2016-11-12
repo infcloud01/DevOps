@@ -1,3 +1,6 @@
+.DESCRIPTION
+
+
 function foo(){
 Get-Process -name $args[0] | Select-Object -property Name, $args[1]
 }
@@ -27,3 +30,5 @@ Now that the sessions are established, you can run any command in them. And beca
 For example, the following command runs a Get-HotFix command in the sessions in the $s variable and it saves the results in the $h variable. The $h variable is created in each of the sessions in $s, but it does not exist in the local session.
 
 Invoke-Command -Session $s {$h = Get-HotFix}
+
+$psISE.options.zoom = 125
