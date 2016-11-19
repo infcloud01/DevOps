@@ -1,0 +1,4 @@
+#install extra packages for Linux
+ yum install -y epel-release
+#install ansible
+yum install -y ansible
