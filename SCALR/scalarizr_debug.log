@@ -1,0 +1,3240 @@
+2016-11-30 00:05:55,985-05:00 - INFO - scalarizr.app - [pid: 1406] Starting scalarizr 5.1.7
+2016-11-30 00:05:55,986-05:00 - INFO - scalarizr.node - State: importing
+2016-11-30 00:05:55,986-05:00 - INFO - scalarizr.app - Configuring Scalarizr. This can take a few minutes...
+2016-11-30 00:05:55,986-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:05:55,987-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:05:55,987-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:05:55,987-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:05:55,987-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:05:55,988-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:05:55,988-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:05:55,988-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:05:55,988-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:05:55,988-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:05:55,989-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:05:55,990-05:00 - DEBUG - scalarizr.config - Updating configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:05:55,991-05:00 - DEBUG - scalarizr.config - Updating configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:05:55,991-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2016-11-30 00:05:55,991-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:05:55,991-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:05:55,992-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:05:55,993-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:05:55,993-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:05:55,993-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:05:55,993-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:05:55,994-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:05:55,994-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:05:55,994-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:05:55,995-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.lifecycle
+2016-11-30 00:05:56,019-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.lifecycle
+2016-11-30 00:05:56,019-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ip_list_builder
+2016-11-30 00:05:56,021-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ip_list_builder
+2016-11-30 00:05:56,021-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.script_executor
+2016-11-30 00:05:56,021-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.script_executor
+2016-11-30 00:05:56,022-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.hooks
+2016-11-30 00:05:56,022-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.hooks
+2016-11-30 00:05:56,023-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:05:56,024-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:05:56,024-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.deploy
+2016-11-30 00:05:56,025-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.deploy
+2016-11-30 00:05:56,025-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:05:56,026-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:05:56,026-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:05:56,170-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:05:56,171-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.ebs
+2016-11-30 00:05:56,173-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.ebs
+2016-11-30 00:05:56,174-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:05:56,174-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2016-11-30 00:05:56,174-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:05:56,174-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:05:56,175-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:05:56,175-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:05:56,175-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:05:56,175-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:05:56,175-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:05:56,176-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:05:56,176-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:05:56,176-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:05:56,176-05:00 - DEBUG - scalarizr.app - Enable RedHat subscription
+2016-11-30 00:05:56,182-05:00 - DEBUG - scalarizr.app - Initialize platform
+2016-11-30 00:05:56,221-05:00 - DEBUG - scalarizr.app - Database doesn't exist, creating new one from script
+2016-11-30 00:05:56,221-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2016-11-30 00:05:56,227-05:00 - DEBUG - scalarizr.util - system: sync
+2016-11-30 00:05:56,318-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2016-11-30 00:05:56,338-05:00 - DEBUG - scalarizr.util - system: ('/usr/bin/yum', '-d0', '-y', 'clean', 'all', '--exclude', '*.i386', '--exclude', '*.i486', '--exclude', '*.i686')
+2016-11-30 00:05:56,569-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:05:56,569-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:05:56,570-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.lifecycle
+2016-11-30 00:05:56,570-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.lifecycle
+2016-11-30 00:05:56,570-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ip_list_builder
+2016-11-30 00:05:56,571-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ip_list_builder
+2016-11-30 00:05:56,571-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.script_executor
+2016-11-30 00:05:56,571-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.script_executor
+2016-11-30 00:05:56,571-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.hooks
+2016-11-30 00:05:56,571-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.hooks
+2016-11-30 00:05:56,571-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:05:56,571-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.deploy
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.deploy
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.ebs
+2016-11-30 00:05:56,572-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.ebs
+2016-11-30 00:05:56,573-05:00 - DEBUG - scalarizr.app - Got scalr url: 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com'
+2016-11-30 00:05:56,573-05:00 - DEBUG - scalarizr.app - Initialize QueryEnv client
+2016-11-30 00:05:56,573-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2016-11-30 00:05:56,576-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2012-04-17/get-latest-version
+2016-11-30 00:05:56,576-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-latest-version', 'version': '2012-04-17'}
+2016-11-30 00:05:56,612-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): 2015-04-10
+2016-11-30 00:05:56,648-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/get-global-config
+2016-11-30 00:05:56,648-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-global-config', 'version': '2015-04-10'}
+2016-11-30 00:05:56,666-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {'scalr.id': 'd972ee78', 'scalr.version': '5.11.22', 'dns.static.endpoint': 'example-dns.net'}
+2016-11-30 00:05:56,666-05:00 - DEBUG - scalarizr.app - Initialize messaging
+2016-11-30 00:05:56,675-05:00 - DEBUG - scalarizr.app - Initialize message handlers
+2016-11-30 00:05:56,675-05:00 - DEBUG - scalarizr.handlers - Initializing message listener
+2016-11-30 00:05:56,676-05:00 - DEBUG - scalarizr.handlers - Keywords for each Handler::accept
+{'behaviour': [],
+ 'dist': ('redhat', '7.2', 'Maipo'),
+ 'os': ('Linux',
+        'puppet-client01',
+        '3.10.0-327.el7.x86_64',
+        '#1 SMP Thu Oct 29 17:29:29 EDT 2015',
+        'x86_64',
+        'x86_64'),
+ 'platform': 'ec2'}
+2016-11-30 00:05:56,676-05:00 - DEBUG - scalarizr.handlers - Collecting message handlers...
+2016-11-30 00:05:56,677-05:00 - DEBUG - scalarizr.handlers - Message handlers chain:
+[<scalarizr.handlers.ip_list_builder.IpListBuilder object at 0x7f362afe9850>,
+ <scalarizr.handlers.ec2.ebs.EbsHandler object at 0x7f362afe9b10>,
+ <scalarizr.handlers.ec2.rebundle.Ec2RebundleHandler object at 0x7f362afe9ad0>,
+ <scalarizr.handlers.ec2.lifecycle.Ec2LifeCycleHandler object at 0x7f362afe9a50>,
+ <scalarizr.handlers.hooks.HooksHandler object at 0x7f362afe99d0>,
+ <scalarizr.handlers.script_executor.ScriptExecutor object at 0x7f362afe9890>,
+ <scalarizr.handlers.lifecycle.LifeCycleHandler object at 0x7f362afe93d0>]
+2016-11-30 00:05:56,677-05:00 - DEBUG - scalarizr.messaging.p2p.store - Add rotate messages table task for periodical executor
+2016-11-30 00:05:56,705-05:00 - DEBUG - scalarizr.handlers.block_device - Ensure udev rule for EBS devices
+2016-11-30 00:05:56,706-05:00 - DEBUG - scalarizr.util - system: ('/sbin/ntpdate', '-u', '0.amazon.pool.ntp.org')
+2016-11-30 00:06:03,490-05:00 - DEBUG - root - stdout: 30 Nov 00:06:03 ntpdate[1422]: adjust time server 45.79.1.70 offset -0.081038 sec
+
+2016-11-30 00:06:03,490-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/ec2.ini
+2016-11-30 00:06:03,494-05:00 - DEBUG - scalarizr.handlers.ec2.lifecycle - Setting hostname to ec2-54-186-206-118.us-west-2.compute.amazonaws.com
+2016-11-30 00:06:03,494-05:00 - DEBUG - scalarizr.util - system: hostname ec2-54-186-206-118.us-west-2.compute.amazonaws.com
+2016-11-30 00:06:03,502-05:00 - WARNING - scalarizr.util - Adding new-line character before server SSH key in authorized_keys file
+2016-11-30 00:06:03,502-05:00 - DEBUG - scalarizr.util - system: mount -a
+2016-11-30 00:06:03,508-05:00 - DEBUG - scalarizr.util - system: ('mount', '-a')
+2016-11-30 00:06:03,511-05:00 - DEBUG - scalarizr.handlers.lifecycle - Adding iptables rules for scalarizr ports
+2016-11-30 00:06:03,512-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:06:03,514-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2016-11-30 00:06:03,515-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:06:03,517-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2016-11-30 00:06:03,518-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:06:03,520-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2016-11-30 00:06:03,521-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:06:03,523-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2016-11-30 00:06:03,524-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:06:03,527-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2016-11-30 00:06:03,527-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT', '--table', 'filter')
+2016-11-30 00:06:03,530-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2016-11-30 00:06:03,530-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'udp', '--match', 'udp', '--jump', 'ACCEPT', '--dport', '8014', '--insert', 'INPUT')
+2016-11-30 00:06:03,536-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8013', '--insert', 'INPUT')
+2016-11-30 00:06:03,540-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8012', '--insert', 'INPUT')
+2016-11-30 00:06:03,543-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8010', '--insert', 'INPUT')
+2016-11-30 00:06:03,546-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8008', '--insert', 'INPUT')
+2016-11-30 00:06:03,549-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'init'() {}
+2016-11-30 00:06:03,550-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2016-11-30 00:06:03,551-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2016-11-30 00:06:03,552-05:00 - DEBUG - agent.scalarizr.utils.mixutil.PeriodicalExecutor - Executing task Rotate messages sqlite table
+2016-11-30 00:06:03,552-05:00 - DEBUG - scalarizr.handlers.script_executor - Starting log_rotate routine
+2016-11-30 00:06:03,555-05:00 - DEBUG - scalarizr.handlers.script_executor - STATE[script_executor.in_progress]: None
+2016-11-30 00:06:03,557-05:00 - INFO - scalarizr.handlers.script_executor - Restoring supervision of 0 orchestration scripts
+2016-11-30 00:06:03,559-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message consumer http://0.0.0.0:8013
+2016-11-30 00:06:03,559-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message handler
+2016-11-30 00:06:03,568-05:00 - INFO - scalarizr.handlers.lifecycle - Server will be imported into Scalr
+2016-11-30 00:06:03,572-05:00 - INFO - scalarizr.handlers - Detecting supported behaviors...
+2016-11-30 00:06:03,573-05:00 - DEBUG - scalarizr.util - system: ('/bin/rpm', '-qa', '--queryformat', '%{NAME}|%{VERSION}\n')
+2016-11-30 00:06:03,912-05:00 - DEBUG - root - stdout: rhnsd|5.0.13
+redhat-release-server|7.2
+yum-rhn-plugin|2.0.1
+filesystem|3.2
+trousers|0.3.13
+basesystem|10.0
+glib-networking|2.42.0
+kbd-misc|1.15.5
+net-tools|2.0
+nss-softokn-freebl|3.16.2.3
+ppp|2.4.5
+glibc|2.17
+policycoreutils-python|2.2.5
+libstdc++|4.8.5
+libndp|1.2
+bash|4.2.46
+teamd|1.17
+pcre|8.32
+bind-libs-lite|9.9.4
+zlib|1.2.7
+NetworkManager|1.0.6
+audit-libs|2.4.1
+popt|1.13
+kbd|1.15.5
+sed|4.2.2
+kexec-tools|2.0.7
+libcom_err|1.42.9
+NetworkManager-team|1.0.6
+libxml2|2.9.1
+cloud-init|0.7.6
+bzip2-libs|1.0.6
+rh-amazon-rhui-client|2.2.124
+dbus-libs|1.6.12
+audit|2.4.1
+readline|6.2
+irqbalance|1.0.7
+elfutils-libelf|0.163
+tuned|2.5.1
+glib2|2.42.2
+rsync|3.0.9
+shared-mime-info|1.1
+microcode_ctl|2.1
+libattr|2.4.46
+dracut-config-rescue|033
+libcap|2.22
+parted|3.1
+libnl3|3.2.21
+man-db|2.6.3
+elfutils-libs|0.163
+yum-utils|1.1.31
+cpio|2.11
+selinux-policy-targeted|3.13.1
+expat|2.1.0
+cloud-utils-growpart|0.27
+dbus-glib|0.100
+Red_Hat_Enterprise_Linux-Release_Notes-7-en-US|7
+libidn|1.28
+btrfs-progs|3.19.1
+file-libs|5.11
+tar|1.26
+file|5.11
+rootfiles|8.1
+nss-softokn|3.16.2.3
+NetworkManager-config-server|1.0.6
+gobject-introspection|1.42.0
+gpg-pubkey|2fa658e0
+cyrus-sasl-lib|2.1.26
+perl-HTTP-Tiny|0.033
+groff-base|1.22.2
+perl-Pod-Perldoc|3.20
+libunistring|0.9.3
+perl-Text-ParseWords|3.29
+libedit|3.0
+perl-Pod-Usage|1.63
+slang|2.2.4
+perl-macros|5.16.3
+tcp_wrappers-libs|7.6
+perl-Exporter|5.68
+libdaemon|0.14
+perl-Time-Local|1.2300
+ethtool|3.15
+perl-Carp|1.26
+libtasn1|3.8
+perl-PathTools|3.40
+gdbm|1.10
+perl-File-Temp|0.23.01
+gettext-libs|0.18.2.1
+perl-threads-shared|1.43
+libteam|1.17
+perl-Filter|1.49
+setools-libs|3.3.7
+perl-Getopt-Long|2.40
+acl|2.2.51
+vim-filesystem|7.4.160
+desktop-file-utils|0.22
+gpm-libs|1.20.7
+avahi-libs|0.6.31
+perl-Error|0.17020
+libss|1.42.9
+perl-TermReadKey|2.30
+pinentry|0.8.1
+perl-Git|1.8.3.1
+kmod-libs|20
+powershell|6.0.0_alpha.10
+libselinux-utils|2.2.2
+gpg-pubkey|4bd6ec30
+ncurses|5.9
+tzdata-java|2016g
+libproxy|0.4.11
+libjpeg-turbo|1.2.90
+snappy|1.1.0
+javapackages-tools|3.4.1
+libmnl|1.0.3
+puppet-agent|1.7.0
+iptables|1.4.21
+autogen-libopts|5.18
+libnl|1.1.4
+ntp|4.2.6p5
+libsemanage|2.1.10
+epel-release|7
+libverto|0.2.5
+sshpass|1.05
+openssl-libs|1.0.1e
+libtomcrypt|1.17
+ca-certificates|2015.2.4
+python2-pyasn1|0.1.9
+python|2.7.5
+python2-ecdsa|0.13
+libblkid|2.23.2
+python-httplib2|0.7.7
+python-iniparse|0.4
+ansible|2.2.0.0
+gzip|1.5
+scalarizr-ec2|5.1.7
+python-decorator|3.4.0
+m2crypto|0.21.1
+pygobject3-base|3.14.0
+pam|1.1.8
+systemd-libs|219
+procps-ng|3.3.10
+python-lxml|3.2.1
+python-configobj|4.7.2
+python-chardet|2.2.1
+e2fsprogs|1.42.9
+avahi-autoipd|0.6.31
+python-IPy|0.75
+pyserial|2.6
+python-pyudev|0.15
+python-jinja2|2.7.2
+rhnlib|2.5.65
+python-gudev|147.2
+libsemanage-python|2.1.10
+libxml2-python|2.9.1
+python-prettytable|0.7.2
+python-backports-ssl_match_hostname|3.4.0.2
+python-requests|2.6.0
+python-jsonpointer|1.9
+python-perf|3.10.0
+xdg-utils|1.1.0
+nss|3.19.1
+nss-tools|3.19.1
+logrotate|3.8.6
+binutils|2.23.52.0.1
+libssh2|1.4.3
+curl|7.29.0
+rpm|4.11.3
+libuser|0.60
+policycoreutils|2.2.5
+dhcp-libs|4.2.5
+selinux-policy|3.13.1
+usermode|1.111
+python-urlgrabber|3.10
+fipscheck|1.4.1
+kernel-tools-libs|3.10.0
+gnupg2|2.0.22
+pygpgme|0.3
+rpm-python|4.11.3
+redhat-support-lib-python|0.9.7
+qrencode-libs|3.4.1
+libpipeline|1.2.3
+libyaml|0.1.4
+pciutils-libs|3.2.1
+kpartx|0.4.9
+device-mapper-libs|1.02.107
+dracut|033
+systemd|219
+systemd-sysv|219
+initscripts|9.49.30
+polkit-pkla-compat|0.1
+cronie|1.4.11
+os-prober|1.58
+dnsmasq|2.66
+hwdata|0.252
+rhn-client-tools|2.0.2
+libgcc|4.8.5
+rhn-setup|2.0.2
+setup|2.8.71
+rhn-check|2.0.2
+tzdata|2015g
+gnutls|3.3.8
+emacs-filesystem|24.3
+libsoup|2.48.1
+ncurses-base|5.9
+glibc-common|2.17
+libcgroup|0.41
+xz-libs|5.1.2
+json-c|0.11
+ncurses-libs|5.9
+jansson|2.4
+libsepol|2.1.9
+bind-license|9.9.4
+libselinux|2.2.2
+dhclient|4.2.5
+info|5.1
+dracut-network|033
+libuuid|2.23.2
+kbd-legacy|1.15.5
+chkconfig|1.3.61
+kernel|3.10.0
+nspr|4.10.8
+NetworkManager-tui|1.0.6
+nss-util|3.19.1
+rsyslog|7.4.7
+libdb|5.3.21
+grep|2.20
+grub2|2.02
+gawk|4.0.2
+postfix|2.10.1
+libgpg-error|1.12
+rdma|7.2_4.1_rc6
+libffi|3.0.13
+subscription-manager|1.15.9
+pkgconfig|0.27.1
+chrony|2.1.1
+libgcrypt|1.5.3
+openssh-server|6.6.1p1
+libacl|2.2.51
+dracut-config-generic|033
+sqlite|3.7.17
+kernel-tools|3.10.0
+p11-kit|0.20.7
+redhat-support-tool|0.9.7
+lua|5.1.4
+openssh-clients|6.6.1p1
+diffutils|3.3
+authconfig|6.2.8
+libcap-ng|0.7.5
+sudo|1.8.6p7
+which|2.20
+xfsprogs|3.2.2
+findutils|4.5.11
+gdisk|0.8.6
+gmp|6.0.0
+libsysfs|2.1.0
+libnl3-cli|3.2.21
+iwl7265-firmware|22.0.7.0
+libcroco|0.6.8
+gpg-pubkey|fd431d51
+libassuan|2.1.0
+perl-parent|0.225
+e2fsprogs-libs|1.42.9
+perl-podlators|2.5.1
+libgomp|4.8.5
+perl-Pod-Escapes|1.04
+xz|5.1.2
+perl-Encode|2.51
+libnfnetlink|1.0.1
+perl-libs|5.16.3
+newt|0.52.15
+perl-Storable|2.45
+lzo|2.06
+perl-constant|1.27
+hostname|3.13
+perl-Socket|2.010
+keyutils-libs|1.5.8
+perl-Time-HiRes|1.9725
+p11-kit-trust|0.20.7
+perl-Scalar-List-Utils|1.27
+dmidecode|2.12
+perl-File-Path|2.09
+less|458
+perl-threads|1.87
+nettle|2.7.1
+perl-Pod-Simple|3.28
+vim-minimal|7.4.160
+perl|5.16.3
+libxslt|1.1.28
+vim-common|7.4.160
+gsettings-desktop-schemas|3.14.2
+vim-enhanced|7.4.160
+libdb-utils|5.3.21
+libgnome-keyring|3.8.0
+mozjs17|17.0.0
+git|1.8.3.1
+make|3.82
+libunwind|1.1
+checkpolicy|2.1.12
+puppetlabs-release-pc1|1.1.0
+freetype|2.4.11
+gpg-pubkey|ef8d349f
+libmodman|2.0.1
+lksctp-tools|1.0.13
+libicu|50.1.2
+python-javapackages|3.4.1
+libpcap|1.5.3
+java-1.8.0-openjdk-headless|1.8.0.102
+libnetfilter_conntrack|1.0.4
+puppetserver|2.6.0
+iproute|3.10.0
+ntpdate|4.2.6p5
+ustr|1.0.4
+wget|1.14
+sysvinit-tools|2.88
+gpg-pubkey|352c64e5
+krb5-libs|1.13.2
+libtommath|0.42.0
+coreutils|8.22
+python2-crypto|2.6.1
+python-libs|2.7.5
+python-keyczar|0.71c
+shadow-utils|4.1.5.1
+python2-paramiko|1.16.1
+dbus-python|1.1.1
+python-setuptools|0.9.8
+python-dateutil|1.5
+scalarizr|5.1.7
+cracklib|2.9.0
+libselinux-python|2.2.2
+newt-python|0.52.15
+cracklib-dicts|2.9.0
+libpwquality|1.2.3
+libgudev1|219
+libmount|2.23.2
+gettext|0.18.2.1
+python-ethtool|0.8
+python-kitchen|1.1.1
+grubby|8.28
+libutempter|1.1.6
+python-markupsafe|0.11
+python-six|1.9.0
+python-babel|0.9.6
+pyOpenSSL|0.13.1
+pygobject2|2.28.6
+audit-libs-python|2.4.1
+pyliblzma|0.5.3
+python-dmidecode|3.10.13
+python-backports|1.0
+python-urllib3|1.10.2
+pyxattr|0.5.1
+python-jsonpatch|1.2
+yum-metadata-parser|1.1.4
+nss-sysinit|3.19.1
+NetworkManager-libnm|1.0.6
+openssl|1.0.1e
+redhat-logos|70.0.3
+mariadb-libs|5.5.44
+libcurl|7.29.0
+rpm-libs|4.11.3
+openldap|2.4.40
+util-linux|2.23.2
+virt-what|1.13
+dhcp-common|4.2.5
+passwd|0.79
+python-pycurl|7.19.0
+fipscheck-lib|1.4.1
+openssh|6.6.1p1
+pth|2.0.7
+gpgme|1.3.2
+rpm-build-libs|4.11.3
+yum|3.4.3
+python-rhsm|1.15.4
+numactl-libs|2.0.9
+libestr|0.1.9
+PyYAML|3.10
+hardlink|1.0
+device-mapper|1.02.107
+cryptsetup-libs|1.6.7
+kmod|20
+dbus|1.6.12
+iputils|20121221
+polkit|0.112
+cronie-anacron|1.4.11
+crontabs|1.11
+grub2-tools|2.02
+wpa_supplicant|2.0
+python-hwdata|1.7.3
+
+2016-11-30 00:06:03,913-05:00 - INFO - scalarizr.handlers - Scalr built-in automation: checking for supported software.
+If installed software isn't detected, review the Scalr Wiki: https://scalr-wiki.atlassian.net/wiki/x/IoB1
+2016-11-30 00:06:03,928-05:00 - INFO - scalarizr.handlers - app: Unavailable. Not installed.
+2016-11-30 00:06:03,929-05:00 - INFO - scalarizr.handlers - chef: Unavailable. Not installed.
+2016-11-30 00:06:03,957-05:00 - INFO - scalarizr.handlers - haproxy: Unavailable. Not installed.
+2016-11-30 00:06:03,996-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2016-11-30 00:06:03,996-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:06:03,997-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/mysqldump] package=None
+2016-11-30 00:06:03,997-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/innobackupex] package=None
+2016-11-30 00:06:03,997-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/xbstream] package=None
+2016-11-30 00:06:03,998-05:00 - INFO - scalarizr.handlers - mariadb: Unavailable. Not installed.
+2016-11-30 00:06:03,999-05:00 - INFO - scalarizr.handlers - memcached: Unavailable. Not installed.
+2016-11-30 00:06:03,999-05:00 - INFO - scalarizr.handlers - mysql: Unavailable. Not installed.
+2016-11-30 00:06:04,000-05:00 - INFO - scalarizr.handlers - mysql2: Unavailable. Not installed.
+2016-11-30 00:06:04,001-05:00 - INFO - scalarizr.handlers - percona: Unavailable. Not installed.
+2016-11-30 00:06:04,014-05:00 - INFO - scalarizr.handlers - postgresql: Unavailable. Not installed.
+2016-11-30 00:06:04,018-05:00 - INFO - scalarizr.handlers - rabbitmq: Unavailable. Not installed.
+2016-11-30 00:06:04,031-05:00 - INFO - scalarizr.handlers - redis: Unavailable. Not installed.
+2016-11-30 00:06:04,033-05:00 - DEBUG - scalarizr.util - system: echo $JAVA_HOME
+2016-11-30 00:06:04,038-05:00 - DEBUG - root - stdout: 
+
+2016-11-30 00:06:04,038-05:00 - DEBUG - scalarizr.util - system: echo $CATALINA_HOME
+2016-11-30 00:06:04,042-05:00 - DEBUG - root - stdout: 
+
+2016-11-30 00:06:04,042-05:00 - INFO - scalarizr.handlers - tomcat: Unavailable. Not installed.
+2016-11-30 00:06:04,043-05:00 - INFO - scalarizr.handlers - www: Unavailable. Not installed.
+2016-11-30 00:06:04,053-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'before_hello'(<scalarizr.messaging.p2p.store.P2pMessage object at 0x7f362afe9f10>,) {}
+2016-11-30 00:06:04,053-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Sending message 'Hello' into queue 'control'
+2016-11-30 00:06:04,062-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:06:04,064-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Delivering message 'Hello' {'server_id': 'bc1ed7c1-d704-4bb0-bc36-37c0e13cd2f4', 'dist': {'distributor': 'redhat', 'release': '7.2', 'codename': 'Maipo'}, 'aws_avail_zone': 'us-west-2c', 'local_ip': '172.31.13.212', 'aws_ami_id': 'ami-775e4f16', 'aws_instance_type': 't2.small', 'behaviour': [], 'aws_instance_id': 'i-2a05edf6', 'role_name': 'RHEL-7-x', 'architecture': 'x86_64', 'os': {'string_version': 'Linux puppet-client01 3.10.0-327.el7.x86_64 #1 SMP Thu Oct 29 17:29:29 EDT 2015 x86_64 x86_64', 'version': 'RedHat 7.2 Maipo', 'arch': 'x86_64'}, 'remote_ip': '54.186.206.118'}. Json: False, Headers: {'Content-Type': 'xml'}
+2016-11-30 00:06:04,064-05:00 - DEBUG - scalarizr.messaging.p2p.security - Encrypting message
+2016-11-30 00:06:04,252-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Message 'Hello' delivered (message_id: b395a387-75a4-4aa7-bd4d-1a14c45faf4c)
+2016-11-30 00:06:04,286-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'hello'() {}
+2016-11-30 00:06:04,286-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'start'() {}
+2016-11-30 00:11:26,771-05:00 - DEBUG - scalarizr.app - Mainloop: KeyboardInterrupt
+2016-11-30 00:11:26,771-05:00 - DEBUG - scalarizr.app - Mainloop: finally
+2016-11-30 00:11:26,772-05:00 - DEBUG - scalarizr.handlers.lifecycle - Calling scalarizr.handlers.lifecycle.on_shutdown
+2016-11-30 00:11:26,772-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'shutdown'() {}
+2016-11-30 00:11:26,772-05:00 - INFO - scalarizr.app - [pid: 1406] Stopping scalarizr 5.1.7
+2016-11-30 00:11:26,772-05:00 - DEBUG - scalarizr.app - Shutdowning external messaging
+2016-11-30 00:11:26,772-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - entring shutdown _server: <BaseHTTPServer.HTTPServer instance at 0x7f362afffef0>, running: True
+2016-11-30 00:11:26,772-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Shutdown message consumer http://0.0.0.0:8013 ...
+2016-11-30 00:11:26,773-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Shutdown HTTP server
+2016-11-30 00:11:26,838-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message handler stopped
+2016-11-30 00:11:26,931-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - HTTP server terminated
+2016-11-30 00:11:26,931-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Shutdown message handler
+2016-11-30 00:11:26,931-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message handler terminated
+2016-11-30 00:11:26,931-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message consumer http://0.0.0.0:8013 terminated
+2016-11-30 00:11:26,931-05:00 - DEBUG - scalarizr.app - Shutdowning API server
+2016-11-30 00:11:26,936-05:00 - DEBUG - scalarizr.app - Shutdowning periodical executor
+2016-11-30 00:11:27,937-05:00 - INFO - scalarizr.app - [pid: 1406] Scalarizr terminated
+2016-11-30 00:11:27,937-05:00 - DEBUG - scalarizr.app - Mainloop: leave
+2016-11-30 00:11:31,289-05:00 - INFO - scalarizr.app - [pid: 1451] Starting scalarizr 5.1.7
+2016-11-30 00:11:31,290-05:00 - INFO - scalarizr.node - State: importing
+2016-11-30 00:11:31,291-05:00 - INFO - scalarizr.app - Configuring Scalarizr. This can take a few minutes...
+2016-11-30 00:11:31,291-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:11:31,291-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:11:31,291-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:11:31,291-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:11:31,292-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:11:31,292-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:11:31,292-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:11:31,292-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:11:31,292-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:11:31,293-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:11:31,293-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:11:31,294-05:00 - DEBUG - scalarizr.config - Updating configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:11:31,295-05:00 - DEBUG - scalarizr.config - Updating configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:11:31,295-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2016-11-30 00:11:31,296-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:11:31,296-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:11:31,296-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:11:31,296-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:11:31,296-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:11:31,297-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:11:31,297-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:11:31,297-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:11:31,297-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:11:31,298-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:11:31,298-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.lifecycle
+2016-11-30 00:11:31,303-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.lifecycle
+2016-11-30 00:11:31,303-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ip_list_builder
+2016-11-30 00:11:31,303-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ip_list_builder
+2016-11-30 00:11:31,303-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.script_executor
+2016-11-30 00:11:31,303-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.script_executor
+2016-11-30 00:11:31,304-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.hooks
+2016-11-30 00:11:31,304-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.hooks
+2016-11-30 00:11:31,304-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:11:31,304-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:11:31,305-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.deploy
+2016-11-30 00:11:31,305-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.deploy
+2016-11-30 00:11:31,305-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:11:31,305-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:11:31,306-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:11:31,326-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:11:31,326-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.ebs
+2016-11-30 00:11:31,327-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.ebs
+2016-11-30 00:11:31,327-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:11:31,327-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2016-11-30 00:11:31,327-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:11:31,328-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:11:31,328-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:11:31,328-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:11:31,328-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:11:31,329-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:11:31,329-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:11:31,329-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:11:31,329-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:11:31,329-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:11:31,330-05:00 - DEBUG - scalarizr.app - Enable RedHat subscription
+2016-11-30 00:11:31,334-05:00 - DEBUG - scalarizr.app - Initialize platform
+2016-11-30 00:11:31,337-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2016-11-30 00:11:31,360-05:00 - DEBUG - scalarizr.util - system: ('/usr/bin/yum', '-d0', '-y', 'clean', 'all', '--exclude', '*.i386', '--exclude', '*.i486', '--exclude', '*.i686')
+2016-11-30 00:11:31,547-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:11:31,547-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:11:31,548-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.lifecycle
+2016-11-30 00:11:31,548-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.lifecycle
+2016-11-30 00:11:31,549-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ip_list_builder
+2016-11-30 00:11:31,549-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ip_list_builder
+2016-11-30 00:11:31,549-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.script_executor
+2016-11-30 00:11:31,549-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.script_executor
+2016-11-30 00:11:31,549-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.hooks
+2016-11-30 00:11:31,549-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.hooks
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.deploy
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.deploy
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:11:31,550-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:11:31,551-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.ebs
+2016-11-30 00:11:31,551-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.ebs
+2016-11-30 00:11:31,551-05:00 - DEBUG - scalarizr.app - Got scalr url: 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com'
+2016-11-30 00:11:31,551-05:00 - DEBUG - scalarizr.app - Initialize QueryEnv client
+2016-11-30 00:11:31,551-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2016-11-30 00:11:31,557-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/get-global-config
+2016-11-30 00:11:31,557-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-global-config', 'version': u'2015-04-10'}
+2016-11-30 00:11:31,578-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {'scalr.id': 'd972ee78', 'scalr.version': '5.11.22', 'dns.static.endpoint': 'example-dns.net'}
+2016-11-30 00:11:31,578-05:00 - DEBUG - scalarizr.app - Initialize messaging
+2016-11-30 00:11:31,581-05:00 - DEBUG - scalarizr.app - Initialize message handlers
+2016-11-30 00:11:31,581-05:00 - DEBUG - scalarizr.handlers - Initializing message listener
+2016-11-30 00:11:31,582-05:00 - DEBUG - scalarizr.handlers - Keywords for each Handler::accept
+{'behaviour': [],
+ 'dist': ('redhat', '7.2', 'Maipo'),
+ 'os': ('Linux',
+        'ec2-54-186-206-118.us-west-2.compute.amazonaws.com',
+        '3.10.0-327.el7.x86_64',
+        '#1 SMP Thu Oct 29 17:29:29 EDT 2015',
+        'x86_64',
+        'x86_64'),
+ 'platform': 'ec2'}
+2016-11-30 00:11:31,582-05:00 - DEBUG - scalarizr.handlers - Collecting message handlers...
+2016-11-30 00:11:31,583-05:00 - DEBUG - scalarizr.handlers - Message handlers chain:
+[<scalarizr.handlers.ip_list_builder.IpListBuilder object at 0x7f0075e5fc90>,
+ <scalarizr.handlers.ec2.ebs.EbsHandler object at 0x7f0075e5ff50>,
+ <scalarizr.handlers.ec2.rebundle.Ec2RebundleHandler object at 0x7f0075e5ff10>,
+ <scalarizr.handlers.ec2.lifecycle.Ec2LifeCycleHandler object at 0x7f0075e5fe90>,
+ <scalarizr.handlers.hooks.HooksHandler object at 0x7f0075e5fe10>,
+ <scalarizr.handlers.script_executor.ScriptExecutor object at 0x7f0075e5fcd0>,
+ <scalarizr.handlers.lifecycle.LifeCycleHandler object at 0x7f0075e5f790>]
+2016-11-30 00:11:31,583-05:00 - DEBUG - scalarizr.messaging.p2p.store - Add rotate messages table task for periodical executor
+2016-11-30 00:11:31,598-05:00 - DEBUG - scalarizr.handlers.block_device - Ensure udev rule for EBS devices
+2016-11-30 00:11:31,599-05:00 - DEBUG - scalarizr.util - system: ('/sbin/ntpdate', '-u', '0.amazon.pool.ntp.org')
+2016-11-30 00:11:38,339-05:00 - DEBUG - root - stdout: 30 Nov 00:11:38 ntpdate[1462]: adjust time server 104.232.3.3 offset 0.039278 sec
+
+2016-11-30 00:11:38,339-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/ec2.ini
+2016-11-30 00:11:38,342-05:00 - DEBUG - scalarizr.handlers.ec2.lifecycle - Setting hostname to ec2-54-186-206-118.us-west-2.compute.amazonaws.com
+2016-11-30 00:11:38,342-05:00 - DEBUG - scalarizr.util - system: hostname ec2-54-186-206-118.us-west-2.compute.amazonaws.com
+2016-11-30 00:11:38,347-05:00 - DEBUG - scalarizr.util - system: mount -a
+2016-11-30 00:11:38,370-05:00 - DEBUG - scalarizr.util - system: ('mount', '-a')
+2016-11-30 00:11:38,374-05:00 - DEBUG - scalarizr.handlers.lifecycle - Adding iptables rules for scalarizr ports
+2016-11-30 00:11:38,375-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:11:38,377-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:11:38,378-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:11:38,381-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:11:38,382-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:11:38,385-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:11:38,386-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:11:38,388-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:11:38,389-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:11:38,392-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:11:38,393-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT', '--table', 'filter')
+2016-11-30 00:11:38,396-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:11:38,397-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'init'() {}
+2016-11-30 00:11:38,397-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2016-11-30 00:11:38,398-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2016-11-30 00:11:38,399-05:00 - DEBUG - agent.scalarizr.utils.mixutil.PeriodicalExecutor - Executing task Rotate messages sqlite table
+2016-11-30 00:11:38,399-05:00 - DEBUG - scalarizr.handlers.script_executor - Starting log_rotate routine
+2016-11-30 00:11:38,399-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message consumer http://0.0.0.0:8013
+2016-11-30 00:11:38,400-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message handler
+2016-11-30 00:11:38,402-05:00 - DEBUG - scalarizr.handlers.script_executor - STATE[script_executor.in_progress]: []
+2016-11-30 00:11:38,404-05:00 - INFO - scalarizr.handlers.script_executor - Restoring supervision of 0 orchestration scripts
+2016-11-30 00:11:38,414-05:00 - INFO - scalarizr.handlers.lifecycle - Server will be imported into Scalr
+2016-11-30 00:11:38,417-05:00 - INFO - scalarizr.handlers - Detecting supported behaviors...
+2016-11-30 00:11:38,418-05:00 - DEBUG - scalarizr.util - system: ('/bin/rpm', '-qa', '--queryformat', '%{NAME}|%{VERSION}\n')
+2016-11-30 00:11:38,756-05:00 - DEBUG - root - stdout: rhnsd|5.0.13
+redhat-release-server|7.2
+yum-rhn-plugin|2.0.1
+filesystem|3.2
+trousers|0.3.13
+basesystem|10.0
+glib-networking|2.42.0
+kbd-misc|1.15.5
+net-tools|2.0
+nss-softokn-freebl|3.16.2.3
+ppp|2.4.5
+glibc|2.17
+policycoreutils-python|2.2.5
+libstdc++|4.8.5
+libndp|1.2
+bash|4.2.46
+teamd|1.17
+pcre|8.32
+bind-libs-lite|9.9.4
+zlib|1.2.7
+NetworkManager|1.0.6
+audit-libs|2.4.1
+popt|1.13
+kbd|1.15.5
+sed|4.2.2
+kexec-tools|2.0.7
+libcom_err|1.42.9
+NetworkManager-team|1.0.6
+libxml2|2.9.1
+cloud-init|0.7.6
+bzip2-libs|1.0.6
+rh-amazon-rhui-client|2.2.124
+dbus-libs|1.6.12
+audit|2.4.1
+readline|6.2
+irqbalance|1.0.7
+elfutils-libelf|0.163
+tuned|2.5.1
+glib2|2.42.2
+rsync|3.0.9
+shared-mime-info|1.1
+microcode_ctl|2.1
+libattr|2.4.46
+dracut-config-rescue|033
+libcap|2.22
+parted|3.1
+libnl3|3.2.21
+man-db|2.6.3
+elfutils-libs|0.163
+yum-utils|1.1.31
+cpio|2.11
+selinux-policy-targeted|3.13.1
+expat|2.1.0
+cloud-utils-growpart|0.27
+dbus-glib|0.100
+Red_Hat_Enterprise_Linux-Release_Notes-7-en-US|7
+libidn|1.28
+btrfs-progs|3.19.1
+file-libs|5.11
+tar|1.26
+file|5.11
+rootfiles|8.1
+nss-softokn|3.16.2.3
+NetworkManager-config-server|1.0.6
+gobject-introspection|1.42.0
+gpg-pubkey|2fa658e0
+cyrus-sasl-lib|2.1.26
+perl-HTTP-Tiny|0.033
+groff-base|1.22.2
+perl-Pod-Perldoc|3.20
+libunistring|0.9.3
+perl-Text-ParseWords|3.29
+libedit|3.0
+perl-Pod-Usage|1.63
+slang|2.2.4
+perl-macros|5.16.3
+tcp_wrappers-libs|7.6
+perl-Exporter|5.68
+libdaemon|0.14
+perl-Time-Local|1.2300
+ethtool|3.15
+perl-Carp|1.26
+libtasn1|3.8
+perl-PathTools|3.40
+gdbm|1.10
+perl-File-Temp|0.23.01
+gettext-libs|0.18.2.1
+perl-threads-shared|1.43
+libteam|1.17
+perl-Filter|1.49
+setools-libs|3.3.7
+perl-Getopt-Long|2.40
+acl|2.2.51
+vim-filesystem|7.4.160
+desktop-file-utils|0.22
+gpm-libs|1.20.7
+avahi-libs|0.6.31
+perl-Error|0.17020
+libss|1.42.9
+perl-TermReadKey|2.30
+pinentry|0.8.1
+perl-Git|1.8.3.1
+kmod-libs|20
+powershell|6.0.0_alpha.10
+libselinux-utils|2.2.2
+gpg-pubkey|4bd6ec30
+ncurses|5.9
+tzdata-java|2016g
+libproxy|0.4.11
+libjpeg-turbo|1.2.90
+snappy|1.1.0
+javapackages-tools|3.4.1
+libmnl|1.0.3
+puppet-agent|1.7.0
+iptables|1.4.21
+autogen-libopts|5.18
+libnl|1.1.4
+ntp|4.2.6p5
+libsemanage|2.1.10
+epel-release|7
+libverto|0.2.5
+sshpass|1.05
+openssl-libs|1.0.1e
+libtomcrypt|1.17
+ca-certificates|2015.2.4
+python2-pyasn1|0.1.9
+python|2.7.5
+python2-ecdsa|0.13
+libblkid|2.23.2
+python-httplib2|0.7.7
+python-iniparse|0.4
+ansible|2.2.0.0
+gzip|1.5
+scalarizr-ec2|5.1.7
+python-decorator|3.4.0
+m2crypto|0.21.1
+pygobject3-base|3.14.0
+pam|1.1.8
+systemd-libs|219
+procps-ng|3.3.10
+python-lxml|3.2.1
+python-configobj|4.7.2
+python-chardet|2.2.1
+e2fsprogs|1.42.9
+avahi-autoipd|0.6.31
+python-IPy|0.75
+pyserial|2.6
+python-pyudev|0.15
+python-jinja2|2.7.2
+rhnlib|2.5.65
+python-gudev|147.2
+libsemanage-python|2.1.10
+libxml2-python|2.9.1
+python-prettytable|0.7.2
+python-backports-ssl_match_hostname|3.4.0.2
+python-requests|2.6.0
+python-jsonpointer|1.9
+python-perf|3.10.0
+xdg-utils|1.1.0
+nss|3.19.1
+nss-tools|3.19.1
+logrotate|3.8.6
+binutils|2.23.52.0.1
+libssh2|1.4.3
+curl|7.29.0
+rpm|4.11.3
+libuser|0.60
+policycoreutils|2.2.5
+dhcp-libs|4.2.5
+selinux-policy|3.13.1
+usermode|1.111
+python-urlgrabber|3.10
+fipscheck|1.4.1
+kernel-tools-libs|3.10.0
+gnupg2|2.0.22
+pygpgme|0.3
+rpm-python|4.11.3
+redhat-support-lib-python|0.9.7
+qrencode-libs|3.4.1
+libpipeline|1.2.3
+libyaml|0.1.4
+pciutils-libs|3.2.1
+kpartx|0.4.9
+device-mapper-libs|1.02.107
+dracut|033
+systemd|219
+systemd-sysv|219
+initscripts|9.49.30
+polkit-pkla-compat|0.1
+cronie|1.4.11
+os-prober|1.58
+dnsmasq|2.66
+hwdata|0.252
+rhn-client-tools|2.0.2
+libgcc|4.8.5
+rhn-setup|2.0.2
+setup|2.8.71
+rhn-check|2.0.2
+tzdata|2015g
+gnutls|3.3.8
+emacs-filesystem|24.3
+libsoup|2.48.1
+ncurses-base|5.9
+glibc-common|2.17
+libcgroup|0.41
+xz-libs|5.1.2
+json-c|0.11
+ncurses-libs|5.9
+jansson|2.4
+libsepol|2.1.9
+bind-license|9.9.4
+libselinux|2.2.2
+dhclient|4.2.5
+info|5.1
+dracut-network|033
+libuuid|2.23.2
+kbd-legacy|1.15.5
+chkconfig|1.3.61
+kernel|3.10.0
+nspr|4.10.8
+NetworkManager-tui|1.0.6
+nss-util|3.19.1
+rsyslog|7.4.7
+libdb|5.3.21
+grep|2.20
+grub2|2.02
+gawk|4.0.2
+postfix|2.10.1
+libgpg-error|1.12
+rdma|7.2_4.1_rc6
+libffi|3.0.13
+subscription-manager|1.15.9
+pkgconfig|0.27.1
+chrony|2.1.1
+libgcrypt|1.5.3
+openssh-server|6.6.1p1
+libacl|2.2.51
+dracut-config-generic|033
+sqlite|3.7.17
+kernel-tools|3.10.0
+p11-kit|0.20.7
+redhat-support-tool|0.9.7
+lua|5.1.4
+openssh-clients|6.6.1p1
+diffutils|3.3
+authconfig|6.2.8
+libcap-ng|0.7.5
+sudo|1.8.6p7
+which|2.20
+xfsprogs|3.2.2
+findutils|4.5.11
+gdisk|0.8.6
+gmp|6.0.0
+libsysfs|2.1.0
+libnl3-cli|3.2.21
+iwl7265-firmware|22.0.7.0
+libcroco|0.6.8
+gpg-pubkey|fd431d51
+libassuan|2.1.0
+perl-parent|0.225
+e2fsprogs-libs|1.42.9
+perl-podlators|2.5.1
+libgomp|4.8.5
+perl-Pod-Escapes|1.04
+xz|5.1.2
+perl-Encode|2.51
+libnfnetlink|1.0.1
+perl-libs|5.16.3
+newt|0.52.15
+perl-Storable|2.45
+lzo|2.06
+perl-constant|1.27
+hostname|3.13
+perl-Socket|2.010
+keyutils-libs|1.5.8
+perl-Time-HiRes|1.9725
+p11-kit-trust|0.20.7
+perl-Scalar-List-Utils|1.27
+dmidecode|2.12
+perl-File-Path|2.09
+less|458
+perl-threads|1.87
+nettle|2.7.1
+perl-Pod-Simple|3.28
+vim-minimal|7.4.160
+perl|5.16.3
+libxslt|1.1.28
+vim-common|7.4.160
+gsettings-desktop-schemas|3.14.2
+vim-enhanced|7.4.160
+libdb-utils|5.3.21
+libgnome-keyring|3.8.0
+mozjs17|17.0.0
+git|1.8.3.1
+make|3.82
+libunwind|1.1
+checkpolicy|2.1.12
+puppetlabs-release-pc1|1.1.0
+freetype|2.4.11
+gpg-pubkey|ef8d349f
+libmodman|2.0.1
+lksctp-tools|1.0.13
+libicu|50.1.2
+python-javapackages|3.4.1
+libpcap|1.5.3
+java-1.8.0-openjdk-headless|1.8.0.102
+libnetfilter_conntrack|1.0.4
+puppetserver|2.6.0
+iproute|3.10.0
+ntpdate|4.2.6p5
+ustr|1.0.4
+wget|1.14
+sysvinit-tools|2.88
+gpg-pubkey|352c64e5
+krb5-libs|1.13.2
+libtommath|0.42.0
+coreutils|8.22
+python2-crypto|2.6.1
+python-libs|2.7.5
+python-keyczar|0.71c
+shadow-utils|4.1.5.1
+python2-paramiko|1.16.1
+dbus-python|1.1.1
+python-setuptools|0.9.8
+python-dateutil|1.5
+scalarizr|5.1.7
+cracklib|2.9.0
+libselinux-python|2.2.2
+newt-python|0.52.15
+cracklib-dicts|2.9.0
+libpwquality|1.2.3
+libgudev1|219
+libmount|2.23.2
+gettext|0.18.2.1
+python-ethtool|0.8
+python-kitchen|1.1.1
+grubby|8.28
+libutempter|1.1.6
+python-markupsafe|0.11
+python-six|1.9.0
+python-babel|0.9.6
+pyOpenSSL|0.13.1
+pygobject2|2.28.6
+audit-libs-python|2.4.1
+pyliblzma|0.5.3
+python-dmidecode|3.10.13
+python-backports|1.0
+python-urllib3|1.10.2
+pyxattr|0.5.1
+python-jsonpatch|1.2
+yum-metadata-parser|1.1.4
+nss-sysinit|3.19.1
+NetworkManager-libnm|1.0.6
+openssl|1.0.1e
+redhat-logos|70.0.3
+mariadb-libs|5.5.44
+libcurl|7.29.0
+rpm-libs|4.11.3
+openldap|2.4.40
+util-linux|2.23.2
+virt-what|1.13
+dhcp-common|4.2.5
+passwd|0.79
+python-pycurl|7.19.0
+fipscheck-lib|1.4.1
+openssh|6.6.1p1
+pth|2.0.7
+gpgme|1.3.2
+rpm-build-libs|4.11.3
+yum|3.4.3
+python-rhsm|1.15.4
+numactl-libs|2.0.9
+libestr|0.1.9
+PyYAML|3.10
+hardlink|1.0
+device-mapper|1.02.107
+cryptsetup-libs|1.6.7
+kmod|20
+dbus|1.6.12
+iputils|20121221
+polkit|0.112
+cronie-anacron|1.4.11
+crontabs|1.11
+grub2-tools|2.02
+wpa_supplicant|2.0
+python-hwdata|1.7.3
+
+2016-11-30 00:11:38,757-05:00 - INFO - scalarizr.handlers - Scalr built-in automation: checking for supported software.
+If installed software isn't detected, review the Scalr Wiki: https://scalr-wiki.atlassian.net/wiki/x/IoB1
+2016-11-30 00:11:38,759-05:00 - INFO - scalarizr.handlers - app: Unavailable. Not installed.
+2016-11-30 00:11:38,759-05:00 - INFO - scalarizr.handlers - chef: Unavailable. Not installed.
+2016-11-30 00:11:38,764-05:00 - INFO - scalarizr.handlers - haproxy: Unavailable. Not installed.
+2016-11-30 00:11:38,770-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2016-11-30 00:11:38,771-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:11:38,771-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/mysqldump] package=None
+2016-11-30 00:11:38,771-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/innobackupex] package=None
+2016-11-30 00:11:38,772-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/xbstream] package=None
+2016-11-30 00:11:38,772-05:00 - INFO - scalarizr.handlers - mariadb: Unavailable. Not installed.
+2016-11-30 00:11:38,772-05:00 - INFO - scalarizr.handlers - memcached: Unavailable. Not installed.
+2016-11-30 00:11:38,773-05:00 - INFO - scalarizr.handlers - mysql: Unavailable. Not installed.
+2016-11-30 00:11:38,773-05:00 - INFO - scalarizr.handlers - mysql2: Unavailable. Not installed.
+2016-11-30 00:11:38,774-05:00 - INFO - scalarizr.handlers - percona: Unavailable. Not installed.
+2016-11-30 00:11:38,776-05:00 - INFO - scalarizr.handlers - postgresql: Unavailable. Not installed.
+2016-11-30 00:11:38,777-05:00 - INFO - scalarizr.handlers - rabbitmq: Unavailable. Not installed.
+2016-11-30 00:11:38,778-05:00 - INFO - scalarizr.handlers - redis: Unavailable. Not installed.
+2016-11-30 00:11:38,779-05:00 - DEBUG - scalarizr.util - system: echo $JAVA_HOME
+2016-11-30 00:11:38,783-05:00 - DEBUG - root - stdout: 
+
+2016-11-30 00:11:38,784-05:00 - DEBUG - scalarizr.util - system: echo $CATALINA_HOME
+2016-11-30 00:11:38,787-05:00 - DEBUG - root - stdout: 
+
+2016-11-30 00:11:38,787-05:00 - INFO - scalarizr.handlers - tomcat: Unavailable. Not installed.
+2016-11-30 00:11:38,788-05:00 - INFO - scalarizr.handlers - www: Unavailable. Not installed.
+2016-11-30 00:11:38,793-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'before_hello'(<scalarizr.messaging.p2p.store.P2pMessage object at 0x7f0075e5f9d0>,) {}
+2016-11-30 00:11:38,793-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Sending message 'Hello' into queue 'control'
+2016-11-30 00:11:38,827-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:11:38,828-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Delivering message 'Hello' {'server_id': 'bc1ed7c1-d704-4bb0-bc36-37c0e13cd2f4', 'dist': {'distributor': 'redhat', 'release': '7.2', 'codename': 'Maipo'}, 'aws_avail_zone': 'us-west-2c', 'local_ip': '172.31.13.212', 'aws_ami_id': 'ami-775e4f16', 'aws_instance_type': 't2.small', 'behaviour': [], 'aws_instance_id': 'i-2a05edf6', 'role_name': 'RHEL-7-x', 'architecture': 'x86_64', 'os': {'string_version': 'Linux ec2-54-186-206-118.us-west-2.compute.amazonaws.com 3.10.0-327.el7.x86_64 #1 SMP Thu Oct 29 17:29:29 EDT 2015 x86_64 x86_64', 'version': 'RedHat 7.2 Maipo', 'arch': 'x86_64'}, 'remote_ip': '54.186.206.118'}. Json: False, Headers: {'Content-Type': 'xml'}
+2016-11-30 00:11:38,828-05:00 - DEBUG - scalarizr.messaging.p2p.security - Encrypting message
+2016-11-30 00:11:38,879-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Message 'Hello' delivered (message_id: c555b06c-8d1e-4624-83a3-b63e2e343ad9)
+2016-11-30 00:11:38,888-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'hello'() {}
+2016-11-30 00:11:38,888-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'start'() {}
+2016-11-30 00:14:48,023-05:00 - DEBUG - scalarizr.app - Mainloop: KeyboardInterrupt
+2016-11-30 00:14:48,023-05:00 - DEBUG - scalarizr.app - Mainloop: finally
+2016-11-30 00:14:48,023-05:00 - DEBUG - scalarizr.handlers.lifecycle - Calling scalarizr.handlers.lifecycle.on_shutdown
+2016-11-30 00:14:48,023-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'shutdown'() {}
+2016-11-30 00:14:48,023-05:00 - INFO - scalarizr.app - [pid: 1451] Stopping scalarizr 5.1.7
+2016-11-30 00:14:48,024-05:00 - DEBUG - scalarizr.app - Shutdowning external messaging
+2016-11-30 00:14:48,024-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - entring shutdown _server: <BaseHTTPServer.HTTPServer instance at 0x7f0075e716c8>, running: True
+2016-11-30 00:14:48,024-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Shutdown message consumer http://0.0.0.0:8013 ...
+2016-11-30 00:14:48,024-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Shutdown HTTP server
+2016-11-30 00:14:48,069-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - HTTP server terminated
+2016-11-30 00:14:48,069-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Shutdown message handler
+2016-11-30 00:14:48,090-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message handler stopped
+2016-11-30 00:14:48,091-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message handler terminated
+2016-11-30 00:14:48,091-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message consumer http://0.0.0.0:8013 terminated
+2016-11-30 00:14:48,091-05:00 - DEBUG - scalarizr.app - Shutdowning API server
+2016-11-30 00:14:48,136-05:00 - DEBUG - scalarizr.app - Shutdowning periodical executor
+2016-11-30 00:14:48,652-05:00 - INFO - scalarizr.app - [pid: 1451] Scalarizr terminated
+2016-11-30 00:14:48,652-05:00 - DEBUG - scalarizr.app - Mainloop: leave
+2016-11-30 00:18:35,875-05:00 - INFO - scalarizr.app - [pid: 1541] Starting scalarizr 5.1.7
+2016-11-30 00:18:35,875-05:00 - INFO - scalarizr.node - State: importing
+2016-11-30 00:18:35,876-05:00 - INFO - scalarizr.app - Configuring Scalarizr. This can take a few minutes...
+2016-11-30 00:18:35,876-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:18:35,876-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:18:35,876-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:18:35,877-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:18:35,877-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:18:35,877-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:18:35,877-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:18:35,877-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:18:35,878-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:18:35,878-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:18:35,878-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:18:35,879-05:00 - DEBUG - scalarizr.config - Updating configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:18:35,880-05:00 - DEBUG - scalarizr.config - Updating configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:18:35,881-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2016-11-30 00:18:35,881-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:18:35,881-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:18:35,881-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:18:35,881-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:18:35,882-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:18:35,882-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:18:35,882-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:18:35,882-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:18:35,882-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:18:35,883-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:18:35,883-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.lifecycle
+2016-11-30 00:18:35,887-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.lifecycle
+2016-11-30 00:18:35,888-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ip_list_builder
+2016-11-30 00:18:35,888-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ip_list_builder
+2016-11-30 00:18:35,888-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.script_executor
+2016-11-30 00:18:35,888-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.script_executor
+2016-11-30 00:18:35,888-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.hooks
+2016-11-30 00:18:35,889-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.hooks
+2016-11-30 00:18:35,889-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:18:35,889-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:18:35,889-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.deploy
+2016-11-30 00:18:35,889-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.deploy
+2016-11-30 00:18:35,890-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:18:35,890-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:18:35,890-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:18:35,910-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:18:35,910-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.ebs
+2016-11-30 00:18:35,910-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.ebs
+2016-11-30 00:18:35,911-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:18:35,911-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2016-11-30 00:18:35,911-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2016-11-30 00:18:35,911-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2016-11-30 00:18:35,912-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2016-11-30 00:18:35,912-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2016-11-30 00:18:35,912-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2016-11-30 00:18:35,912-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2016-11-30 00:18:35,913-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2016-11-30 00:18:35,913-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2016-11-30 00:18:35,913-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2016-11-30 00:18:35,913-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2016-11-30 00:18:35,914-05:00 - DEBUG - scalarizr.app - Enable RedHat subscription
+2016-11-30 00:18:35,918-05:00 - DEBUG - scalarizr.app - Initialize platform
+2016-11-30 00:18:35,920-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2016-11-30 00:18:35,939-05:00 - DEBUG - scalarizr.util - system: ('/usr/bin/yum', '-d0', '-y', 'clean', 'all', '--exclude', '*.i386', '--exclude', '*.i486', '--exclude', '*.i686')
+2016-11-30 00:18:36,151-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:18:36,151-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2016-11-30 00:18:36,152-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.lifecycle
+2016-11-30 00:18:36,153-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.lifecycle
+2016-11-30 00:18:36,153-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ip_list_builder
+2016-11-30 00:18:36,153-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ip_list_builder
+2016-11-30 00:18:36,153-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.script_executor
+2016-11-30 00:18:36,153-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.script_executor
+2016-11-30 00:18:36,153-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.hooks
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.hooks
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ssh_auth_keys
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.deploy
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.deploy
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.lifecycle
+2016-11-30 00:18:36,154-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:18:36,155-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.rebundle
+2016-11-30 00:18:36,155-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.ebs
+2016-11-30 00:18:36,155-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.ebs
+2016-11-30 00:18:36,155-05:00 - DEBUG - scalarizr.app - Got scalr url: 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com'
+2016-11-30 00:18:36,155-05:00 - DEBUG - scalarizr.app - Initialize QueryEnv client
+2016-11-30 00:18:36,156-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2016-11-30 00:18:36,161-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/get-global-config
+2016-11-30 00:18:36,161-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-global-config', 'version': u'2015-04-10'}
+2016-11-30 00:18:36,181-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {'scalr.id': 'd972ee78', 'scalr.version': '5.11.22', 'dns.static.endpoint': 'example-dns.net'}
+2016-11-30 00:18:36,181-05:00 - DEBUG - scalarizr.app - Initialize messaging
+2016-11-30 00:18:36,184-05:00 - DEBUG - scalarizr.app - Initialize message handlers
+2016-11-30 00:18:36,184-05:00 - DEBUG - scalarizr.handlers - Initializing message listener
+2016-11-30 00:18:36,185-05:00 - DEBUG - scalarizr.handlers - Keywords for each Handler::accept
+{'behaviour': [],
+ 'dist': ('redhat', '7.2', 'Maipo'),
+ 'os': ('Linux',
+        'ec2-54-186-206-118.us-west-2.compute.amazonaws.com',
+        '3.10.0-327.el7.x86_64',
+        '#1 SMP Thu Oct 29 17:29:29 EDT 2015',
+        'x86_64',
+        'x86_64'),
+ 'platform': 'ec2'}
+2016-11-30 00:18:36,185-05:00 - DEBUG - scalarizr.handlers - Collecting message handlers...
+2016-11-30 00:18:36,186-05:00 - DEBUG - scalarizr.handlers - Message handlers chain:
+[<scalarizr.handlers.ip_list_builder.IpListBuilder object at 0x7f3df6f21c90>,
+ <scalarizr.handlers.ec2.ebs.EbsHandler object at 0x7f3df6f21f50>,
+ <scalarizr.handlers.ec2.rebundle.Ec2RebundleHandler object at 0x7f3df6f21f10>,
+ <scalarizr.handlers.ec2.lifecycle.Ec2LifeCycleHandler object at 0x7f3df6f21e90>,
+ <scalarizr.handlers.hooks.HooksHandler object at 0x7f3df6f21e10>,
+ <scalarizr.handlers.script_executor.ScriptExecutor object at 0x7f3df6f21cd0>,
+ <scalarizr.handlers.lifecycle.LifeCycleHandler object at 0x7f3df6f21790>]
+2016-11-30 00:18:36,186-05:00 - DEBUG - scalarizr.messaging.p2p.store - Add rotate messages table task for periodical executor
+2016-11-30 00:18:36,201-05:00 - DEBUG - scalarizr.handlers.block_device - Ensure udev rule for EBS devices
+2016-11-30 00:18:36,202-05:00 - DEBUG - scalarizr.util - system: ('/sbin/ntpdate', '-u', '0.amazon.pool.ntp.org')
+2016-11-30 00:18:42,969-05:00 - DEBUG - root - stdout: 30 Nov 00:18:42 ntpdate[1552]: adjust time server 74.82.59.142 offset -0.019664 sec
+
+2016-11-30 00:18:42,969-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/ec2.ini
+2016-11-30 00:18:42,972-05:00 - DEBUG - scalarizr.handlers.ec2.lifecycle - Setting hostname to ec2-54-186-206-118.us-west-2.compute.amazonaws.com
+2016-11-30 00:18:42,972-05:00 - DEBUG - scalarizr.util - system: hostname ec2-54-186-206-118.us-west-2.compute.amazonaws.com
+2016-11-30 00:18:42,977-05:00 - DEBUG - scalarizr.util - system: mount -a
+2016-11-30 00:18:42,998-05:00 - DEBUG - scalarizr.util - system: ('mount', '-a')
+2016-11-30 00:18:43,002-05:00 - DEBUG - scalarizr.handlers.lifecycle - Adding iptables rules for scalarizr ports
+2016-11-30 00:18:43,002-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:18:43,005-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:18:43,006-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:18:43,009-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:18:43,010-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:18:43,013-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:18:43,013-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:18:43,016-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:18:43,017-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2016-11-30 00:18:43,020-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:18:43,021-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT', '--table', 'filter')
+2016-11-30 00:18:43,023-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+-A INPUT -p tcp -m tcp --dport 8008 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8010 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8012 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 8013 -j ACCEPT
+-A INPUT -p udp -m udp --dport 8014 -j ACCEPT
+
+2016-11-30 00:18:43,024-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'init'() {}
+2016-11-30 00:18:43,025-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2016-11-30 00:18:43,025-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2016-11-30 00:18:43,026-05:00 - DEBUG - agent.scalarizr.utils.mixutil.PeriodicalExecutor - Executing task Rotate messages sqlite table
+2016-11-30 00:18:43,027-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message consumer http://0.0.0.0:8013
+2016-11-30 00:18:43,027-05:00 - DEBUG - scalarizr.handlers.script_executor - Starting log_rotate routine
+2016-11-30 00:18:43,027-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message handler
+2016-11-30 00:18:43,029-05:00 - DEBUG - scalarizr.handlers.script_executor - STATE[script_executor.in_progress]: []
+2016-11-30 00:18:43,032-05:00 - INFO - scalarizr.handlers.script_executor - Restoring supervision of 0 orchestration scripts
+2016-11-30 00:18:43,066-05:00 - INFO - scalarizr.handlers.lifecycle - Server will be imported into Scalr
+2016-11-30 00:18:43,069-05:00 - INFO - scalarizr.handlers - Detecting supported behaviors...
+2016-11-30 00:18:43,070-05:00 - DEBUG - scalarizr.util - system: ('/bin/rpm', '-qa', '--queryformat', '%{NAME}|%{VERSION}\n')
+2016-11-30 00:18:43,404-05:00 - DEBUG - root - stdout: rhnsd|5.0.13
+redhat-release-server|7.2
+yum-rhn-plugin|2.0.1
+filesystem|3.2
+trousers|0.3.13
+basesystem|10.0
+glib-networking|2.42.0
+kbd-misc|1.15.5
+net-tools|2.0
+nss-softokn-freebl|3.16.2.3
+ppp|2.4.5
+glibc|2.17
+policycoreutils-python|2.2.5
+libstdc++|4.8.5
+libndp|1.2
+bash|4.2.46
+teamd|1.17
+pcre|8.32
+bind-libs-lite|9.9.4
+zlib|1.2.7
+NetworkManager|1.0.6
+audit-libs|2.4.1
+popt|1.13
+kbd|1.15.5
+sed|4.2.2
+kexec-tools|2.0.7
+libcom_err|1.42.9
+NetworkManager-team|1.0.6
+libxml2|2.9.1
+cloud-init|0.7.6
+bzip2-libs|1.0.6
+rh-amazon-rhui-client|2.2.124
+dbus-libs|1.6.12
+audit|2.4.1
+readline|6.2
+irqbalance|1.0.7
+elfutils-libelf|0.163
+tuned|2.5.1
+glib2|2.42.2
+rsync|3.0.9
+shared-mime-info|1.1
+microcode_ctl|2.1
+libattr|2.4.46
+dracut-config-rescue|033
+libcap|2.22
+parted|3.1
+libnl3|3.2.21
+man-db|2.6.3
+elfutils-libs|0.163
+yum-utils|1.1.31
+cpio|2.11
+selinux-policy-targeted|3.13.1
+expat|2.1.0
+cloud-utils-growpart|0.27
+dbus-glib|0.100
+Red_Hat_Enterprise_Linux-Release_Notes-7-en-US|7
+libidn|1.28
+btrfs-progs|3.19.1
+file-libs|5.11
+tar|1.26
+file|5.11
+rootfiles|8.1
+nss-softokn|3.16.2.3
+NetworkManager-config-server|1.0.6
+gobject-introspection|1.42.0
+gpg-pubkey|2fa658e0
+cyrus-sasl-lib|2.1.26
+perl-HTTP-Tiny|0.033
+groff-base|1.22.2
+perl-Pod-Perldoc|3.20
+libunistring|0.9.3
+perl-Text-ParseWords|3.29
+libedit|3.0
+perl-Pod-Usage|1.63
+slang|2.2.4
+perl-macros|5.16.3
+tcp_wrappers-libs|7.6
+perl-Exporter|5.68
+libdaemon|0.14
+perl-Time-Local|1.2300
+ethtool|3.15
+perl-Carp|1.26
+libtasn1|3.8
+perl-PathTools|3.40
+gdbm|1.10
+perl-File-Temp|0.23.01
+gettext-libs|0.18.2.1
+perl-threads-shared|1.43
+libteam|1.17
+perl-Filter|1.49
+setools-libs|3.3.7
+perl-Getopt-Long|2.40
+acl|2.2.51
+vim-filesystem|7.4.160
+desktop-file-utils|0.22
+gpm-libs|1.20.7
+avahi-libs|0.6.31
+perl-Error|0.17020
+libss|1.42.9
+perl-TermReadKey|2.30
+pinentry|0.8.1
+perl-Git|1.8.3.1
+kmod-libs|20
+powershell|6.0.0_alpha.10
+libselinux-utils|2.2.2
+gpg-pubkey|4bd6ec30
+ncurses|5.9
+tzdata-java|2016g
+libproxy|0.4.11
+libjpeg-turbo|1.2.90
+snappy|1.1.0
+javapackages-tools|3.4.1
+libmnl|1.0.3
+puppet-agent|1.7.0
+iptables|1.4.21
+autogen-libopts|5.18
+libnl|1.1.4
+ntp|4.2.6p5
+libsemanage|2.1.10
+epel-release|7
+libverto|0.2.5
+sshpass|1.05
+openssl-libs|1.0.1e
+libtomcrypt|1.17
+ca-certificates|2015.2.4
+python2-pyasn1|0.1.9
+python|2.7.5
+python2-ecdsa|0.13
+libblkid|2.23.2
+python-httplib2|0.7.7
+python-iniparse|0.4
+ansible|2.2.0.0
+gzip|1.5
+scalarizr-ec2|5.1.7
+python-decorator|3.4.0
+m2crypto|0.21.1
+pygobject3-base|3.14.0
+pam|1.1.8
+systemd-libs|219
+procps-ng|3.3.10
+python-lxml|3.2.1
+python-configobj|4.7.2
+python-chardet|2.2.1
+e2fsprogs|1.42.9
+avahi-autoipd|0.6.31
+python-IPy|0.75
+pyserial|2.6
+python-pyudev|0.15
+python-jinja2|2.7.2
+rhnlib|2.5.65
+python-gudev|147.2
+libsemanage-python|2.1.10
+libxml2-python|2.9.1
+python-prettytable|0.7.2
+python-backports-ssl_match_hostname|3.4.0.2
+python-requests|2.6.0
+python-jsonpointer|1.9
+python-perf|3.10.0
+xdg-utils|1.1.0
+nss|3.19.1
+nss-tools|3.19.1
+logrotate|3.8.6
+binutils|2.23.52.0.1
+libssh2|1.4.3
+curl|7.29.0
+rpm|4.11.3
+libuser|0.60
+policycoreutils|2.2.5
+dhcp-libs|4.2.5
+selinux-policy|3.13.1
+usermode|1.111
+python-urlgrabber|3.10
+fipscheck|1.4.1
+kernel-tools-libs|3.10.0
+gnupg2|2.0.22
+pygpgme|0.3
+rpm-python|4.11.3
+redhat-support-lib-python|0.9.7
+qrencode-libs|3.4.1
+libpipeline|1.2.3
+libyaml|0.1.4
+pciutils-libs|3.2.1
+kpartx|0.4.9
+device-mapper-libs|1.02.107
+dracut|033
+systemd|219
+systemd-sysv|219
+initscripts|9.49.30
+polkit-pkla-compat|0.1
+cronie|1.4.11
+os-prober|1.58
+dnsmasq|2.66
+hwdata|0.252
+rhn-client-tools|2.0.2
+libgcc|4.8.5
+rhn-setup|2.0.2
+setup|2.8.71
+rhn-check|2.0.2
+tzdata|2015g
+gnutls|3.3.8
+emacs-filesystem|24.3
+libsoup|2.48.1
+ncurses-base|5.9
+glibc-common|2.17
+libcgroup|0.41
+xz-libs|5.1.2
+json-c|0.11
+ncurses-libs|5.9
+jansson|2.4
+libsepol|2.1.9
+bind-license|9.9.4
+libselinux|2.2.2
+dhclient|4.2.5
+info|5.1
+dracut-network|033
+libuuid|2.23.2
+kbd-legacy|1.15.5
+chkconfig|1.3.61
+kernel|3.10.0
+nspr|4.10.8
+NetworkManager-tui|1.0.6
+nss-util|3.19.1
+rsyslog|7.4.7
+libdb|5.3.21
+grep|2.20
+grub2|2.02
+gawk|4.0.2
+postfix|2.10.1
+libgpg-error|1.12
+rdma|7.2_4.1_rc6
+libffi|3.0.13
+subscription-manager|1.15.9
+pkgconfig|0.27.1
+chrony|2.1.1
+libgcrypt|1.5.3
+openssh-server|6.6.1p1
+libacl|2.2.51
+dracut-config-generic|033
+sqlite|3.7.17
+kernel-tools|3.10.0
+p11-kit|0.20.7
+redhat-support-tool|0.9.7
+lua|5.1.4
+openssh-clients|6.6.1p1
+diffutils|3.3
+authconfig|6.2.8
+libcap-ng|0.7.5
+sudo|1.8.6p7
+which|2.20
+xfsprogs|3.2.2
+findutils|4.5.11
+gdisk|0.8.6
+gmp|6.0.0
+libsysfs|2.1.0
+libnl3-cli|3.2.21
+iwl7265-firmware|22.0.7.0
+libcroco|0.6.8
+gpg-pubkey|fd431d51
+libassuan|2.1.0
+perl-parent|0.225
+e2fsprogs-libs|1.42.9
+perl-podlators|2.5.1
+libgomp|4.8.5
+perl-Pod-Escapes|1.04
+xz|5.1.2
+perl-Encode|2.51
+libnfnetlink|1.0.1
+perl-libs|5.16.3
+newt|0.52.15
+perl-Storable|2.45
+lzo|2.06
+perl-constant|1.27
+hostname|3.13
+perl-Socket|2.010
+keyutils-libs|1.5.8
+perl-Time-HiRes|1.9725
+p11-kit-trust|0.20.7
+perl-Scalar-List-Utils|1.27
+dmidecode|2.12
+perl-File-Path|2.09
+less|458
+perl-threads|1.87
+nettle|2.7.1
+perl-Pod-Simple|3.28
+vim-minimal|7.4.160
+perl|5.16.3
+libxslt|1.1.28
+vim-common|7.4.160
+gsettings-desktop-schemas|3.14.2
+vim-enhanced|7.4.160
+libdb-utils|5.3.21
+libgnome-keyring|3.8.0
+mozjs17|17.0.0
+git|1.8.3.1
+make|3.82
+libunwind|1.1
+checkpolicy|2.1.12
+puppetlabs-release-pc1|1.1.0
+freetype|2.4.11
+gpg-pubkey|ef8d349f
+libmodman|2.0.1
+lksctp-tools|1.0.13
+libicu|50.1.2
+python-javapackages|3.4.1
+libpcap|1.5.3
+java-1.8.0-openjdk-headless|1.8.0.102
+libnetfilter_conntrack|1.0.4
+puppetserver|2.6.0
+iproute|3.10.0
+ntpdate|4.2.6p5
+ustr|1.0.4
+wget|1.14
+sysvinit-tools|2.88
+gpg-pubkey|352c64e5
+krb5-libs|1.13.2
+libtommath|0.42.0
+coreutils|8.22
+python2-crypto|2.6.1
+python-libs|2.7.5
+python-keyczar|0.71c
+shadow-utils|4.1.5.1
+python2-paramiko|1.16.1
+dbus-python|1.1.1
+python-setuptools|0.9.8
+python-dateutil|1.5
+scalarizr|5.1.7
+cracklib|2.9.0
+libselinux-python|2.2.2
+newt-python|0.52.15
+cracklib-dicts|2.9.0
+libpwquality|1.2.3
+libgudev1|219
+libmount|2.23.2
+gettext|0.18.2.1
+python-ethtool|0.8
+python-kitchen|1.1.1
+grubby|8.28
+libutempter|1.1.6
+python-markupsafe|0.11
+python-six|1.9.0
+python-babel|0.9.6
+pyOpenSSL|0.13.1
+pygobject2|2.28.6
+audit-libs-python|2.4.1
+pyliblzma|0.5.3
+python-dmidecode|3.10.13
+python-backports|1.0
+python-urllib3|1.10.2
+pyxattr|0.5.1
+python-jsonpatch|1.2
+yum-metadata-parser|1.1.4
+nss-sysinit|3.19.1
+NetworkManager-libnm|1.0.6
+openssl|1.0.1e
+redhat-logos|70.0.3
+mariadb-libs|5.5.44
+libcurl|7.29.0
+rpm-libs|4.11.3
+openldap|2.4.40
+util-linux|2.23.2
+virt-what|1.13
+dhcp-common|4.2.5
+passwd|0.79
+python-pycurl|7.19.0
+fipscheck-lib|1.4.1
+openssh|6.6.1p1
+pth|2.0.7
+gpgme|1.3.2
+rpm-build-libs|4.11.3
+yum|3.4.3
+python-rhsm|1.15.4
+numactl-libs|2.0.9
+libestr|0.1.9
+PyYAML|3.10
+hardlink|1.0
+device-mapper|1.02.107
+cryptsetup-libs|1.6.7
+kmod|20
+dbus|1.6.12
+iputils|20121221
+polkit|0.112
+cronie-anacron|1.4.11
+crontabs|1.11
+grub2-tools|2.02
+wpa_supplicant|2.0
+python-hwdata|1.7.3
+
+2016-11-30 00:18:43,405-05:00 - INFO - scalarizr.handlers - Scalr built-in automation: checking for supported software.
+If installed software isn't detected, review the Scalr Wiki: https://scalr-wiki.atlassian.net/wiki/x/IoB1
+2016-11-30 00:18:43,407-05:00 - INFO - scalarizr.handlers - app: Unavailable. Not installed.
+2016-11-30 00:18:43,407-05:00 - INFO - scalarizr.handlers - chef: Unavailable. Not installed.
+2016-11-30 00:18:43,412-05:00 - INFO - scalarizr.handlers - haproxy: Unavailable. Not installed.
+2016-11-30 00:18:43,418-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2016-11-30 00:18:43,418-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:18:43,419-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/mysqldump] package=None
+2016-11-30 00:18:43,419-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/innobackupex] package=None
+2016-11-30 00:18:43,419-05:00 - DEBUG - scalarizr.services.mysql2 - Exec[/usr/bin/xbstream] package=None
+2016-11-30 00:18:43,420-05:00 - INFO - scalarizr.handlers - mariadb: Unavailable. Not installed.
+2016-11-30 00:18:43,420-05:00 - INFO - scalarizr.handlers - memcached: Unavailable. Not installed.
+2016-11-30 00:18:43,420-05:00 - INFO - scalarizr.handlers - mysql: Unavailable. Not installed.
+2016-11-30 00:18:43,421-05:00 - INFO - scalarizr.handlers - mysql2: Unavailable. Not installed.
+2016-11-30 00:18:43,421-05:00 - INFO - scalarizr.handlers - percona: Unavailable. Not installed.
+2016-11-30 00:18:43,423-05:00 - INFO - scalarizr.handlers - postgresql: Unavailable. Not installed.
+2016-11-30 00:18:43,424-05:00 - INFO - scalarizr.handlers - rabbitmq: Unavailable. Not installed.
+2016-11-30 00:18:43,425-05:00 - INFO - scalarizr.handlers - redis: Unavailable. Not installed.
+2016-11-30 00:18:43,426-05:00 - DEBUG - scalarizr.util - system: echo $JAVA_HOME
+2016-11-30 00:18:43,430-05:00 - DEBUG - root - stdout: 
+
+2016-11-30 00:18:43,431-05:00 - DEBUG - scalarizr.util - system: echo $CATALINA_HOME
+2016-11-30 00:18:43,434-05:00 - DEBUG - root - stdout: 
+
+2016-11-30 00:18:43,435-05:00 - INFO - scalarizr.handlers - tomcat: Unavailable. Not installed.
+2016-11-30 00:18:43,435-05:00 - INFO - scalarizr.handlers - www: Unavailable. Not installed.
+2016-11-30 00:18:43,440-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'before_hello'(<scalarizr.messaging.p2p.store.P2pMessage object at 0x7f3df6f219d0>,) {}
+2016-11-30 00:18:43,440-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Sending message 'Hello' into queue 'control'
+2016-11-30 00:18:43,449-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2016-11-30 00:18:43,451-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Delivering message 'Hello' {'server_id': 'cd3878d4-c6a0-43d1-aa5c-d2bb220ec66d', 'dist': {'distributor': 'redhat', 'release': '7.2', 'codename': 'Maipo'}, 'aws_avail_zone': 'us-west-2c', 'local_ip': '172.31.13.212', 'aws_ami_id': 'ami-775e4f16', 'aws_instance_type': 't2.small', 'behaviour': [], 'aws_instance_id': 'i-2a05edf6', 'role_name': 'RHEL-7-x', 'architecture': 'x86_64', 'os': {'string_version': 'Linux ec2-54-186-206-118.us-west-2.compute.amazonaws.com 3.10.0-327.el7.x86_64 #1 SMP Thu Oct 29 17:29:29 EDT 2015 x86_64 x86_64', 'version': 'RedHat 7.2 Maipo', 'arch': 'x86_64'}, 'remote_ip': '54.186.206.118'}. Json: False, Headers: {'Content-Type': 'xml'}
+2016-11-30 00:18:43,451-05:00 - DEBUG - scalarizr.messaging.p2p.security - Encrypting message
+2016-11-30 00:18:43,499-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Message 'Hello' delivered (message_id: 54f5d525-8bdd-4c44-ad65-909e5fdee740)
+2016-11-30 00:18:43,507-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'hello'() {}
+2016-11-30 00:18:43,508-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'start'() {}
+2017-01-04 00:43:17,168-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2017-01-04 00:43:17,169-05:00 - DEBUG - scalarizr.util - Wait 0.10 seconds before the next attempt
+2017-01-04 00:43:17,169-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2017-01-04 00:43:17,170-05:00 - DEBUG - scalarizr.util - Wait 0.10 seconds before the next attempt
+2017-01-04 00:43:17,194-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2017-01-04 00:43:17,204-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2017-01-04 00:43:17,204-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2017-01-04 00:43:17,206-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2017-01-04 00:43:17,209-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2017-01-04 00:43:17,210-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2017-01-04 00:43:17,211-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2017-01-04 00:43:17,221-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2017-01-04 00:43:17,221-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2017-01-04 00:43:17,221-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2017-01-04 00:43:17,239-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2017-01-04 00:43:17,241-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2017-01-04 00:43:17,242-05:00 - DEBUG - scalarizr.app - Initialize script messaging
+2017-01-04 00:43:17,244-05:00 - INFO - scalarizr.scripts.udev - Starting udev script...
+2017-01-04 00:43:17,256-05:00 - DEBUG - scalarizr.util.initdv2 - Daemon.ctl (command: systemctl is-active scalarizr.service)
+2017-01-04 00:43:17,256-05:00 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-active', 'scalarizr.service')
+2017-01-04 00:43:17,274-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2017-01-04 00:43:17,274-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2017-01-04 00:43:17,274-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2017-01-04 00:43:17,275-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2017-01-04 00:43:17,275-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2017-01-04 00:43:17,275-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2017-01-04 00:43:17,276-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2017-01-04 00:43:17,276-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2017-01-04 00:43:17,276-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2017-01-04 00:43:17,276-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2017-01-04 00:43:17,277-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2017-01-04 00:43:17,277-05:00 - DEBUG - scalarizr.app - Initialize script messaging
+2017-01-04 00:43:17,279-05:00 - INFO - scalarizr.scripts.udev - Starting udev script...
+2017-01-04 00:43:17,279-05:00 - DEBUG - scalarizr.util.initdv2 - Daemon.ctl (command: systemctl is-active scalarizr.service)
+2017-01-04 00:43:17,279-05:00 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-active', 'scalarizr.service')
+2017-01-04 00:43:17,280-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2017-01-04 00:43:17,281-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2017-01-04 00:43:17,281-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2017-01-04 00:43:17,282-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2017-01-04 00:43:17,282-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2017-01-04 00:43:17,309-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2017-01-04 00:43:17,309-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2017-01-04 00:43:17,310-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2017-01-04 00:43:17,310-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2017-01-04 00:43:17,310-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2017-01-04 00:43:17,311-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2017-01-04 00:43:17,311-05:00 - DEBUG - scalarizr.app - Initialize script messaging
+2017-01-04 00:43:17,313-05:00 - INFO - scalarizr.scripts.udev - Starting udev script...
+2017-01-04 00:43:17,313-05:00 - DEBUG - scalarizr.util.initdv2 - Daemon.ctl (command: systemctl is-active scalarizr.service)
+2017-01-04 00:43:17,313-05:00 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-active', 'scalarizr.service')
+2017-01-04 00:43:17,345-05:00 - DEBUG - root - stdout: unknown
+
+2017-01-04 00:43:17,351-05:00 - DEBUG - root - stdout: unknown
+
+2017-01-04 00:43:17,352-05:00 - DEBUG - root - stdout: unknown
+
+2017-01-04 00:44:55,913-05:00 - INFO - scalarizr.app - [pid: 9341] Starting scalarizr 4.12.2
+2017-01-04 00:44:55,913-05:00 - INFO - scalarizr.node - State: unknown
+2017-01-04 00:44:55,914-05:00 - DEBUG - scalarizr.util - system: ('/etc/init.d/scalr-upd-client', 'status')
+2017-01-04 00:44:55,952-05:00 - DEBUG - root - stdout: ● scalr-upd-client.service - Update service for Scalr`s guest agent.
+   Loaded: loaded (/usr/lib/systemd/system/scalr-upd-client.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2017-01-04 00:43:31 EST; 1min 24s ago
+     Docs: https://github.com/Scalr/scalarizr
+ Main PID: 5227 (scalr-upd-clien)
+   CGroup: /system.slice/scalr-upd-client.service
+           └─5227 /opt/scalarizr/embedded/bin/python /usr/bin/scalr-upd-client -l /var/log/scalarizr_update.log
+
+Jan 04 00:43:31 ip-172-31-15-60.us-west-2.compute.internal systemd[1]: scalr-upd-client.service holdoff time over, scheduling restart.
+Jan 04 00:43:31 ip-172-31-15-60.us-west-2.compute.internal systemd[1]: Started Update service for Scalr`s guest agent..
+Jan 04 00:43:31 ip-172-31-15-60.us-west-2.compute.internal systemd[1]: Starting Update service for Scalr`s guest agent....
+
+2017-01-04 00:44:55,952-05:00 - INFO - scalarizr.app - Polling UpdateClient state...
+2017-01-04 00:44:55,953-05:00 - DEBUG - scalarizr.app - UpdateClient state: completed/wait-ack
+2017-01-04 00:44:55,954-05:00 - DEBUG - scalarizr.app - UpdateClient state: completed/wait-ack
+2017-01-04 00:44:55,967-05:00 - INFO - scalarizr.app - UpdateClient state: completed/wait-ack
+2017-01-04 00:44:55,967-05:00 - INFO - scalarizr.app - UpdateClient completed update and should be restarted, restarting
+2017-01-04 00:44:55,967-05:00 - INFO - scalarizr.util.initdv2 - Stopping scalr-upd-client
+2017-01-04 00:44:55,968-05:00 - DEBUG - scalarizr.util - system: ('/etc/init.d/scalr-upd-client', 'stop')
+2017-01-04 00:44:56,132-05:00 - DEBUG - root - stdout: Stopping scalr-upd-client (via systemctl):  [  OK  ]
+
+2017-01-04 00:44:56,132-05:00 - INFO - scalarizr.util.initdv2 - Starting scalr-upd-client
+2017-01-04 00:44:56,132-05:00 - DEBUG - scalarizr.util - system: ('/etc/init.d/scalr-upd-client', 'start')
+2017-01-04 00:44:56,177-05:00 - DEBUG - root - stdout: Starting scalr-upd-client (via systemctl):  [  OK  ]
+
+2017-01-04 00:44:56,177-05:00 - DEBUG - common.utils.mixutil - Trying until <function <lambda> at 0x7f6e88d04ed8> (timeout: 60 interval: 1 times: unlimited)
+2017-01-04 00:44:56,178-05:00 - DEBUG - common.utils.mixutil - /var/run/scalarizr/result.json not exists (1) ...
+2017-01-04 00:44:56,178-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2017-01-04 00:44:56,179-05:00 - INFO - scalarizr.app - This image was bundled with cloud API call. Cleanuping ancestor server data
+2017-01-04 00:44:56,180-05:00 - DEBUG - scalarizr.util - system: sync
+2017-01-04 00:45:12,334-05:00 - INFO - scalarizr.node - State: bootstrapping
+2017-01-04 00:45:12,335-05:00 - DEBUG - scalarizr.app - Applying user-data to configuration
+2017-01-04 00:45:12,344-05:00 - DEBUG - scalarizr.app - User-data (Instance):
+{'behaviors': 'base',
+ 'cloud_location_zone': '',
+ 'cloud_server_id': '',
+ 'cloud_storage_path': 's3://',
+ 'env_id': '1',
+ 'farm_roleid': '4',
+ 'farmid': '2',
+ 'hash': 'c22920c5c486da',
+ 'httpproto': 'http',
+ 'message_format': 'json',
+ 'owner_email': '',
+ 'p2p_producer_endpoint': 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/messaging',
+ 'platform': 'ec2',
+ 'queryenv_url': 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env',
+ 'realrolename': 'Puppet-Master',
+ 'region': 'us-west-2',
+ 'role': 'base',
+ 'roleid': '6',
+ 's3bucket': '',
+ 'server_index': '1',
+ 'serverid': '20988d13-3546-4c75-87de-50fe4e8b2af9',
+ 'szr_key': 'wKL/RgfscF1Ddt6noEsUe9UG0GFK9nsJwTsZDyn1'}
+2017-01-04 00:45:12,344-05:00 - DEBUG - scalarizr.config - Updating configuration file /etc/scalr/private.d/config.ini
+2017-01-04 00:45:12,345-05:00 - DEBUG - scalarizr.app - Reloading configuration after user-data applying
+2017-01-04 00:45:12,345-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2017-01-04 00:45:12,345-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2017-01-04 00:45:12,346-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2017-01-04 00:45:12,346-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2017-01-04 00:45:12,346-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2017-01-04 00:45:12,347-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2017-01-04 00:45:12,347-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2017-01-04 00:45:12,347-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2017-01-04 00:45:12,347-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2017-01-04 00:45:12,348-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2017-01-04 00:45:12,348-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2017-01-04 00:45:12,348-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=True)
+2017-01-04 00:45:12,348-05:00 - DEBUG - scalarizr.config - Loading main configuration
+2017-01-04 00:45:12,349-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2017-01-04 00:45:12,349-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2017-01-04 00:45:12,349-05:00 - DEBUG - scalarizr.config - Loading platform configuration
+2017-01-04 00:45:12,350-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2017-01-04 00:45:12,350-05:00 - DEBUG - scalarizr.config - Loading behaviours configuration
+2017-01-04 00:45:12,350-05:00 - DEBUG - scalarizr.config - Loading handlers configuration
+2017-01-04 00:45:12,350-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2017-01-04 00:45:12,351-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2017-01-04 00:45:12,351-05:00 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2017-01-04 00:45:12,351-05:00 - DEBUG - scalarizr.app - Enable RedHat subscription
+2017-01-04 00:45:12,367-05:00 - DEBUG - scalarizr.app - Initialize platform
+2017-01-04 00:45:12,707-05:00 - DEBUG - scalarizr.app - Open SQLite database (file: /etc/scalr/private.d/db.sqlite)
+2017-01-04 00:45:12,727-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2017-01-04 00:45:12,728-05:00 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2017-01-04 00:45:12,729-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.lifecycle
+2017-01-04 00:45:12,775-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.lifecycle
+2017-01-04 00:45:12,775-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ip_list_builder
+2017-01-04 00:45:12,777-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ip_list_builder
+2017-01-04 00:45:12,777-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.script_executor
+2017-01-04 00:45:12,778-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.script_executor
+2017-01-04 00:45:12,778-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.hooks
+2017-01-04 00:45:12,779-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.hooks
+2017-01-04 00:45:12,779-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ssh_auth_keys
+2017-01-04 00:45:12,780-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ssh_auth_keys
+2017-01-04 00:45:12,780-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.deploy
+2017-01-04 00:45:12,781-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.deploy
+2017-01-04 00:45:12,781-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.lifecycle
+2017-01-04 00:45:12,795-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.lifecycle
+2017-01-04 00:45:12,795-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.rebundle
+2017-01-04 00:45:12,901-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.rebundle
+2017-01-04 00:45:12,902-05:00 - DEBUG - scalarizr.config - Importing module scalarizr.handlers.ec2.ebs
+2017-01-04 00:45:12,904-05:00 - DEBUG - scalarizr.config - Lookup config container in module scalarizr.handlers.ec2.ebs
+2017-01-04 00:45:12,905-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2017-01-04 00:45:12,905-05:00 - DEBUG - scalarizr.app - Got scalr url: 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com'
+2017-01-04 00:45:12,905-05:00 - DEBUG - scalarizr.app - Initialize QueryEnv client
+2017-01-04 00:45:12,906-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2017-01-04 00:45:12,919-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/get-global-config
+2017-01-04 00:45:12,920-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-global-config', 'version': u'2015-04-10'}
+2017-01-04 00:45:12,937-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {'scalr.id': 'd972ee78', 'scalr.version': '5.11.22', 'dns.static.endpoint': 'example-dns.net'}
+2017-01-04 00:45:12,937-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/list-farm-role-params-json
+2017-01-04 00:45:12,937-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'list-farm-role-params-json', 'version': u'2015-04-10', 'farm-role-id': '4'}
+2017-01-04 00:45:12,967-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {u'base': {u'reboot_after_hostinit_phase': 0, u'disable_firewall_management': 0, u'abort_init_on_script_fail': 1, u'hostname': u'', u'update': {u'deb_repo_url': u'http://repo.scalr.net/apt-plain stable/', u'repository': u'stable', u'server_url': u'http://update.scalr.net/', u'api_port': u'', u'rpm_repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch', u'client_mode': u'client', u'win_repo_url': u'http://repo.scalr.net/win/stable'}, u'api_port': u'8010', u'messaging_port': u'8013', u'scalr_labs_fatmouse_update': 0, u'resume_strategy': u'reboot', u'union_script_executor': 1, u'keep_scripting_logs_time': u'36000'}}
+2017-01-04 00:45:12,968-05:00 - DEBUG - scalarizr.app - Initialize messaging
+2017-01-04 00:45:12,969-05:00 - DEBUG - scalarizr.app - Initialize message handlers
+2017-01-04 00:45:12,969-05:00 - DEBUG - scalarizr.handlers - Initializing message listener
+2017-01-04 00:45:12,970-05:00 - DEBUG - scalarizr.handlers - Keywords for each Handler::accept
+{'behaviour': [],
+ 'dist': ('redhat', '7.2', 'Maipo'),
+ 'os': ('Linux',
+        'ip-172-31-15-60.us-west-2.compute.internal',
+        '3.10.0-327.el7.x86_64',
+        '#1 SMP Thu Oct 29 17:29:29 EDT 2015',
+        'x86_64',
+        'x86_64'),
+ 'platform': 'ec2'}
+2017-01-04 00:45:12,970-05:00 - DEBUG - scalarizr.handlers - Collecting message handlers...
+2017-01-04 00:45:12,971-05:00 - DEBUG - scalarizr.messaging.p2p.store - Add rotate messages table task for periodical executor
+2017-01-04 00:45:13,424-05:00 - DEBUG - scalarizr.handlers - Message handlers chain:
+[<scalarizr.handlers.ip_list_builder.IpListBuilder object at 0x7f6e817ffa50>,
+ <scalarizr.handlers.ec2.ebs.EbsHandler object at 0x7f6e817ffc50>,
+ <scalarizr.handlers.union.base.BaseBehaviorHandler object at 0x7f6e7b0bd2d0>,
+ <scalarizr.handlers.ec2.rebundle.Ec2RebundleHandler object at 0x7f6e817ffc10>,
+ <scalarizr.handlers.ec2.lifecycle.Ec2LifeCycleHandler object at 0x7f6e817ffb90>,
+ <scalarizr.handlers.ssh_auth_keys.SSHKeys object at 0x7f6e817ffb50>,
+ <scalarizr.handlers.hooks.HooksHandler object at 0x7f6e817ffa90>,
+ <scalarizr.handlers.lifecycle.LifeCycleHandler object at 0x7f6e817ff3d0>]
+2017-01-04 00:45:13,444-05:00 - DEBUG - scalarizr.handlers.block_device - Ensure udev rule for EBS devices
+2017-01-04 00:45:13,445-05:00 - DEBUG - scalarizr.util - system: ('/sbin/ntpdate', '-u', '0.amazon.pool.ntp.org')
+2017-01-04 00:45:20,422-05:00 - DEBUG - root - stdout:  4 Jan 00:45:20 ntpdate[9420]: adjust time server 171.66.97.126 offset 0.001159 sec
+
+2017-01-04 00:45:20,423-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/ec2.ini
+2017-01-04 00:45:20,425-05:00 - DEBUG - scalarizr.handlers.ec2.lifecycle - Setting hostname to ec2-54-187-24-126.us-west-2.compute.amazonaws.com
+2017-01-04 00:45:20,425-05:00 - DEBUG - scalarizr.util - system: hostname ec2-54-187-24-126.us-west-2.compute.amazonaws.com
+2017-01-04 00:45:20,432-05:00 - DEBUG - scalarizr.util - system: mount -a
+2017-01-04 00:45:20,449-05:00 - DEBUG - scalarizr.util - system: ('mount', '-a')
+2017-01-04 00:45:20,461-05:00 - DEBUG - scalarizr.handlers.lifecycle - Adding iptables rules for scalarizr ports
+2017-01-04 00:45:20,462-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2017-01-04 00:45:20,465-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:45:20,465-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2017-01-04 00:45:20,468-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:45:20,469-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2017-01-04 00:45:20,471-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:45:20,472-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2017-01-04 00:45:20,487-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:45:20,488-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2017-01-04 00:45:20,491-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:45:20,491-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT', '--table', 'filter')
+2017-01-04 00:45:20,502-05:00 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:45:20,503-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'udp', '--match', 'udp', '--jump', 'ACCEPT', '--dport', '8014', '--insert', 'INPUT')
+2017-01-04 00:45:20,509-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8013', '--insert', 'INPUT')
+2017-01-04 00:45:20,514-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8012', '--insert', 'INPUT')
+2017-01-04 00:45:20,525-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8010', '--insert', 'INPUT')
+2017-01-04 00:45:20,529-05:00 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--protocol', 'tcp', '--match', 'tcp', '--jump', 'ACCEPT', '--dport', '8008', '--insert', 'INPUT')
+2017-01-04 00:45:20,532-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'init'() {}
+2017-01-04 00:45:20,533-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2017-01-04 00:45:20,546-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2017-01-04 00:45:20,547-05:00 - DEBUG - scalarizr.util.PeriodicalExecutor - Executing task Rotate messages sqlite table
+2017-01-04 00:45:20,548-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/list-farm-role-params-json
+2017-01-04 00:45:20,548-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'list-farm-role-params-json', 'version': u'2015-04-10', 'farm-role-id': '4'}
+2017-01-04 00:45:20,551-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message consumer http://0.0.0.0:8013
+2017-01-04 00:45:20,551-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message handler
+2017-01-04 00:45:20,574-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {u'base': {u'reboot_after_hostinit_phase': 0, u'disable_firewall_management': 0, u'abort_init_on_script_fail': 1, u'hostname': u'', u'update': {u'deb_repo_url': u'http://repo.scalr.net/apt-plain stable/', u'repository': u'stable', u'server_url': u'http://update.scalr.net/', u'api_port': u'', u'rpm_repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch', u'client_mode': u'client', u'win_repo_url': u'http://repo.scalr.net/win/stable'}, u'api_port': u'8010', u'messaging_port': u'8013', u'scalr_labs_fatmouse_update': 0, u'resume_strategy': u'reboot', u'union_script_executor': 1, u'keep_scripting_logs_time': u'36000'}}
+2017-01-04 00:45:20,575-05:00 - INFO - scalarizr.handlers.lifecycle - Starting initialization
+2017-01-04 00:45:20,577-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'before_host_init'(<scalarizr.messaging.p2p.store.P2pMessage object at 0x7f6e817975d0>,) {}
+2017-01-04 00:45:20,577-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message consumer locked
+2017-01-04 00:45:20,577-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Sending message 'HostInit' into queue 'control'
+2017-01-04 00:45:20,586-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2017-01-04 00:45:20,587-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Delivering message 'HostInit' {'local_ip': '172.31.15.60', 'seconds_since_boot': 158.93, 'seconds_since_start': 24.66, 'behaviour': [], 'crypto_key': '31/1jc7cpLBxnW47H9+SILWgNGlOxNtoXsu3owQqwrg3UIahnoHtSw==\n', 'role_name': 'Puppet-Master', 'ssh_pub_key': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZxtm7Te3cQn+xWXlUvZt4I5eElzqLxMIbKjCg2AHsb7SNMV7xrtq2wpZDx0rdO+rDgzQo6c3VwGEyAVWT50zxdovSUpilFboFYw+ewMuW3hPvxzKYh5L92UOF/s3MevNOg9Tkd/+UYVx7yTcTM3Pl2TW4qR4N3P9JzqxCZxB2J4dFppZXuoPZD+oWBdT1sBiJmqhhdnoMI+B7IdWGyfCb1ccG626oQBzUuKGGD3sejGREdsrd4wWvGM130MGjdl8UgKI9o61ku05lGqEgKTG2ckcWyVuoKNcSgNGv0AydJh/tTAC7p276oJ5lTnNBbYC9w8ejb/6fb6KYlaYM4qDz FARM-2-d972ee78', 'remote_ip': '54.187.24.126'}. Json: True, Headers: {'Content-Type': 'application/json'}
+2017-01-04 00:45:20,587-05:00 - DEBUG - scalarizr.messaging.p2p.security - Encrypting message
+2017-01-04 00:45:20,605-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Message 'HostInit' delivered (message_id: 79c48aa7-a002-4f60-bf99-a0e60d5d75f4)
+2017-01-04 00:45:20,614-05:00 - DEBUG - scalarizr.handlers.lifecycle - Writing new crypto key to disk
+2017-01-04 00:45:20,614-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Message consumer unlocked
+2017-01-04 00:45:20,614-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Waiting message acknowledge event: HostInit
+2017-01-04 00:45:21,290-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Received ingoing message in queue: 'control'
+2017-01-04 00:45:21,290-05:00 - DEBUG - scalarizr.messaging.p2p.security - Decrypting message
+2017-01-04 00:45:21,294-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Decoding message: {
+    "body": {
+        "server_id": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+        "server_index": "1", 
+        "farm_role_id": "", 
+        "handlers": [
+            "base"
+        ], 
+        "event_id": "39e06590-3d6f-4583-8b1d-8f15ca539095", 
+        "local_ip": "", 
+        "cloud_location": "us-west-2", 
+        "farm_crypto_key": "ryspEl6kB7SxcdTJDupVTc4j4C03Z7u6GsgBJY5H", 
+        "behaviour": "", 
+        "role_name": "", 
+        "base": {
+            "reboot_after_hostinit_phase": 0, 
+            "disable_firewall_management": 0, 
+            "abort_init_on_script_fail": 1, 
+            "hostname": "", 
+            "update": {
+                "deb_repo_url": "http://repo.scalr.net/apt-plain stable/", 
+                "repository": "stable", 
+                "server_url": "http://update.scalr.net/", 
+                "api_port": "", 
+                "rpm_repo_url": "http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch", 
+                "client_mode": "client", 
+                "win_repo_url": "http://repo.scalr.net/win/stable"
+            }, 
+            "api_port": "8010", 
+            "messaging_port": "8013", 
+            "scalr_labs_fatmouse_update": 0, 
+            "resume_strategy": "reboot", 
+            "union_script_executor": 1, 
+            "keep_scripting_logs_time": "36000"
+        }, 
+        "global_variables": [
+            {
+                "value": "ami-1004aa70", 
+                "name": "SCALR_IMAGE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "54.187.24.126", 
+                "name": "SCALR_EXTERNAL_IP", 
+                "system": 1
+            }, 
+            {
+                "value": "172.31.15.60", 
+                "name": "SCALR_INTERNAL_IP", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet-Master", 
+                "name": "SCALR_ROLE_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_ISDBMASTER", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_INSTANCE_INDEX", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_INSTANCE_FARM_INDEX", 
+                "system": 1
+            }, 
+            {
+                "value": "m3.medium", 
+                "name": "SCALR_SERVER_TYPE", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_SERVER_HOSTNAME", 
+                "system": 1
+            }, 
+            {
+                "value": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+                "name": "SCALR_SERVER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "2", 
+                "name": "SCALR_FARM_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "4", 
+                "name": "SCALR_FARM_ROLE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet-Master", 
+                "name": "SCALR_FARM_ROLE_ALIAS", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet Enterprise", 
+                "name": "SCALR_FARM_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "c22920c5c486da", 
+                "name": "SCALR_FARM_HASH", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_FARM_OWNER_EMAIL", 
+                "system": 1
+            }, 
+            {
+                "value": "DevOps", 
+                "name": "SCALR_FARM_TEAM", 
+                "system": 1
+            }, 
+            {
+                "value": "base", 
+                "name": "SCALR_BEHAVIORS", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_ENV_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "Development Cloud", 
+                "name": "SCALR_ENV_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2", 
+                "name": "SCALR_CLOUD_LOCATION", 
+                "system": 1
+            }, 
+            {
+                "value": "i-00b0f537c8d4a238e", 
+                "name": "SCALR_CLOUD_SERVER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2c", 
+                "name": "SCALR_CLOUD_LOCATION_ZONE", 
+                "system": 1
+            }, 
+            {
+                "value": "i-00b0f537c8d4a238e", 
+                "name": "SCALR_INSTANCE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "ami-1004aa70", 
+                "name": "SCALR_AMI_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2", 
+                "name": "SCALR_REGION", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2c", 
+                "name": "SCALR_AVAIL_ZONE", 
+                "system": 1
+            }, 
+            {
+                "value": "3f54770e-bf1a-11e3-92c5-000feae9c516", 
+                "name": "SCALR_COST_CENTER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "CC-00", 
+                "name": "SCALR_COST_CENTER_BC", 
+                "system": 1
+            }, 
+            {
+                "value": "Cost center 01", 
+                "name": "SCALR_COST_CENTER_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "30c59dba-fc9b-4d0f-83ec-4b5043b12f72", 
+                "name": "SCALR_PROJECT_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "PR-00-00", 
+                "name": "SCALR_PROJECT_BC", 
+                "system": 1
+            }, 
+            {
+                "value": "Project 01", 
+                "name": "SCALR_PROJECT_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "q_activity_database_name='pe-activity'\nq_activity_database_password='DN4WXv_PYetzG7Sh1Oca5A'\nq_activity_database_user='pe-activity'\nq_all_in_one_install='y'\nq_classifier_database_name='pe-classifier'\nq_classifier_database_password='RDM2_8piLyq56maU47Sfvw'\nq_classifier_database_user='pe-classifier'\nq_database_host=$(hostname -f)\nq_database_install='y'\nq_database_port='5432'\nq_database_root_password='B3h509BRv7S3woID1AxCQQ'\nq_database_root_user='root'\nq_fail_on_unsuccessful_master_lookup='y'\nq_install='y'\nq_pe_check_for_updates='y'\nq_pe_database='y'\nq_public_hostname=$(hostname -f)\nq_puppet_cloud_install='y'\nq_puppet_enterpriseconsole_auth_password=$(echo $PUPPET_ENTERPRISE_PASSWORD)\nq_puppet_enterpriseconsole_database_name='console'\nq_puppet_enterpriseconsole_database_password='COSPtcRjoGbsvllYqaoGxg'\nq_puppet_enterpriseconsole_database_user='console'\nq_puppet_enterpriseconsole_httpd_port='443'\nq_puppet_enterpriseconsole_install='y'\nq_puppet_enterpriseconsole_master_hostname=$(hostname -f)\nq_puppetagent_certname=$(hostname -f)\nq_puppetagent_install='y'\nq_puppetagent_server=$(hostname -f)\nq_puppetdb_database_name='pe-puppetdb'\nq_puppetdb_database_password='sOX5kr1x_Zll0d9BalEe-g'\nq_puppetdb_database_user='pe-puppetdb'\nq_puppetdb_hostname=$(hostname -f)\nq_puppetdb_install='y'\nq_puppetdb_plaintext_port='8080'\nq_puppetdb_port='8081'\nq_puppetmaster_certname=$(hostname -f)\nq_puppetmaster_dnsaltnames='puppet'\nq_puppetmaster_enterpriseconsole_hostname=$(hostname -f)\nq_puppetmaster_enterpriseconsole_port='443'\nq_puppetmaster_install='y'\nq_rbac_database_name='pe-rbac'\nq_rbac_database_password='Zqhezg8ZdvucAE301KyJhA'\nq_rbac_database_user='pe-rbac'\nq_skip_backup='y'\nq_skip_master_verification='n'\nq_vendor_packages_install='y'", 
+                "name": "PUPPET_ENTERPRISE_ANSWER"
+            }, 
+            {
+                "value": "", 
+                "name": "PUPPET_ENTERPRISE_LICENSE"
+            }, 
+            {
+                "value": "ChangeM3", 
+                "name": "PUPPET_ENTERPRISE_PASSWORD"
+            }
+        ], 
+        "message_id": "f4ad8929-7702-4407-b380-d8987aaa80b3", 
+        "remote_ip": ""
+    }, 
+    "meta": {
+        "server_id": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+        "scalr_version": "5.11.22"
+    }, 
+    "name": "HostInitResponse", 
+    "id": "f4ad8929-7702-4407-b380-d8987aaa80b3"
+}
+2017-01-04 00:45:21,294-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Received message 'HostInitResponse' (message_id: f4ad8929-7702-4407-b380-d8987aaa80b3, format: json)
+2017-01-04 00:45:21,303-05:00 - DEBUG - scalarizr.messaging.p2p.store - Commiting put_ingoing
+2017-01-04 00:45:21,303-05:00 - DEBUG - scalarizr.messaging.p2p.store - Commited put_ingoing
+2017-01-04 00:45:21,303-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - "POST /control HTTP/1.0" 201 -
+2017-01-04 00:45:21,553-05:00 - DEBUG - scalarizr.util.PeriodicalExecutor - Executing task Rotate tasks data
+2017-01-04 00:45:21,553-05:00 - DEBUG - scalarizr.util.PeriodicalExecutor - Executing task Rotate scripting logs
+2017-01-04 00:45:22,517-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Received ingoing message in queue: 'control'
+2017-01-04 00:45:22,517-05:00 - DEBUG - scalarizr.messaging.p2p.security - Decrypting message
+2017-01-04 00:45:22,520-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Decoding message: {
+    "body": {
+        "server_id": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+        "server_index": "1", 
+        "farm_role_id": "4", 
+        "handlers": [
+            "base"
+        ], 
+        "event_id": "39e06590-3d6f-4583-8b1d-8f15ca539095", 
+        "farm_role_alias": "Puppet-Master", 
+        "local_ip": "172.31.15.60", 
+        "cloud_location": "us-west-2", 
+        "ssh_pub_key": "", 
+        "behaviour": [
+            "base"
+        ], 
+        "crypto_key": "", 
+        "debug_scripting_count": 0, 
+        "role_name": "Puppet-Master", 
+        "debug_scripting_error": "", 
+        "base": {
+            "reboot_after_hostinit_phase": 0, 
+            "disable_firewall_management": 0, 
+            "abort_init_on_script_fail": 1, 
+            "hostname": "", 
+            "update": {
+                "deb_repo_url": "http://repo.scalr.net/apt-plain stable/", 
+                "repository": "stable", 
+                "server_url": "http://update.scalr.net/", 
+                "api_port": "", 
+                "rpm_repo_url": "http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch", 
+                "client_mode": "client", 
+                "win_repo_url": "http://repo.scalr.net/win/stable"
+            }, 
+            "api_port": "8010", 
+            "messaging_port": "8013", 
+            "scalr_labs_fatmouse_update": 0, 
+            "resume_strategy": "reboot", 
+            "union_script_executor": 1, 
+            "keep_scripting_logs_time": "36000"
+        }, 
+        "scripts": [], 
+        "global_variables": [
+            {
+                "value": "ami-1004aa70", 
+                "name": "SCALR_IMAGE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "54.187.24.126", 
+                "name": "SCALR_EXTERNAL_IP", 
+                "system": 1
+            }, 
+            {
+                "value": "172.31.15.60", 
+                "name": "SCALR_INTERNAL_IP", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet-Master", 
+                "name": "SCALR_ROLE_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_ISDBMASTER", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_INSTANCE_INDEX", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_INSTANCE_FARM_INDEX", 
+                "system": 1
+            }, 
+            {
+                "value": "m3.medium", 
+                "name": "SCALR_SERVER_TYPE", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_SERVER_HOSTNAME", 
+                "system": 1
+            }, 
+            {
+                "value": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+                "name": "SCALR_SERVER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "2", 
+                "name": "SCALR_FARM_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "4", 
+                "name": "SCALR_FARM_ROLE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet-Master", 
+                "name": "SCALR_FARM_ROLE_ALIAS", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet Enterprise", 
+                "name": "SCALR_FARM_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "c22920c5c486da", 
+                "name": "SCALR_FARM_HASH", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_FARM_OWNER_EMAIL", 
+                "system": 1
+            }, 
+            {
+                "value": "DevOps", 
+                "name": "SCALR_FARM_TEAM", 
+                "system": 1
+            }, 
+            {
+                "value": "base", 
+                "name": "SCALR_BEHAVIORS", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_ENV_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "Development Cloud", 
+                "name": "SCALR_ENV_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2", 
+                "name": "SCALR_CLOUD_LOCATION", 
+                "system": 1
+            }, 
+            {
+                "value": "i-00b0f537c8d4a238e", 
+                "name": "SCALR_CLOUD_SERVER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2c", 
+                "name": "SCALR_CLOUD_LOCATION_ZONE", 
+                "system": 1
+            }, 
+            {
+                "value": "i-00b0f537c8d4a238e", 
+                "name": "SCALR_INSTANCE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "ami-1004aa70", 
+                "name": "SCALR_AMI_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2", 
+                "name": "SCALR_REGION", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2c", 
+                "name": "SCALR_AVAIL_ZONE", 
+                "system": 1
+            }, 
+            {
+                "value": "3f54770e-bf1a-11e3-92c5-000feae9c516", 
+                "name": "SCALR_COST_CENTER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "CC-00", 
+                "name": "SCALR_COST_CENTER_BC", 
+                "system": 1
+            }, 
+            {
+                "value": "Cost center 01", 
+                "name": "SCALR_COST_CENTER_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "30c59dba-fc9b-4d0f-83ec-4b5043b12f72", 
+                "name": "SCALR_PROJECT_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "PR-00-00", 
+                "name": "SCALR_PROJECT_BC", 
+                "system": 1
+            }, 
+            {
+                "value": "Project 01", 
+                "name": "SCALR_PROJECT_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "q_activity_database_name='pe-activity'\nq_activity_database_password='DN4WXv_PYetzG7Sh1Oca5A'\nq_activity_database_user='pe-activity'\nq_all_in_one_install='y'\nq_classifier_database_name='pe-classifier'\nq_classifier_database_password='RDM2_8piLyq56maU47Sfvw'\nq_classifier_database_user='pe-classifier'\nq_database_host=$(hostname -f)\nq_database_install='y'\nq_database_port='5432'\nq_database_root_password='B3h509BRv7S3woID1AxCQQ'\nq_database_root_user='root'\nq_fail_on_unsuccessful_master_lookup='y'\nq_install='y'\nq_pe_check_for_updates='y'\nq_pe_database='y'\nq_public_hostname=$(hostname -f)\nq_puppet_cloud_install='y'\nq_puppet_enterpriseconsole_auth_password=$(echo $PUPPET_ENTERPRISE_PASSWORD)\nq_puppet_enterpriseconsole_database_name='console'\nq_puppet_enterpriseconsole_database_password='COSPtcRjoGbsvllYqaoGxg'\nq_puppet_enterpriseconsole_database_user='console'\nq_puppet_enterpriseconsole_httpd_port='443'\nq_puppet_enterpriseconsole_install='y'\nq_puppet_enterpriseconsole_master_hostname=$(hostname -f)\nq_puppetagent_certname=$(hostname -f)\nq_puppetagent_install='y'\nq_puppetagent_server=$(hostname -f)\nq_puppetdb_database_name='pe-puppetdb'\nq_puppetdb_database_password='sOX5kr1x_Zll0d9BalEe-g'\nq_puppetdb_database_user='pe-puppetdb'\nq_puppetdb_hostname=$(hostname -f)\nq_puppetdb_install='y'\nq_puppetdb_plaintext_port='8080'\nq_puppetdb_port='8081'\nq_puppetmaster_certname=$(hostname -f)\nq_puppetmaster_dnsaltnames='puppet'\nq_puppetmaster_enterpriseconsole_hostname=$(hostname -f)\nq_puppetmaster_enterpriseconsole_port='443'\nq_puppetmaster_install='y'\nq_rbac_database_name='pe-rbac'\nq_rbac_database_password='Zqhezg8ZdvucAE301KyJhA'\nq_rbac_database_user='pe-rbac'\nq_skip_backup='y'\nq_skip_master_verification='n'\nq_vendor_packages_install='y'", 
+                "name": "PUPPET_ENTERPRISE_ANSWER"
+            }, 
+            {
+                "value": "", 
+                "name": "PUPPET_ENTERPRISE_LICENSE"
+            }, 
+            {
+                "value": "ChangeM3", 
+                "name": "PUPPET_ENTERPRISE_PASSWORD"
+            }
+        ], 
+        "message_id": "c645102a-bcd1-4344-b6c2-1d5521e1da04", 
+        "remote_ip": "54.187.24.126"
+    }, 
+    "meta": {
+        "server_id": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+        "scalr_version": "5.11.22"
+    }, 
+    "name": "HostInit", 
+    "id": "c645102a-bcd1-4344-b6c2-1d5521e1da04"
+}
+2017-01-04 00:45:22,520-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Received message 'HostInit' (message_id: c645102a-bcd1-4344-b6c2-1d5521e1da04, format: json)
+2017-01-04 00:45:22,529-05:00 - DEBUG - scalarizr.messaging.p2p.store - Commiting put_ingoing
+2017-01-04 00:45:22,529-05:00 - DEBUG - scalarizr.messaging.p2p.store - Commited put_ingoing
+2017-01-04 00:45:22,530-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - "POST /control HTTP/1.1" 201 -
+2017-01-04 00:45:22,567-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Going to handle_one_message. Thread: MessageHandler
+2017-01-04 00:45:22,567-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Notify message listeners (message_id: c645102a-bcd1-4344-b6c2-1d5521e1da04)
+2017-01-04 00:45:22,567-05:00 - DEBUG - scalarizr.handlers - Handle 'HostInit'
+2017-01-04 00:45:22,568-05:00 - DEBUG - scalarizr.handlers - Scalr version: (5, 11, 22)
+2017-01-04 00:45:22,568-05:00 - DEBUG - scalarizr.handlers - Call handler BaseBehaviorHandler
+2017-01-04 00:45:22,568-05:00 - DEBUG - scalarizr.handlers - Call handler LifeCycleHandler
+2017-01-04 00:45:22,569-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/list-farm-role-params-json
+2017-01-04 00:45:22,569-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'list-farm-role-params-json', 'version': u'2015-04-10', 'farm-role-id': '4'}
+2017-01-04 00:45:22,593-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {u'base': {u'reboot_after_hostinit_phase': 0, u'disable_firewall_management': 0, u'abort_init_on_script_fail': 1, u'hostname': u'', u'update': {u'deb_repo_url': u'http://repo.scalr.net/apt-plain stable/', u'repository': u'stable', u'server_url': u'http://update.scalr.net/', u'api_port': u'', u'rpm_repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch', u'client_mode': u'client', u'win_repo_url': u'http://repo.scalr.net/win/stable'}, u'api_port': u'8010', u'messaging_port': u'8013', u'scalr_labs_fatmouse_update': 0, u'resume_strategy': u'reboot', u'union_script_executor': 1, u'keep_scripting_logs_time': u'36000'}}
+2017-01-04 00:45:22,594-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Mark message (message_id: c645102a-bcd1-4344-b6c2-1d5521e1da04) as handled
+2017-01-04 00:45:22,606-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Completed handle_one_message. Thread: MessageHandler
+2017-01-04 00:45:22,606-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Found a message and continue message handler
+2017-01-04 00:45:22,606-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Fired message acknowledge event: HostInit
+2017-01-04 00:45:22,606-05:00 - INFO - scalarizr.config - State: initializing
+2017-01-04 00:45:22,606-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'host_init'() {}
+2017-01-04 00:45:22,607-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'start'() {}
+2017-01-04 00:45:22,707-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Notify message listeners (message_id: f4ad8929-7702-4407-b380-d8987aaa80b3)
+2017-01-04 00:45:22,707-05:00 - DEBUG - scalarizr.handlers - Handle 'HostInitResponse'
+2017-01-04 00:45:22,708-05:00 - DEBUG - scalarizr.handlers - Scalr version: (5, 11, 22)
+2017-01-04 00:45:22,708-05:00 - DEBUG - scalarizr.handlers - Call handler BaseBehaviorHandler
+2017-01-04 00:45:22,708-05:00 - DEBUG - scalarizr.handlers - Call handler LifeCycleHandler
+2017-01-04 00:45:22,709-05:00 - DEBUG - scalarizr.handlers.lifecycle - bus.init_op: <scalarizr.api.operation.Operation object at 0x7f6e7b0bdc10>
+2017-01-04 00:45:22,709-05:00 - DEBUG - scalarizr.util.flag - Touch file '/etc/scalr/private.d/.hir'
+2017-01-04 00:45:22,709-05:00 - DEBUG - scalarizr.handlers.lifecycle - HIR.body.base: {u'reboot_after_hostinit_phase': 0, u'disable_firewall_management': 0, u'abort_init_on_script_fail': 1, u'hostname': u'', u'update': {u'deb_repo_url': u'http://repo.scalr.net/apt-plain stable/', u'repository': u'stable', u'server_url': u'http://update.scalr.net/', u'api_port': u'', u'rpm_repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch', u'client_mode': u'client', u'win_repo_url': u'http://repo.scalr.net/win/stable'}, u'api_port': u'8010', u'messaging_port': u'8013', u'scalr_labs_fatmouse_update': 0, u'resume_strategy': u'reboot', u'union_script_executor': 1, u'keep_scripting_logs_time': u'36000'}
+2017-01-04 00:45:22,709-05:00 - INFO - scalarizr.ops.system.init - Configuring storage volumes
+2017-01-04 00:45:22,710-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/list-ebs-mountpoints
+2017-01-04 00:45:22,710-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'list-ebs-mountpoints', 'version': u'2015-04-10'}
+2017-01-04 00:45:22,726-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): []
+2017-01-04 00:45:22,726-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'host_init_response'(<scalarizr.messaging.p2p.store.P2pMessage object at 0x7f6e81dc97d0>,) {}
+2017-01-04 00:45:22,727-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/public.d/config.ini
+2017-01-04 00:45:22,727-05:00 - DEBUG - scalarizr.node - Reloading /etc/scalr/private.d/config.ini
+2017-01-04 00:45:22,728-05:00 - DEBUG - scalarizr.util - system: ('/bin/rpm', '-qa', '--queryformat', '%{NAME}|%{VERSION}\n')
+2017-01-04 00:45:23,393-05:00 - DEBUG - root - stdout: yum-rhn-plugin|2.0.1
+filesystem|3.2
+glib-networking|2.42.0
+kbd-misc|1.15.5
+ppp|2.4.5
+glibc|2.17
+libndp|1.2
+bash|4.2.46
+bind-libs-lite|9.9.4
+zlib|1.2.7
+popt|1.13
+kexec-tools|2.0.7
+libcom_err|1.42.9
+cloud-init|0.7.6
+bzip2-libs|1.0.6
+audit|2.4.1
+readline|6.2
+tuned|2.5.1
+glib2|2.42.2
+microcode_ctl|2.1
+libattr|2.4.46
+parted|3.1
+libnl3|3.2.21
+yum-utils|1.1.31
+cpio|2.11
+cloud-utils-growpart|0.27
+dbus-glib|0.100
+btrfs-progs|3.19.1
+file-libs|5.11
+rootfiles|8.1
+nss-softokn|3.16.2.3
+gpg-pubkey|2fa658e0
+cyrus-sasl-lib|2.1.26
+perl-Pod-Perldoc|3.20
+libunistring|0.9.3
+perl-Pod-Usage|1.63
+slang|2.2.4
+perl-Exporter|5.68
+libdaemon|0.14
+perl-Carp|1.26
+libtasn1|3.8
+perl-File-Temp|0.23.01
+gettext-libs|0.18.2.1
+perl-Filter|1.49
+setools-libs|3.3.7
+vim-filesystem|7.4.160
+desktop-file-utils|0.22
+perl-Error|0.17020
+libss|1.42.9
+perl-Git|1.8.3.1
+kmod-libs|20
+gpg-pubkey|4bd6ec30
+ncurses|5.9
+libjpeg-turbo|1.2.90
+snappy|1.1.0
+puppet-agent|1.7.0
+iptables|1.4.21
+ntp|4.2.6p5
+libsemanage|2.1.10
+sshpass|1.05
+openssl-libs|1.0.1e
+python2-pyasn1|0.1.9
+python|2.7.5
+python-httplib2|0.7.7
+python-iniparse|0.4
+python-decorator|3.4.0
+pygobject3-base|3.14.0
+systemd-libs|219
+python-lxml|3.2.1
+python-chardet|2.2.1
+e2fsprogs|1.42.9
+python-IPy|0.75
+python-pyudev|0.15
+rhnlib|2.5.65
+libsemanage-python|2.1.10
+python-prettytable|0.7.2
+python-requests|2.6.0
+python-perf|3.10.0
+nss|3.19.1
+logrotate|3.8.6
+libssh2|1.4.3
+rpm|4.11.3
+policycoreutils|2.2.5
+selinux-policy|3.13.1
+python-urlgrabber|3.10
+kernel-tools-libs|3.10.0
+pygpgme|0.3
+redhat-support-lib-python|0.9.7
+libpipeline|1.2.3
+pciutils-libs|3.2.1
+device-mapper-libs|1.02.107
+systemd|219
+initscripts|9.49.30
+cronie|1.4.11
+dnsmasq|2.66
+rhn-client-tools|2.0.2
+libgcc|4.8.5
+rhn-setup|2.0.2
+setup|2.8.71
+rhn-check|2.0.2
+tzdata|2015g
+gnutls|3.3.8
+emacs-filesystem|24.3
+libsoup|2.48.1
+ncurses-base|5.9
+glibc-common|2.17
+libcgroup|0.41
+xz-libs|5.1.2
+json-c|0.11
+ncurses-libs|5.9
+jansson|2.4
+libsepol|2.1.9
+bind-license|9.9.4
+libselinux|2.2.2
+dhclient|4.2.5
+info|5.1
+dracut-network|033
+libuuid|2.23.2
+kbd-legacy|1.15.5
+chkconfig|1.3.61
+kernel|3.10.0
+nspr|4.10.8
+NetworkManager-tui|1.0.6
+nss-util|3.19.1
+rsyslog|7.4.7
+libdb|5.3.21
+grep|2.20
+grub2|2.02
+gawk|4.0.2
+postfix|2.10.1
+libgpg-error|1.12
+rdma|7.2_4.1_rc6
+libffi|3.0.13
+subscription-manager|1.15.9
+pkgconfig|0.27.1
+chrony|2.1.1
+libgcrypt|1.5.3
+openssh-server|6.6.1p1
+libacl|2.2.51
+dracut-config-generic|033
+sqlite|3.7.17
+kernel-tools|3.10.0
+p11-kit|0.20.7
+redhat-support-tool|0.9.7
+lua|5.1.4
+openssh-clients|6.6.1p1
+diffutils|3.3
+authconfig|6.2.8
+libcap-ng|0.7.5
+sudo|1.8.6p7
+which|2.20
+xfsprogs|3.2.2
+findutils|4.5.11
+gdisk|0.8.6
+gmp|6.0.0
+libsysfs|2.1.0
+libnl3-cli|3.2.21
+iwl7265-firmware|22.0.7.0
+libcroco|0.6.8
+gpg-pubkey|fd431d51
+libassuan|2.1.0
+perl-parent|0.225
+e2fsprogs-libs|1.42.9
+perl-podlators|2.5.1
+libgomp|4.8.5
+perl-Pod-Escapes|1.04
+xz|5.1.2
+perl-Encode|2.51
+libnfnetlink|1.0.1
+perl-libs|5.16.3
+newt|0.52.15
+perl-Storable|2.45
+lzo|2.06
+perl-constant|1.27
+hostname|3.13
+perl-Socket|2.010
+keyutils-libs|1.5.8
+perl-Time-HiRes|1.9725
+p11-kit-trust|0.20.7
+perl-Scalar-List-Utils|1.27
+dmidecode|2.12
+perl-File-Path|2.09
+less|458
+perl-threads|1.87
+nettle|2.7.1
+perl-Pod-Simple|3.28
+vim-minimal|7.4.160
+perl|5.16.3
+libxslt|1.1.28
+vim-common|7.4.160
+gsettings-desktop-schemas|3.14.2
+vim-enhanced|7.4.160
+libdb-utils|5.3.21
+libgnome-keyring|3.8.0
+mozjs17|17.0.0
+git|1.8.3.1
+make|3.82
+libunwind|1.1
+checkpolicy|2.1.12
+puppetlabs-release-pc1|1.1.0
+freetype|2.4.11
+gpg-pubkey|ef8d349f
+libmodman|2.0.1
+lksctp-tools|1.0.13
+libicu|50.1.2
+python-javapackages|3.4.1
+libpcap|1.5.3
+java-1.8.0-openjdk-headless|1.8.0.102
+libnetfilter_conntrack|1.0.4
+puppetserver|2.6.0
+iproute|3.10.0
+ntpdate|4.2.6p5
+ustr|1.0.4
+wget|1.14
+sysvinit-tools|2.88
+gpg-pubkey|352c64e5
+krb5-libs|1.13.2
+libtommath|0.42.0
+coreutils|8.22
+python2-crypto|2.6.1
+python-libs|2.7.5
+python-keyczar|0.71c
+shadow-utils|4.1.5.1
+python2-paramiko|1.16.1
+dbus-python|1.1.1
+python-setuptools|0.9.8
+python-dateutil|1.5
+cracklib|2.9.0
+libselinux-python|2.2.2
+newt-python|0.52.15
+cracklib-dicts|2.9.0
+libpwquality|1.2.3
+libgudev1|219
+libmount|2.23.2
+gettext|0.18.2.1
+python-ethtool|0.8
+python-kitchen|1.1.1
+grubby|8.28
+libutempter|1.1.6
+python-markupsafe|0.11
+python-six|1.9.0
+python-babel|0.9.6
+pyOpenSSL|0.13.1
+pygobject2|2.28.6
+audit-libs-python|2.4.1
+pyliblzma|0.5.3
+python-dmidecode|3.10.13
+python-backports|1.0
+python-urllib3|1.10.2
+pyxattr|0.5.1
+python-jsonpatch|1.2
+yum-metadata-parser|1.1.4
+nss-sysinit|3.19.1
+NetworkManager-libnm|1.0.6
+openssl|1.0.1e
+redhat-logos|70.0.3
+mariadb-libs|5.5.44
+libcurl|7.29.0
+rpm-libs|4.11.3
+openldap|2.4.40
+util-linux|2.23.2
+virt-what|1.13
+dhcp-common|4.2.5
+passwd|0.79
+python-pycurl|7.19.0
+fipscheck-lib|1.4.1
+openssh|6.6.1p1
+pth|2.0.7
+gpgme|1.3.2
+rpm-build-libs|4.11.3
+yum|3.4.3
+python-rhsm|1.15.4
+numactl-libs|2.0.9
+libestr|0.1.9
+PyYAML|3.10
+hardlink|1.0
+device-mapper|1.02.107
+cryptsetup-libs|1.6.7
+kmod|20
+dbus|1.6.12
+iputils|20121221
+polkit|0.112
+cronie-anacron|1.4.11
+crontabs|1.11
+grub2-tools|2.02
+wpa_supplicant|2.0
+python-hwdata|1.7.3
+scalarizr|4.12.2
+rhnsd|5.0.13
+redhat-release-server|7.2
+trousers|0.3.13
+basesystem|10.0
+net-tools|2.0
+nss-softokn-freebl|3.16.2.3
+policycoreutils-python|2.2.5
+libstdc++|4.8.5
+teamd|1.17
+pcre|8.32
+NetworkManager|1.0.6
+audit-libs|2.4.1
+kbd|1.15.5
+sed|4.2.2
+NetworkManager-team|1.0.6
+libxml2|2.9.1
+rh-amazon-rhui-client|2.2.124
+dbus-libs|1.6.12
+irqbalance|1.0.7
+elfutils-libelf|0.163
+rsync|3.0.9
+shared-mime-info|1.1
+dracut-config-rescue|033
+libcap|2.22
+man-db|2.6.3
+elfutils-libs|0.163
+selinux-policy-targeted|3.13.1
+expat|2.1.0
+Red_Hat_Enterprise_Linux-Release_Notes-7-en-US|7
+libidn|1.28
+tar|1.26
+file|5.11
+NetworkManager-config-server|1.0.6
+gobject-introspection|1.42.0
+perl-HTTP-Tiny|0.033
+groff-base|1.22.2
+perl-Text-ParseWords|3.29
+libedit|3.0
+perl-macros|5.16.3
+tcp_wrappers-libs|7.6
+perl-Time-Local|1.2300
+ethtool|3.15
+perl-PathTools|3.40
+gdbm|1.10
+perl-threads-shared|1.43
+libteam|1.17
+perl-Getopt-Long|2.40
+acl|2.2.51
+gpm-libs|1.20.7
+avahi-libs|0.6.31
+perl-TermReadKey|2.30
+pinentry|0.8.1
+powershell|6.0.0_alpha.10
+libselinux-utils|2.2.2
+tzdata-java|2016g
+libproxy|0.4.11
+javapackages-tools|3.4.1
+libmnl|1.0.3
+autogen-libopts|5.18
+libnl|1.1.4
+epel-release|7
+libverto|0.2.5
+libtomcrypt|1.17
+ca-certificates|2015.2.4
+python2-ecdsa|0.13
+libblkid|2.23.2
+ansible|2.2.0.0
+gzip|1.5
+scalarizr-ec2|4.12.2
+m2crypto|0.21.1
+pam|1.1.8
+procps-ng|3.3.10
+python-configobj|4.7.2
+avahi-autoipd|0.6.31
+pyserial|2.6
+python-jinja2|2.7.2
+python-gudev|147.2
+libxml2-python|2.9.1
+python-backports-ssl_match_hostname|3.4.0.2
+python-jsonpointer|1.9
+xdg-utils|1.1.0
+nss-tools|3.19.1
+binutils|2.23.52.0.1
+curl|7.29.0
+libuser|0.60
+dhcp-libs|4.2.5
+usermode|1.111
+fipscheck|1.4.1
+gnupg2|2.0.22
+rpm-python|4.11.3
+qrencode-libs|3.4.1
+libyaml|0.1.4
+kpartx|0.4.9
+dracut|033
+systemd-sysv|219
+polkit-pkla-compat|0.1
+os-prober|1.58
+hwdata|0.252
+
+2017-01-04 00:45:23,394-05:00 - DEBUG - scalarizr.handlers.hooks - Hook on 'before_host_up'(<scalarizr.messaging.p2p.store.P2pMessage object at 0x7f6e7b0bd410>,) {}
+2017-01-04 00:45:23,395-05:00 - DEBUG - scalarizr.handlers.ip_list_builder - Rebuild farm hosts structure
+2017-01-04 00:45:23,395-05:00 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/list-roles
+2017-01-04 00:45:23,395-05:00 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'list-roles', 'version': u'2015-04-10'}
+2017-01-04 00:45:23,417-05:00 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): [behaviour = ['base']; name = Puppet-Master; hosts = []; farm_role_id = 4;]
+2017-01-04 00:45:23,417-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Sending message 'BeforeHostUp' into queue 'control'
+2017-01-04 00:45:23,427-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Delivering message 'BeforeHostUp' {'behaviour': [], 'role_name': 'Puppet-Master', 'local_ip': '172.31.15.60', 'remote_ip': '54.187.24.126'}. Json: True, Headers: {'Content-Type': 'application/json'}
+2017-01-04 00:45:23,427-05:00 - DEBUG - scalarizr.messaging.p2p.security - Encrypting message
+2017-01-04 00:45:23,444-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Message 'BeforeHostUp' delivered (message_id: ff079d68-180d-4242-888f-8d8d51b827e4)
+2017-01-04 00:45:23,453-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message subhandler thread: BeforeHostUpHandler
+2017-01-04 00:45:23,453-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Starting message handler
+2017-01-04 00:45:23,454-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Waiting message subhandler thread: BeforeHostUpHandler
+2017-01-04 00:45:28,521-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Received ingoing message in queue: 'control'
+2017-01-04 00:45:28,522-05:00 - DEBUG - scalarizr.messaging.p2p.security - Decrypting message
+2017-01-04 00:45:28,525-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Decoding message: {
+    "body": {
+        "server_id": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+        "server_index": "1", 
+        "farm_role_id": "4", 
+        "local_ip": "172.31.15.60", 
+        "event_id": "117c308f-fe90-4a88-ab2c-b8bf53e115e5", 
+        "farm_role_alias": "Puppet-Master", 
+        "handlers": [], 
+        "cloud_location": "us-west-2", 
+        "behaviour": [
+            "base"
+        ], 
+        "debug_scripting_count": 1, 
+        "role_name": "Puppet-Master", 
+        "debug_scripting_error": "", 
+        "scripts": [
+            {
+                "body": "#!/bin/bash\nset -o errexit\nset -o nounset\n\n# Please ensure the following ports are open in the firewall:\n# 443, 4433, 4435, 8140, 61613\n\n# Needed Global Variables:\n# PUPPET_ENTERPRISE_LICENSE - Your PE License\n# PUPPET_ENTERPRISE_ANSWER - Your PE Answer file config\n\nLICENSE=\"/etc/puppetlabs/license.key\"\nANSWER=\"/etc/puppetlabs/answer.file\"\nLOG=\"/var/log/puppet_install.log\"\nCONFIG=\"/etc/puppetlabs/puppet/puppet.conf\"\n\n# Download and unpack Puppet Enterprise\nwget \"https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest\" -O /opt/puppet-enterprise.tar.gz\ntar zxf /opt/puppet-enterprise.tar.gz -C /opt\n\n# Create license file\nmkdir -p /etc/puppetlabs\necho \"${PUPPET_ENTERPRISE_LICENSE}\" > \"${LICENSE}\"\n\n# Create answer file\necho \"${PUPPET_ENTERPRISE_ANSWER}\" > \"${ANSWER}\"\n\n# Run installation\ncd /opt/puppet-enterprise-*\n./puppet-enterprise-installer -a \"${ANSWER}\" >> \"${LOG}\"\n\n# Allow puppet agents to auto-register\necho \"autosign = true\" >> \"${CONFIG}\"\n\n# Restart puppet master to reload config\nservice pe-puppetserver restart\n", 
+                "timeout": "1800", 
+                "asynchronous": "0", 
+                "name": "Install_Puppet_Enterprise", 
+                "execution_id": "0127208e-098b-459f-8674-5f25afc73d47"
+            }
+        ], 
+        "global_variables": [
+            {
+                "value": "ami-1004aa70", 
+                "name": "SCALR_IMAGE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "54.187.24.126", 
+                "name": "SCALR_EXTERNAL_IP", 
+                "system": 1
+            }, 
+            {
+                "value": "172.31.15.60", 
+                "name": "SCALR_INTERNAL_IP", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet-Master", 
+                "name": "SCALR_ROLE_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_ISDBMASTER", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_INSTANCE_INDEX", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_INSTANCE_FARM_INDEX", 
+                "system": 1
+            }, 
+            {
+                "value": "m3.medium", 
+                "name": "SCALR_SERVER_TYPE", 
+                "system": 1
+            }, 
+            {
+                "value": "ec2-54-187-24-126.us-west-2.compute.amazonaws.com", 
+                "name": "SCALR_SERVER_HOSTNAME", 
+                "system": 1
+            }, 
+            {
+                "value": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+                "name": "SCALR_SERVER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "2", 
+                "name": "SCALR_FARM_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "4", 
+                "name": "SCALR_FARM_ROLE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet-Master", 
+                "name": "SCALR_FARM_ROLE_ALIAS", 
+                "system": 1
+            }, 
+            {
+                "value": "Puppet Enterprise", 
+                "name": "SCALR_FARM_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "c22920c5c486da", 
+                "name": "SCALR_FARM_HASH", 
+                "system": 1
+            }, 
+            {
+                "value": "", 
+                "name": "SCALR_FARM_OWNER_EMAIL", 
+                "system": 1
+            }, 
+            {
+                "value": "DevOps", 
+                "name": "SCALR_FARM_TEAM", 
+                "system": 1
+            }, 
+            {
+                "value": "base", 
+                "name": "SCALR_BEHAVIORS", 
+                "system": 1
+            }, 
+            {
+                "value": "1", 
+                "name": "SCALR_ENV_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "Development Cloud", 
+                "name": "SCALR_ENV_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2", 
+                "name": "SCALR_CLOUD_LOCATION", 
+                "system": 1
+            }, 
+            {
+                "value": "i-00b0f537c8d4a238e", 
+                "name": "SCALR_CLOUD_SERVER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2c", 
+                "name": "SCALR_CLOUD_LOCATION_ZONE", 
+                "system": 1
+            }, 
+            {
+                "value": "i-00b0f537c8d4a238e", 
+                "name": "SCALR_INSTANCE_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "ami-1004aa70", 
+                "name": "SCALR_AMI_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2", 
+                "name": "SCALR_REGION", 
+                "system": 1
+            }, 
+            {
+                "value": "us-west-2c", 
+                "name": "SCALR_AVAIL_ZONE", 
+                "system": 1
+            }, 
+            {
+                "value": "3f54770e-bf1a-11e3-92c5-000feae9c516", 
+                "name": "SCALR_COST_CENTER_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "CC-00", 
+                "name": "SCALR_COST_CENTER_BC", 
+                "system": 1
+            }, 
+            {
+                "value": "Cost center 01", 
+                "name": "SCALR_COST_CENTER_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "30c59dba-fc9b-4d0f-83ec-4b5043b12f72", 
+                "name": "SCALR_PROJECT_ID", 
+                "system": 1
+            }, 
+            {
+                "value": "PR-00-00", 
+                "name": "SCALR_PROJECT_BC", 
+                "system": 1
+            }, 
+            {
+                "value": "Project 01", 
+                "name": "SCALR_PROJECT_NAME", 
+                "system": 1
+            }, 
+            {
+                "value": "q_activity_database_name='pe-activity'\nq_activity_database_password='DN4WXv_PYetzG7Sh1Oca5A'\nq_activity_database_user='pe-activity'\nq_all_in_one_install='y'\nq_classifier_database_name='pe-classifier'\nq_classifier_database_password='RDM2_8piLyq56maU47Sfvw'\nq_classifier_database_user='pe-classifier'\nq_database_host=$(hostname -f)\nq_database_install='y'\nq_database_port='5432'\nq_database_root_password='B3h509BRv7S3woID1AxCQQ'\nq_database_root_user='root'\nq_fail_on_unsuccessful_master_lookup='y'\nq_install='y'\nq_pe_check_for_updates='y'\nq_pe_database='y'\nq_public_hostname=$(hostname -f)\nq_puppet_cloud_install='y'\nq_puppet_enterpriseconsole_auth_password=$(echo $PUPPET_ENTERPRISE_PASSWORD)\nq_puppet_enterpriseconsole_database_name='console'\nq_puppet_enterpriseconsole_database_password='COSPtcRjoGbsvllYqaoGxg'\nq_puppet_enterpriseconsole_database_user='console'\nq_puppet_enterpriseconsole_httpd_port='443'\nq_puppet_enterpriseconsole_install='y'\nq_puppet_enterpriseconsole_master_hostname=$(hostname -f)\nq_puppetagent_certname=$(hostname -f)\nq_puppetagent_install='y'\nq_puppetagent_server=$(hostname -f)\nq_puppetdb_database_name='pe-puppetdb'\nq_puppetdb_database_password='sOX5kr1x_Zll0d9BalEe-g'\nq_puppetdb_database_user='pe-puppetdb'\nq_puppetdb_hostname=$(hostname -f)\nq_puppetdb_install='y'\nq_puppetdb_plaintext_port='8080'\nq_puppetdb_port='8081'\nq_puppetmaster_certname=$(hostname -f)\nq_puppetmaster_dnsaltnames='puppet'\nq_puppetmaster_enterpriseconsole_hostname=$(hostname -f)\nq_puppetmaster_enterpriseconsole_port='443'\nq_puppetmaster_install='y'\nq_rbac_database_name='pe-rbac'\nq_rbac_database_password='Zqhezg8ZdvucAE301KyJhA'\nq_rbac_database_user='pe-rbac'\nq_skip_backup='y'\nq_skip_master_verification='n'\nq_vendor_packages_install='y'", 
+                "name": "PUPPET_ENTERPRISE_ANSWER"
+            }, 
+            {
+                "value": "", 
+                "name": "PUPPET_ENTERPRISE_LICENSE"
+            }, 
+            {
+                "value": "ChangeM3", 
+                "name": "PUPPET_ENTERPRISE_PASSWORD"
+            }
+        ], 
+        "message_id": "382b9a86-680b-434e-8566-51d282d49d1d", 
+        "remote_ip": "54.187.24.126"
+    }, 
+    "meta": {
+        "server_id": "20988d13-3546-4c75-87de-50fe4e8b2af9", 
+        "scalr_version": "5.11.22"
+    }, 
+    "name": "BeforeHostUp", 
+    "id": "382b9a86-680b-434e-8566-51d282d49d1d"
+}
+2017-01-04 00:45:28,525-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Received message 'BeforeHostUp' (message_id: 382b9a86-680b-434e-8566-51d282d49d1d, format: json)
+2017-01-04 00:45:28,534-05:00 - DEBUG - scalarizr.messaging.p2p.store - Commiting put_ingoing
+2017-01-04 00:45:28,534-05:00 - DEBUG - scalarizr.messaging.p2p.store - Commited put_ingoing
+2017-01-04 00:45:28,534-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - "POST /control HTTP/1.1" 201 -
+2017-01-04 00:45:28,605-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Going to handle_one_message. Thread: BeforeHostUpHandler
+2017-01-04 00:45:28,605-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Notify message listeners (message_id: 382b9a86-680b-434e-8566-51d282d49d1d)
+2017-01-04 00:45:28,605-05:00 - DEBUG - scalarizr.handlers - Handle 'BeforeHostUp'
+2017-01-04 00:45:28,606-05:00 - DEBUG - scalarizr.handlers - Scalr version: (5, 11, 22)
+2017-01-04 00:45:28,607-05:00 - DEBUG - scalarizr.handlers - Call handler BaseBehaviorHandler
+2017-01-04 00:45:28,607-05:00 - INFO - scalarizr.handlers.union.base - Executing 'Install_Puppet_Enterprise' in blocking mode
+2017-01-04 00:45:28,607-05:00 - DEBUG - agent.utils.celeryutil - task_pre_run task_id=5024590e65f941b985397062487eb60f
+2017-01-04 00:45:28,608-05:00 - DEBUG - agent.utils.celeryutil - func_pre_run func_name=execute.script
+2017-01-04 00:45:28,610-05:00 - INFO - agent.tasks.execute - Writing script u'Install_Puppet_Enterprise' to disk (1058 bytes)
+2017-01-04 00:45:28,610-05:00 - DEBUG - common.utils.subprocess2 - Executing subprocess: (('/bin/chown', '--recursive', 'root', u'/var/lib/scalarizr/tasks/5024590e65f941b985397062487eb60f/001-execute.script/bin/Install_Puppet_Enterprise'),)
+2017-01-04 00:45:28,619-05:00 - INFO - agent.tasks.execute - Executing script u'Install_Puppet_Enterprise' ...
+2017-01-04 00:45:28,619-05:00 - DEBUG - common.utils.subprocess2 - Executing subprocess: ([u'/var/lib/scalarizr/tasks/5024590e65f941b985397062487eb60f/001-execute.script/bin/Install_Puppet_Enterprise'],)
+2017-01-04 00:46:01,457-05:00 - DEBUG - common.utils.subprocess2 - Subprocess returncode: 1
+2017-01-04 00:46:01,458-05:00 - INFO - agent.tasks.execute - Finished script u'Install_Puppet_Enterprise'
+2017-01-04 00:46:01,459-05:00 - DEBUG - agent.utils.celeryutil - func_post_run stack=['001-execute.script']
+2017-01-04 00:46:01,459-05:00 - DEBUG - agent.utils.celeryutil - task_post_run task_id=5024590e65f941b985397062487eb60f
+2017-01-04 00:46:01,459-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Sending message 'ExecScriptResult' into queue 'log'
+2017-01-04 00:46:31,462-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Delivering message 'ExecScriptResult' {'stderr': 'Li4uCjM2OTI1MEsgLi4uLi4uLi4uLiAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gLi4uLi4uLi4uLiAuLi4uLi4uLi4uIDk5JSA3Ny45TSAwcwozNjkzMDBLIC4uLi4uLi4uLi4gLi4uLi4uLi4uLiAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gLi4uLi4uLi4uLiA5OSUgNC45Mk0gMHMKMzY5MzUwSyAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gLi4uLi4uLi4uLiAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gOTklIDE4LjhNIDBzCjM2OTQwMEsgLi4uLi4uLi4uLiAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gLi4uLi4uLi4uLiAuLi4uLi4uLi4uIDk5JSAxNy40TSAwcwozNjk0NTBLIC4uLi4uLi4uLi4gLi4uLi4uLi4uLiAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gLi4uLi4uLi4uLiA5OSUgNTIuNk0gMHMKMzY5NTAwSyAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMDAlIDMwLjNNPTIzcwoKMjAxNy0wMS0wNCAwMDo0NTo1MiAoMTUuOCBNQi9zKSAtIOKAmC9vcHQvcHVwcGV0LWVudGVycHJpc2UudGFyLmd64oCZIHNhdmVkIFszNzgzOTExNDQvMzc4MzkxMTQ0XQoKLi9wdXBwZXQtZW50ZXJwcmlzZS1pbnN0YWxsZXI6IGlsbGVnYWwgb3B0aW9uIC0tIGEK\n', 'event_server_id': u'20988d13-3546-4c75-87de-50fe4e8b2af9', 'event_id': u'117c308f-fe90-4a88-ab2c-b8bf53e115e5', 'stdout': '\n', 'return_code': 1, 'script_name': u'Install_Puppet_Enterprise', 'run_as': None, 'time_elapsed': 32.838682889938354, 'stderr_log_path': u'/var/lib/scalarizr/tasks/5024590e65f941b985397062487eb60f/001-execute.script/log/stderr.log', 'timeout': 1800, 'script_path': None, 'stdout_log_path': u'/var/lib/scalarizr/tasks/5024590e65f941b985397062487eb60f/001-execute.script/log/stdout.log', 'event_name': u'BeforeHostUp', 'execution_id': u'0127208e-098b-459f-8674-5f25afc73d47'}. Json: True, Headers: {'Content-Type': 'application/json'}
+2017-01-04 00:46:31,462-05:00 - DEBUG - scalarizr.messaging.p2p.security - Encrypting message
+2017-01-04 00:46:31,496-05:00 - DEBUG - scalarizr.messaging.p2p.producer - Message 'ExecScriptResult' delivered (message_id: a3ad0fa3-d605-4e98-ace1-67f8f22eae2e)
+2017-01-04 00:46:34,993-05:00 - DEBUG - scalarizr.util.sqlite_server - result is ready but client disconnected (client: 8757035836073)
+2017-01-04 00:46:35,053-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Mark message (message_id: 382b9a86-680b-434e-8566-51d282d49d1d) as handled
+2017-01-04 00:46:35,065-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Caught exception from _handle_one_message: thread: <Thread(BeforeHostUpHandler, started 140112453519104)>
+2017-01-04 00:46:35,065-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Completed handle_one_message. Thread: BeforeHostUpHandler
+2017-01-04 00:46:35,065-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - BeforeHostUp case. Interrupting message handler
+2017-01-04 00:46:35,065-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Completed message subhandler thread: BeforeHostUpHandler
+2017-01-04 00:46:35,066-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Subhandler completed with exception
+2017-01-04 00:46:35,066-05:00 - ERROR - scalarizr.handlers - 'ascii' codec can't encode character u'\u2018' in position 496: ordinal not in range(128)
+Traceback (most recent call last):
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/scalarizr-4.12.2-py2.7.egg/scalarizr/handlers/__init__.py", line 267, in __call__
+    handler(message)
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/scalarizr-4.12.2-py2.7.egg/scalarizr/handlers/__init__.py", line 115, in __call__
+    getattr(self, fn)(message)
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/scalarizr-4.12.2-py2.7.egg/scalarizr/handlers/lifecycle.py", line 462, in on_HostInitResponse
+    op.run()
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/scalarizr-4.12.2-py2.7.egg/scalarizr/api/operation.py", line 198, in run
+    self._in_progress()
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/scalarizr-4.12.2-py2.7.egg/scalarizr/api/operation.py", line 195, in _in_progress
+    __node__['messaging'].send('OperationResult', body=self.serialize())
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/scalarizr-4.12.2-py2.7.egg/scalarizr/api/operation.py", line 254, in serialize
+    ret['error'] = str(self.error[1])
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/fatmouse_agent-0.1.2a938ce1a-py2.7.egg/agent/tasks/execute.py", line 71, in __str__
+    self.get_pretty_error())
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/fatmouse_agent-0.1.2a938ce1a-py2.7.egg/agent/tasks/execute.py", line 44, in get_pretty_error
+    return self._pretty_error or self.get_default_pretty_error()
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/fatmouse_agent-0.1.2a938ce1a-py2.7.egg/agent/tasks/execute.py", line 52, in get_default_pretty_error
+    tail = sysutil.tail_s(self.stderr)
+  File "/opt/scalarizr/embedded/lib/python2.7/site-packages/fatmouse_agent-0.1.2a938ce1a-py2.7.egg/common/utils/sysutil.py", line 182, in tail_s
+    string = string.encode()
+UnicodeEncodeError: 'ascii' codec can't encode character u'\u2018' in position 496: ordinal not in range(128)
+2017-01-04 00:46:35,067-05:00 - DEBUG - scalarizr.messaging.p2p.consumer - Mark message (message_id: f4ad8929-7702-4407-b380-d8987aaa80b3) as handled

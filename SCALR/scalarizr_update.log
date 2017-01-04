@@ -1,0 +1,840 @@
+2017-01-04 00:43:14,359 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2017-01-04 00:43:14,390 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:43:17,317 - DEBUG - scalarizr.util - system: ('/etc/init.d/scalarizr', 'stop')
+2017-01-04 00:43:17,442 - DEBUG - root - stdout: Stopping scalarizr (via systemctl):  [  OK  ]
+
+2017-01-04 00:43:17,447 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'daemon-reload')
+2017-01-04 00:43:17,672 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-enabled', 'scalarizr.service')
+2017-01-04 00:43:17,846 - DEBUG - root - stdout: disabled
+
+2017-01-04 00:43:17,846 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-enabled', 'scalr-upd-client.service')
+2017-01-04 00:43:17,871 - DEBUG - root - stdout: disabled
+
+2017-01-04 00:43:17,871 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'enable', 'scalr-upd-client.service')
+2017-01-04 00:43:18,024 - DEBUG - scalarizr.util - stderr: Created symlink from /etc/systemd/system/multi-user.target.wants/scalr-upd-client.service to /usr/lib/systemd/system/scalr-upd-client.service.
+
+2017-01-04 00:43:18,025 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-enabled', 'scalarizr-shutdown.service')
+2017-01-04 00:43:18,042 - DEBUG - root - stdout: disabled
+
+2017-01-04 00:43:18,043 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'enable', 'scalarizr-shutdown.service')
+2017-01-04 00:43:18,175 - DEBUG - scalarizr.util - stderr: Created symlink from /etc/systemd/system/scalarizr.service.wants/scalarizr-shutdown.service to /usr/lib/systemd/system/scalarizr-shutdown.service.
+
+2017-01-04 00:43:18,191 - INFO - scalarizr.updclient.api - State transition: None -> noop
+2017-01-04 00:43:18,247 - INFO - upd.client - Starting UpdateClient (pid: 3188)
+2017-01-04 00:43:18,248 - INFO - agent.scalrinit.app - Scalr-Init started. Uptime: 36.600s
+2017-01-04 00:43:18,548 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:18,549 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:18,550 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:18,550 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:18,550 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:18,580 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:18,590 - DEBUG - agent.scalrinit.metadata.ec2 - Fitting...
+2017-01-04 00:43:18,592 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:18,592 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:18,593 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:18,594 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:18,595 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:18,595 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:18,595 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:18,595 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:18,595 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:18,595 - DEBUG - agent.scalrinit.metadata.default - Fitting...
+2017-01-04 00:43:18,596 - DEBUG - agent.scalrinit.metadata.default - Fits
+2017-01-04 00:43:18,597 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/meta-data/instance-id HTTP/1.1" 200 19
+2017-01-04 00:43:18,607 - DEBUG - agent.scalrinit.metadata.ec2 - Fits
+2017-01-04 00:43:18,608 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:18,609 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:18,609 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7cec90>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:19,551 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:19,552 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:19,552 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:19,552 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:19,552 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:19,553 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:19,555 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:19,556 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:19,593 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:19,595 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:19,595 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:19,595 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:19,596 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:19,596 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:19,596 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7b8710>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:19,596 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:19,597 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:20,560 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:20,561 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:20,561 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:20,561 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:20,561 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:20,563 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:20,565 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:20,566 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:20,604 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:20,606 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:20,607 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:20,607 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:20,607 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:20,608 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:20,608 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:20,609 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:20,612 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7ce990>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:21,566 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:21,566 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:21,566 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:21,567 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:21,567 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:21,568 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:21,571 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:21,571 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:21,606 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:21,615 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:21,615 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:21,616 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:21,616 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:21,616 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:21,616 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:21,616 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:21,633 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7ce310>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:22,570 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:22,570 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:22,570 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:22,570 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:22,570 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:22,571 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:22,574 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:22,574 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:22,618 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:22,619 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:22,620 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:22,620 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:22,620 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:22,620 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:22,620 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:22,620 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:22,629 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7ce9d0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:23,579 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:23,579 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:23,580 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:23,580 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:23,580 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:23,581 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:23,583 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:23,583 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:23,627 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:23,628 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:23,629 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:23,629 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:23,629 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:23,629 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:23,629 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:23,629 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:23,630 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7ceb10>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:24,587 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:24,587 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:24,587 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:24,588 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:24,588 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:24,589 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:24,603 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:24,604 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:24,638 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:24,639 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:24,668 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:24,668 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:24,668 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:24,669 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:24,669 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:24,669 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:24,675 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7ce390>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:25,588 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:25,589 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:25,589 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:25,589 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:25,589 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:25,590 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:25,600 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:25,601 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:25,639 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:25,649 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:25,665 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7ce910>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:25,671 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:25,671 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:25,671 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:25,671 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:25,671 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:25,671 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:26,600 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:26,600 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:26,601 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:26,601 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:26,601 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:26,602 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:26,605 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:26,606 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:26,645 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:26,646 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:26,648 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7ce590>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:26,677 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:26,677 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:26,677 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:26,678 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:26,678 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:26,678 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:27,601 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:27,602 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:27,602 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:27,602 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:27,602 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:27,603 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:27,604 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:27,605 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:27,646 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:27,647 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:27,648 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5f4e7b8750>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:27,678 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:27,678 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:27,679 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:27,679 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:27,679 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:27,679 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:27,679 - INFO - agent.scalrinit.metadata - Meta-data providers that fit: [<Ec2Provider>, <DefaultProvider>]
+2017-01-04 00:43:27,679 - DEBUG - common.utils.mixutil - Calling <function instance_id at 0x7f5f508e4b90> (retry: 1/10) ...
+2017-01-04 00:43:27,680 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:27,681 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/meta-data/instance-id HTTP/1.1" 200 19
+2017-01-04 00:43:27,682 - INFO - agent.scalrinit.metadata - Best match for Instance-Id: <Ec2Provider>
+2017-01-04 00:43:27,682 - DEBUG - common.utils.mixutil - Calling <function user_data at 0x7f5f508e4b18> (retry: 1/10) ...
+2017-01-04 00:43:27,683 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:27,683 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/user-data HTTP/1.1" 200 540
+2017-01-04 00:43:28,193 - INFO - agent.scalrinit.metadata - Best-match for User-data: <Ec2Provider>
+2017-01-04 00:43:28,193 - DEBUG - common.utils.mixutil - Calling <function instance_id at 0x7f5f508e4b90> (retry: 1/10) ...
+2017-01-04 00:43:28,194 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:28,204 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/meta-data/instance-id HTTP/1.1" 200 19
+2017-01-04 00:43:28,205 - INFO - agent.scalrinit.app - Instance-Id: i-00b0f537c8d4a238e
+2017-01-04 00:43:28,205 - INFO - agent.scalrinit.app - New instance is booting up...
+2017-01-04 00:43:28,205 - DEBUG - common.utils.mixutil - Calling <function user_data at 0x7f5f508e4b18> (retry: 1/10) ...
+2017-01-04 00:43:28,206 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:28,207 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/user-data HTTP/1.1" 200 540
+2017-01-04 00:43:28,208 - INFO - agent.scalrinit.app - User-data: farmid=2;role=base;httpproto=http;region=us-west-2;hash=c22920c5c486da;realrolename=Puppet-Master;szr_key=wKL/RgfscF1Ddt6noEsUe9UG0GFK9nsJwTsZDyn1;serverid=20988d13-3546-4c75-87de-50fe4e8b2af9;p2p_producer_endpoint=http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/messaging;queryenv_url=http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env;behaviors=base;farm_roleid=4;roleid=6;env_id=1;platform=ec2;server_index=1;cloud_server_id=;cloud_location_zone=;owner_email=;message_format=json;s3bucket=;cloud_storage_path=s3://
+2017-01-04 00:43:28,208 - DEBUG - agent.scalrinit.datadir - Writing /var/lib/scalarizr/cloud/data/instance-id
+2017-01-04 00:43:28,209 - DEBUG - agent.scalrinit.datadir - Writing /var/lib/scalarizr/cloud/data/datasource
+2017-01-04 00:43:28,209 - DEBUG - agent.scalrinit.datadir - Writing /var/lib/scalarizr/cloud/data/datasource.instance_id
+2017-01-04 00:43:28,209 - DEBUG - agent.scalrinit.datadir - Writing /var/lib/scalarizr/cloud/instance/user-data.txt
+2017-01-04 00:43:28,209 - DEBUG - agent.scalrinit.datadir - Writing /var/lib/scalarizr/cloud/instance/boot-finished
+2017-01-04 00:43:28,209 - DEBUG - agent.scalrinit.datadir - Writing /var/lib/scalarizr/cloud/data/result.json
+2017-01-04 00:43:28,210 - DEBUG - agent.scalrinit.datadir - Linking /var/run/scalarizr/result.json -> /var/lib/scalarizr/cloud/data/result.json
+2017-01-04 00:43:28,210 - INFO - agent.scalrinit.app - Result: {'datasource': 'ec2', 'errors': []}
+2017-01-04 00:43:28,210 - INFO - agent.scalrinit.app - Scalarizr scalr-init finished at {'elapsed_time': '9.961s', 'datetime': '2017-01-04T00:43:28.209613'}
+2017-01-04 00:43:28,210 - INFO - upd.client - Starting API on port 8008
+2017-01-04 00:43:28,224 - DEBUG - scalarizr.util - system: ('/bin/rpm', '-qa', 'scalarizr*', '--queryformat', '%{NAME}|%{VERSION}\n')
+2017-01-04 00:43:32,185 - DEBUG - scalarizr.util - system: ('/sbin/iptables', '--list-rules', 'INPUT')
+2017-01-04 00:43:32,198 - DEBUG - root - stdout: -P INPUT ACCEPT
+
+2017-01-04 00:43:32,565 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-enabled', 'scalarizr.service')
+2017-01-04 00:43:32,582 - DEBUG - root - stdout: disabled
+
+2017-01-04 00:43:32,582 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-enabled', 'scalr-upd-client.service')
+2017-01-04 00:43:32,597 - DEBUG - root - stdout: enabled
+
+2017-01-04 00:43:32,597 - DEBUG - scalarizr.util - system: ('/bin/systemctl', 'is-enabled', 'scalarizr-shutdown.service')
+2017-01-04 00:43:32,612 - DEBUG - root - stdout: enabled
+
+2017-01-04 00:43:32,614 - INFO - scalarizr.updclient.api - State transition: None -> noop
+2017-01-04 00:43:32,614 - INFO - upd.client - Starting UpdateClient (pid: 5227)
+2017-01-04 00:43:32,615 - INFO - agent.scalrinit.app - Scalr-Init started. Uptime: 50.970s
+2017-01-04 00:43:32,635 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:32,635 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:32,644 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:32,644 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:32,644 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:32,648 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:32,649 - DEBUG - agent.scalrinit.metadata.ec2 - Fitting...
+2017-01-04 00:43:32,650 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:32,651 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:32,652 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:32,661 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:32,661 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:32,661 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:32,661 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:32,661 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:32,661 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:32,662 - DEBUG - agent.scalrinit.metadata.default - Fitting...
+2017-01-04 00:43:32,662 - DEBUG - agent.scalrinit.metadata.default - Fits
+2017-01-04 00:43:32,664 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/meta-data/instance-id HTTP/1.1" 200 19
+2017-01-04 00:43:32,665 - DEBUG - agent.scalrinit.metadata.ec2 - Fits
+2017-01-04 00:43:32,665 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:32,665 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:32,666 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581f6590>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:33,636 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:33,636 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:33,645 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:33,645 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:33,645 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:33,646 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:33,647 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:33,648 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:33,652 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:33,653 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:33,654 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581e9090>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:33,662 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:33,662 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:33,662 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:33,662 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:33,662 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:33,662 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:34,637 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:34,638 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:34,646 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:34,646 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:34,646 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:34,647 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:34,648 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:34,649 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:34,653 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:34,654 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:34,655 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581e9ad0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:34,663 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:34,663 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:34,663 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:34,663 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:34,663 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:34,664 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:35,639 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:35,639 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:35,647 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:35,647 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:35,647 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:35,648 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:35,649 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:35,650 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:35,654 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:35,655 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:35,656 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581e9850>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:35,664 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:35,664 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:35,664 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:35,665 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:35,665 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:35,665 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:36,640 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:36,640 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:36,654 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:36,654 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:36,655 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:36,656 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:36,656 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:36,657 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:36,659 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:36,659 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:36,660 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581f6390>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:36,671 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:36,671 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:36,671 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:36,672 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:36,672 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:36,672 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:37,641 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:37,641 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:37,656 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:37,656 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:37,656 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:37,657 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:37,657 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:37,658 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:37,659 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:37,660 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:37,660 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581f64d0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:37,672 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:37,673 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:37,673 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:37,673 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:37,673 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:37,673 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:38,642 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:38,643 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:38,656 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:38,657 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:38,657 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:38,658 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:38,658 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:38,659 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:38,660 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:38,661 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:38,662 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581f6650>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:38,673 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:38,674 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:38,674 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:38,674 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:38,674 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:38,674 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:39,644 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:39,644 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:39,660 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:39,660 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:39,660 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:39,661 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:39,662 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:39,663 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:39,664 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:39,665 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:39,665 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581f6a50>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:39,676 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:39,677 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:39,677 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:39,677 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:39,677 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:39,677 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:40,645 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:40,646 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:40,661 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:40,661 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:40,661 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:40,662 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:40,663 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:40,664 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:40,674 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:40,674 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:40,675 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581f6a90>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:40,678 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:40,678 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:40,678 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:40,678 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:40,678 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:40,678 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:41,647 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:43:41,647 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:43:41,662 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:43:41,662 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:43:41,662 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:43:41,663 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:41,664 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:43:41,665 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:43:41,666 - DEBUG - requests.packages.urllib3.connectionpool - "GET /openstack/latest/meta_data.json HTTP/1.1" 404 345
+2017-01-04 00:43:41,666 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:43:41,667 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f80581f6490>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:43:41,679 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:43:41,679 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:43:41,679 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:43:41,679 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:43:41,679 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:43:41,680 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:43:41,680 - INFO - agent.scalrinit.metadata - Meta-data providers that fit: [<Ec2Provider>, <DefaultProvider>]
+2017-01-04 00:43:41,680 - DEBUG - common.utils.mixutil - Calling <function instance_id at 0x7f805c5fcb90> (retry: 1/10) ...
+2017-01-04 00:43:41,681 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:41,681 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/meta-data/instance-id HTTP/1.1" 200 19
+2017-01-04 00:43:41,682 - INFO - agent.scalrinit.metadata - Best match for Instance-Id: <Ec2Provider>
+2017-01-04 00:43:41,682 - DEBUG - common.utils.mixutil - Calling <function user_data at 0x7f805c5fcb18> (retry: 1/10) ...
+2017-01-04 00:43:41,683 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:41,685 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/user-data HTTP/1.1" 200 540
+2017-01-04 00:43:41,692 - INFO - agent.scalrinit.metadata - Best-match for User-data: <Ec2Provider>
+2017-01-04 00:43:41,692 - DEBUG - common.utils.mixutil - Calling <function instance_id at 0x7f805c5fcb90> (retry: 1/10) ...
+2017-01-04 00:43:41,694 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:41,694 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/meta-data/instance-id HTTP/1.1" 200 19
+2017-01-04 00:43:41,695 - INFO - agent.scalrinit.app - Instance-Id: i-00b0f537c8d4a238e
+2017-01-04 00:43:41,695 - INFO - agent.scalrinit.app - Scalr-Init already finished at <agent.scalrinit.datadir.BootFinishedProperty object at 0x7f805c5f9110>
+2017-01-04 00:43:41,695 - DEBUG - common.utils.mixutil - Calling <function user_data at 0x7f805c5fcb18> (retry: 1/10) ...
+2017-01-04 00:43:41,696 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:43:41,697 - DEBUG - requests.packages.urllib3.connectionpool - "GET /latest/user-data HTTP/1.1" 200 540
+2017-01-04 00:43:41,706 - INFO - upd.client - Starting API on port 8008
+2017-01-04 00:43:41,707 - DEBUG - scalarizr.util - system: ('/bin/rpm', '-qa', 'scalarizr*', '--queryformat', '%{NAME}|%{VERSION}\n')
+2017-01-04 00:43:48,677 - DEBUG - root - stdout: scalarizr-ec2|5.1.7
+scalarizr|5.1.7
+
+2017-01-04 00:43:48,678 - INFO - scalarizr.updclient.api - Getting System-Id
+2017-01-04 00:43:48,678 - DEBUG - common.utils.mixutil - Trying <function <lambda> at 0x7f805a509848> until (timeout: 360 interval: 1 times: unlimited)
+2017-01-04 00:43:48,678 - DEBUG - common.utils.mixutil - /var/run/scalarizr/result.json not exists (1) ...
+2017-01-04 00:43:48,678 - DEBUG - agent.scalrinit.datadir - Result exists: /var/run/scalarizr/result.json
+2017-01-04 00:43:48,679 - INFO - scalarizr.updclient.api - System-Id: 20988d13-3546-4c75-87de-50fe4e8b2af9
+2017-01-04 00:43:48,679 - DEBUG - scalarizr.updclient.api - Status file /etc/scalr/private.d/update.status not exists
+2017-01-04 00:43:48,679 - INFO - scalarizr.updclient.api - Initializing UpdateClient...
+2017-01-04 00:43:48,679 - INFO - scalarizr.updclient.api - Applying configuration from user-data
+2017-01-04 00:43:48,681 - INFO - scalarizr.updclient.api - Testing that crypto key works (file: /etc/scalr/private.d/keys/default)
+2017-01-04 00:43:48,681 - DEBUG - scalarizr.updclient.api - Initializing database connection
+2017-01-04 00:43:48,683 - DEBUG - scalarizr.updclient.api - Initializing QueryEnv
+2017-01-04 00:43:48,865 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2012-04-17/get-latest-version
+2017-01-04 00:43:48,865 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-latest-version', 'version': '2012-04-17'}
+2017-01-04 00:43:48,867 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:43:48,890 - DEBUG - requests.packages.urllib3.connectionpool - "GET /query-env/2012-04-17/get-latest-version?operation=get-latest-version&version=2012-04-17 HTTP/1.1" 403 23
+2017-01-04 00:43:48,890 - INFO - scalarizr.updclient.api - Crypto key doesn't work: got invalid signature error
+2017-01-04 00:43:48,890 - INFO - scalarizr.updclient.api - Use crypto key from user-data
+2017-01-04 00:43:48,891 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2017-01-04 00:43:48,891 - DEBUG - scalarizr.config - Loading main configuration
+2017-01-04 00:43:48,891 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2017-01-04 00:43:48,891 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/private.d/config.ini
+2017-01-04 00:43:48,892 - DEBUG - scalarizr.config - Loading platform configuration
+2017-01-04 00:43:48,892 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2017-01-04 00:43:48,892 - DEBUG - scalarizr.config - Loading behaviours configuration
+2017-01-04 00:43:48,892 - DEBUG - scalarizr.config - Loading handlers configuration
+2017-01-04 00:43:48,892 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2017-01-04 00:43:48,893 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2017-01-04 00:43:48,893 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2017-01-04 00:43:48,893 - DEBUG - scalarizr.updclient.api - Initializing QueryEnv
+2017-01-04 00:43:48,896 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2012-04-17/get-latest-version
+2017-01-04 00:43:48,896 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-latest-version', 'version': '2012-04-17'}
+2017-01-04 00:43:48,898 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:43:48,914 - DEBUG - requests.packages.urllib3.connectionpool - "GET /query-env/2012-04-17/get-latest-version?operation=get-latest-version&version=2012-04-17 HTTP/1.1" 200 74
+2017-01-04 00:43:48,915 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): 2015-04-10
+2017-01-04 00:43:48,947 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/get-latest-version
+2017-01-04 00:43:48,948 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-latest-version', 'version': '2015-04-10'}
+2017-01-04 00:43:48,949 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:43:48,971 - DEBUG - requests.packages.urllib3.connectionpool - "GET /query-env/2015-04-10/get-latest-version?operation=get-latest-version&version=2015-04-10 HTTP/1.1" 200 74
+2017-01-04 00:43:48,972 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): 2015-04-10
+2017-01-04 00:43:48,972 - DEBUG - scalarizr.updclient.api - Initializing messaging
+2017-01-04 00:43:48,972 - INFO - scalarizr.updclient.api - State transition: noop -> in-progress/prepare
+2017-01-04 00:43:48,972 - INFO - scalarizr.updclient.api - Syncing configuration from Scalr
+2017-01-04 00:43:48,973 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/list-global-variables
+2017-01-04 00:43:48,973 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'list-global-variables', 'version': '2015-04-10'}
+2017-01-04 00:43:48,974 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:43:49,012 - DEBUG - requests.packages.urllib3.connectionpool - "GET /query-env/2015-04-10/list-global-variables?operation=list-global-variables&version=2015-04-10 HTTP/1.1" 200 1140
+2017-01-04 00:43:49,013 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {'PUPPET_ENTERPRISE_PASSWORD': 'ChangeM3', 'SCALR_FARM_ROLE_ID': '4', 'SCALR_ENV_ID': '1', 'SCALR_PROJECT_BC': 'PR-00-00', 'SCALR_AMI_ID': 'ami-1004aa70', 'SCALR_COST_CENTER_BC': 'CC-00', 'SCALR_CLOUD_LOCATION': 'us-west-2', 'PUPPET_ENTERPRISE_ANSWER': "q_activity_database_name='pe-activity'\nq_activity_database_password='DN4WXv_PYetzG7Sh1Oca5A'\nq_activity_database_user='pe-activity'\nq_all_in_one_install='y'\nq_classifier_database_name='pe-classifier'\nq_classifier_database_password='RDM2_8piLyq56maU47Sfvw'\nq_classifier_database_user='pe-classifier'\nq_database_host=$(hostname -f)\nq_database_install='y'\nq_database_port='5432'\nq_database_root_password='B3h509BRv7S3woID1AxCQQ'\nq_database_root_user='root'\nq_fail_on_unsuccessful_master_lookup='y'\nq_install='y'\nq_pe_check_for_updates='y'\nq_pe_database='y'\nq_public_hostname=$(hostname -f)\nq_puppet_cloud_install='y'\nq_puppet_enterpriseconsole_auth_password=$(echo $PUPPET_ENTERPRISE_PASSWORD)\nq_puppet_enterpriseconsole_database_name='console'\nq_puppet_enterpriseconsole_database_password='COSPtcRjoGbsvllYqaoGxg'\nq_puppet_enterpriseconsole_database_user='console'\nq_puppet_enterpriseconsole_httpd_port='443'\nq_puppet_enterpriseconsole_install='y'\nq_puppet_enterpriseconsole_master_hostname=$(hostname -f)\nq_puppetagent_certname=$(hostname -f)\nq_puppetagent_install='y'\nq_puppetagent_server=$(hostname -f)\nq_puppetdb_database_name='pe-puppetdb'\nq_puppetdb_database_password='sOX5kr1x_Zll0d9BalEe-g'\nq_puppetdb_database_user='pe-puppetdb'\nq_puppetdb_hostname=$(hostname -f)\nq_puppetdb_install='y'\nq_puppetdb_plaintext_port='8080'\nq_puppetdb_port='8081'\nq_puppetmaster_certname=$(hostname -f)\nq_puppetmaster_dnsaltnames='puppet'\nq_puppetmaster_enterpriseconsole_hostname=$(hostname -f)\nq_puppetmaster_enterpriseconsole_port='443'\nq_puppetmaster_install='y'\nq_rbac_database_name='pe-rbac'\nq_rbac_database_password='Zqhezg8ZdvucAE301KyJhA'\nq_rbac_database_user='pe-rbac'\nq_skip_backup='y'\nq_skip_master_verification='n'\nq_vendor_packages_install='y'", 'SCALR_COST_CENTER_ID': '3f54770e-bf1a-11e3-92c5-000feae9c516', 'SCALR_FARM_HASH': 'c22920c5c486da', 'SCALR_CLOUD_SERVER_ID': 'i-00b0f537c8d4a238e', 'SCALR_FARM_ID': '2', 'SCALR_AVAIL_ZONE': 'us-west-2c', 'SCALR_CLOUD_LOCATION_ZONE': 'us-west-2c', 'SCALR_IMAGE_ID': 'ami-1004aa70', 'SCALR_FARM_OWNER_EMAIL': '', 'SCALR_INSTANCE_INDEX': '1', 'SCALR_SERVER_TYPE': 'm3.medium', 'SCALR_INSTANCE_FARM_INDEX': '1', 'PUPPET_ENTERPRISE_LICENSE': '', 'SCALR_EXTERNAL_IP': '', 'SCALR_BEHAVIORS': 'base', 'SCALR_FARM_NAME': 'Puppet Enterprise', 'SCALR_FARM_ROLE_ALIAS': 'Puppet-Master', 'SCALR_REGION': 'us-west-2', 'SCALR_SERVER_ID': '20988d13-3546-4c75-87de-50fe4e8b2af9', 'SCALR_ENV_NAME': 'Development Cloud', 'SCALR_SERVER_HOSTNAME': '', 'SCALR_COST_CENTER_NAME': 'Cost center 01', 'SCALR_ROLE_NAME': 'Puppet-Master', 'SCALR_FARM_TEAM': 'DevOps', 'SCALR_INTERNAL_IP': '', 'SCALR_PROJECT_NAME': 'Project 01', 'SCALR_PROJECT_ID': '30c59dba-fc9b-4d0f-83ec-4b5043b12f72', 'SCALR_ISDBMASTER': '', 'SCALR_INSTANCE_ID': 'i-00b0f537c8d4a238e'}
+2017-01-04 00:43:49,014 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/list-farm-role-params-json
+2017-01-04 00:43:49,014 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'list-farm-role-params-json', 'version': '2015-04-10', 'farm-role-id': '4'}
+2017-01-04 00:43:49,030 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:43:49,060 - DEBUG - requests.packages.urllib3.connectionpool - "GET /query-env/2015-04-10/list-farm-role-params-json?operation=list-farm-role-params-json&version=2015-04-10&farm-role-id=4 HTTP/1.1" 200 318
+2017-01-04 00:43:49,061 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {u'base': {u'reboot_after_hostinit_phase': 0, u'disable_firewall_management': 0, u'abort_init_on_script_fail': 1, u'hostname': u'', u'update': {u'deb_repo_url': u'http://repo.scalr.net/apt-plain stable/', u'repository': u'stable', u'server_url': u'http://update.scalr.net/', u'api_port': u'', u'rpm_repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch', u'client_mode': u'client', u'win_repo_url': u'http://repo.scalr.net/win/stable'}, u'api_port': u'8010', u'messaging_port': u'8013', u'scalr_labs_fatmouse_update': 0, u'resume_strategy': u'reboot', u'union_script_executor': 1, u'keep_scripting_logs_time': u'36000'}}
+2017-01-04 00:43:49,061 - INFO - scalarizr.updclient.pkgmgr - Syncing repository info
+2017-01-04 00:43:49,062 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): repo.scalr.net
+2017-01-04 00:43:49,304 - DEBUG - requests.packages.urllib3.connectionpool - "GET /rpm/stable/rhel/7/x86_64/repodata/repomd.xml HTTP/1.1" 200 2265
+2017-01-04 00:43:49,307 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): repo.scalr.net
+2017-01-04 00:43:49,412 - DEBUG - requests.packages.urllib3.connectionpool - "GET /rpm/stable/rhel/7/x86_64/repodata/primary.xml.gz HTTP/1.1" 200 2940
+2017-01-04 00:43:49,433 - INFO - scalarizr.linux.pkgmgr - Ensuring repository "scalr-stable" (file: /etc/yum.repos.d/scalr-stable.repo)
+2017-01-04 00:43:49,433 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/get-global-config
+2017-01-04 00:43:49,433 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-global-config', 'version': '2015-04-10'}
+2017-01-04 00:43:49,434 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:43:49,447 - DEBUG - requests.packages.urllib3.connectionpool - "GET /query-env/2015-04-10/get-global-config?operation=get-global-config&version=2015-04-10 HTTP/1.1" 200 143
+2017-01-04 00:43:49,448 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): {'scalr.id': 'd972ee78', 'scalr.version': '5.11.22', 'dns.static.endpoint': 'example-dns.net'}
+2017-01-04 00:43:49,448 - DEBUG - scalarizr.updclient.pkgmgr - system: ('rpm', '-q', '--queryformat', '%{VERSION}', 'scalarizr-ec2')
+2017-01-04 00:43:49,501 - DEBUG - root - stdout: 5.1.7
+2017-01-04 00:43:49,501 - DEBUG - scalarizr.updclient.pkgmgr - Getting history
+2017-01-04 00:43:49,502 - INFO - scalarizr.updclient.api - State transition: in-progress/prepare -> in-progress/install
+2017-01-04 00:43:49,503 - DEBUG - scalarizr.updclient.api - Saving status: {'candidate': '4.12.2',
+ 'dist': 'RedHat 7.2 Maipo',
+ 'downgrades_enabled': True,
+ 'error': '',
+ 'executed_at': 'Wed 04 Jan 2017 05:43:48 UTC',
+ 'farm_role_id': '4',
+ 'installed': '5.1.7',
+ 'messaging_url': 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/messaging',
+ 'package': 'scalarizr-ec2',
+ 'package_type': 'omnibus',
+ 'platform': 'ec2',
+ 'prev_state': 'in-progress/prepare',
+ 'queryenv_url': 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env',
+ 'repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch',
+ 'repository': u'stable',
+ 'scalr_id': 'd972ee78',
+ 'scalr_version': '5.11.22',
+ 'server_id': '20988d13-3546-4c75-87de-50fe4e8b2af9',
+ 'service_status': 'unknown',
+ 'service_version': '5.1.7',
+ 'ssl_verify_peer': True,
+ 'state': 'in-progress/install',
+ 'system_id': '20988d13-3546-4c75-87de-50fe4e8b2af9',
+ 'system_id_is_server_id': True}
+2017-01-04 00:43:49,504 - INFO - scalarizr.updclient.api - Installing scalarizr-ec2=4.12.2
+2017-01-04 00:43:49,504 - DEBUG - scalarizr.updclient.pkgmgr - Getting history
+2017-01-04 00:43:49,504 - INFO - scalarizr.updclient.pkgmgr - Fetching packages
+2017-01-04 00:43:49,504 - DEBUG - scalarizr.updclient.pkgmgr - Fetching package from /var/cache/scalr/updclient/pkgmgr/scalarizr-ec2/c7d6ddd6c796b1b88034fb660c06ab577966558f/scalarizr-4.12.2-1.el5.x86_64.rpm
+2017-01-04 00:43:49,514 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): repo.scalr.net
+2017-01-04 00:43:49,621 - DEBUG - requests.packages.urllib3.connectionpool - "GET /rpm/stable/rhel/7/x86_64/scalarizr-4.12.2-1.el5.x86_64.rpm HTTP/1.1" 200 62378708
+2017-01-04 00:44:00,592 - DEBUG - scalarizr.updclient.pkgmgr - Fetching package from /var/cache/scalr/updclient/pkgmgr/scalarizr-ec2/c7d6ddd6c796b1b88034fb660c06ab577966558f/scalarizr-ec2-4.12.2-1.x86_64.rpm
+2017-01-04 00:44:00,593 - INFO - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): repo.scalr.net
+2017-01-04 00:44:00,726 - DEBUG - requests.packages.urllib3.connectionpool - "GET /rpm/stable/rhel/7/x86_64/scalarizr-ec2-4.12.2-1.x86_64.rpm HTTP/1.1" 200 1285
+2017-01-04 00:44:00,727 - DEBUG - scalarizr.updclient.pkgmgr - Updating history
+2017-01-04 00:44:00,728 - DEBUG - scalarizr.updclient.pkgmgr - Saving metadata
+2017-01-04 00:44:00,756 - INFO - scalarizr.updclient.pkgmgr - Installing packages
+2017-01-04 00:44:00,757 - DEBUG - scalarizr.updclient.pkgmgr - Installing packages from /var/cache/scalr/updclient/pkgmgr/.index/c7d6ddd6c796b1b88034fb660c06ab577966558f
+2017-01-04 00:44:00,757 - DEBUG - scalarizr.updclient.pkgmgr - Loading metadata
+2017-01-04 00:44:00,757 - DEBUG - scalarizr.updclient.pkgmgr - system: ('rpm', '-U', '--nosignature', '--replacepkgs', '--oldpackage', u'scalarizr-4.12.2-1.el5.x86_64.rpm', u'scalarizr-ec2-4.12.2-1.x86_64.rpm')
+2017-01-04 00:44:53,532 - DEBUG - root - stdout: You're about to install scalarizr!
+scalarizr has been upgraded!
+Stopping scalarizr (via systemctl):  [  OK  ]
+Starting scalarizr (via systemctl):  [  OK  ]
+Thank you for installing scalarizr!
+
+2017-01-04 00:44:53,533 - DEBUG - scalarizr.updclient.pkgmgr - Saving metadata
+2017-01-04 00:44:53,533 - DEBUG - scalarizr.updclient.api - Checking scalarizr status...
+2017-01-04 00:44:53,533 - DEBUG - common.utils.subprocess2 - Executing subprocess: ('systemctl is-active scalarizr.service',)
+2017-01-04 00:44:53,541 - DEBUG - common.utils.subprocess2 - Subprocess stdout: active
+
+2017-01-04 00:44:53,541 - DEBUG - scalarizr.updclient.api - scalarizr is running. 
+2017-01-04 00:44:53,541 - INFO - scalarizr.updclient.api - State transition: in-progress/install -> completed/wait-ack
+2017-01-04 00:44:53,542 - DEBUG - scalarizr.updclient.api - Saving status: {'candidate': None,
+ 'dist': 'RedHat 7.2 Maipo',
+ 'downgrades_enabled': True,
+ 'error': '',
+ 'executed_at': 'Wed 04 Jan 2017 05:43:48 UTC',
+ 'farm_role_id': '4',
+ 'installed': '4.12.2',
+ 'messaging_url': 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/messaging',
+ 'package': 'scalarizr-ec2',
+ 'package_type': 'omnibus',
+ 'platform': 'ec2',
+ 'prev_state': 'in-progress/install',
+ 'queryenv_url': 'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env',
+ 'repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch',
+ 'repository': u'stable',
+ 'scalr_id': 'd972ee78',
+ 'scalr_version': '5.11.22',
+ 'server_id': '20988d13-3546-4c75-87de-50fe4e8b2af9',
+ 'service_status': 'unknown',
+ 'service_version': '5.1.7',
+ 'ssl_verify_peer': True,
+ 'state': 'completed/wait-ack',
+ 'system_id': '20988d13-3546-4c75-87de-50fe4e8b2af9',
+ 'system_id_is_server_id': True}
+2017-01-04 00:44:53,543 - DEBUG - common.utils.subprocess2 - Executing subprocess: ('systemctl is-active scalarizr.service',)
+2017-01-04 00:44:53,560 - DEBUG - common.utils.subprocess2 - Subprocess stdout: active
+
+2017-01-04 00:44:55,990 - INFO - upd.client - Stopping UpdateClient
+2017-01-04 00:44:55,990 - DEBUG - upd.client - Kill child processes
+2017-01-04 00:44:56,075 - INFO - upd.client - Stopped
+2017-01-04 00:44:58,065 - INFO - upd.client - Starting UpdateClient (pid: 9379)
+2017-01-04 00:44:58,065 - INFO - agent.scalrinit.app - Scalr-Init started. Uptime: 136.420s
+2017-01-04 00:44:58,068 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:44:58,069 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:44:58,069 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:44:58,087 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:44:58,088 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:44:58,088 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:44:58,088 - DEBUG - agent.scalrinit.metadata.ec2 - Fitting...
+2017-01-04 00:44:58,097 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:44:58,097 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:44:58,099 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:44:58,100 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:44:58,101 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:44:58,101 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:44:58,101 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:44:58,101 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:44:58,101 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:44:58,101 - DEBUG - agent.scalrinit.metadata.default - Fitting...
+2017-01-04 00:44:58,101 - DEBUG - agent.scalrinit.metadata.default - Fits
+2017-01-04 00:44:58,103 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:44:58,104 - DEBUG - agent.scalrinit.metadata.ec2 - Fits
+2017-01-04 00:44:58,126 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b340c90>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:44:59,070 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:44:59,070 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:44:59,070 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:44:59,072 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:44:59,073 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:44:59,089 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:44:59,089 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:44:59,099 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:44:59,100 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:44:59,101 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff3d0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:44:59,101 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:44:59,101 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:44:59,101 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:44:59,102 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:44:59,102 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:44:59,102 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:00,071 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:00,072 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:00,072 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:00,073 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:00,074 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:00,090 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:00,090 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:00,100 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:00,101 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:00,102 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff390>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:00,102 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:00,102 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:00,102 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:00,103 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:00,103 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:00,103 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:01,073 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:01,073 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:01,073 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:01,074 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:01,076 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:01,091 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:01,091 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:01,101 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:01,102 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:01,103 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff310>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:01,103 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:01,103 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:01,104 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:01,104 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:01,105 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:01,105 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:02,074 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:02,074 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:02,075 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:02,076 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:02,078 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:02,093 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:02,093 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:02,102 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:02,103 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:02,105 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:02,105 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:02,105 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:02,105 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:02,105 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff450>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:02,105 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:02,106 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:03,075 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:03,076 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:03,076 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:03,077 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:03,079 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:03,094 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:03,094 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:03,103 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:03,105 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:03,106 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff390>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:03,106 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:03,106 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:03,106 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:03,106 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:03,106 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:03,107 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:04,077 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:04,077 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:04,077 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:04,079 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:04,080 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:04,095 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:04,095 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:04,105 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:04,106 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:04,107 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff990>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:04,107 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:04,107 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:04,107 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:04,107 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:04,108 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:04,108 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:05,078 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:05,079 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:05,079 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:05,080 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:05,081 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:05,096 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:05,096 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:05,106 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:05,107 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:05,108 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff410>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:05,108 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:05,109 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:05,109 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:05,109 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:05,109 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:05,109 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:06,080 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:06,080 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:06,080 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:06,081 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:06,083 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:06,097 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:06,097 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:06,107 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:06,108 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:06,109 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff350>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:06,109 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:06,109 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:06,109 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:06,110 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:06,110 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:06,110 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:07,081 - DEBUG - agent.scalrinit.metadata.cloudstack - Fitting...
+2017-01-04 00:45:07,081 - DEBUG - agent.scalrinit.metadata.cloudstack - Does not fit: Pattern /var/lib/dhc*/dhclient*.lease* doesn't matches any leases files
+2017-01-04 00:45:07,082 - DEBUG - agent.scalrinit.metadata.openstack - Fitting...
+2017-01-04 00:45:07,083 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:07,084 - DEBUG - agent.scalrinit.metadata.openstack - Does not fit
+2017-01-04 00:45:07,099 - DEBUG - agent.scalrinit.metadata.configdrive - Fitting...
+2017-01-04 00:45:07,099 - DEBUG - agent.scalrinit.metadata.configdrive - Does not fit: Config drive volume not found (label: config-2)
+2017-01-04 00:45:07,108 - DEBUG - agent.scalrinit.metadata.gce - Fitting...
+2017-01-04 00:45:07,109 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): metadata
+2017-01-04 00:45:07,110 - DEBUG - agent.scalrinit.metadata.gce - Does not fit: HTTPConnectionPool(host='metadata', port=80): Max retries exceeded with url: /computeMetadata/v1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f818b2ff0d0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+2017-01-04 00:45:07,110 - DEBUG - agent.scalrinit.metadata.azure - Fitting...
+2017-01-04 00:45:07,110 - DEBUG - agent.scalrinit.metadata.azure - Does not fit
+2017-01-04 00:45:07,111 - DEBUG - agent.scalrinit.metadata.docker - Fitting...
+2017-01-04 00:45:07,111 - DEBUG - agent.scalrinit.metadata.docker - Does not fit
+2017-01-04 00:45:07,111 - DEBUG - agent.scalrinit.metadata.personality - Fitting...
+2017-01-04 00:45:07,111 - DEBUG - agent.scalrinit.metadata.personality - Does not fit: User-data files ['/etc/scalr/private.d/.user-data', '/etc/.scalr-user-data'] do not exist or not accessible.
+2017-01-04 00:45:07,112 - INFO - agent.scalrinit.metadata - Meta-data providers that fit: [<Ec2Provider>, <DefaultProvider>]
+2017-01-04 00:45:07,113 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:07,114 - INFO - agent.scalrinit.metadata - Best match for Instance-Id: <Ec2Provider>
+2017-01-04 00:45:07,115 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:07,503 - INFO - agent.scalrinit.metadata - Best-match for User-data: <Ec2Provider>
+2017-01-04 00:45:07,504 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:07,506 - INFO - agent.scalrinit.app - Instance-Id: i-00b0f537c8d4a238e
+2017-01-04 00:45:07,506 - INFO - agent.scalrinit.app - Scalr-Init already finished at <agent.scalrinit.datadir.BootFinishedProperty object at 0x7f818efe2410>
+2017-01-04 00:45:07,507 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): 169.254.169.254
+2017-01-04 00:45:07,516 - INFO - upd.client - Starting API on port 8008
+2017-01-04 00:45:07,522 - DEBUG - scalarizr.util - system: ('/bin/rpm', '-qa', 'scalarizr*', '--queryformat', '%{NAME}|%{VERSION}\n')
+2017-01-04 00:45:08,201 - DEBUG - root - stdout: scalarizr|4.12.2
+scalarizr-ec2|4.12.2
+
+2017-01-04 00:45:08,201 - INFO - scalarizr.updclient.api - Getting System-Id
+2017-01-04 00:45:08,202 - DEBUG - common.utils.mixutil - Trying until <function <lambda> at 0x7f818b6fa398> (timeout: 360 interval: 1 times: unlimited)
+2017-01-04 00:45:08,202 - DEBUG - common.utils.mixutil - /var/run/scalarizr/result.json not exists (1) ...
+2017-01-04 00:45:08,202 - INFO - scalarizr.updclient.api - System-Id: 20988d13-3546-4c75-87de-50fe4e8b2af9
+2017-01-04 00:45:08,202 - DEBUG - scalarizr.updclient.api - Loading /etc/scalr/private.d/update.status
+2017-01-04 00:45:08,203 - DEBUG - scalarizr.updclient.api - System-Id in status file matches current one (20988d13-3546-4c75-87de-50fe4e8b2af9)
+2017-01-04 00:45:08,203 - INFO - scalarizr.updclient.api - Reading state from /etc/scalr/private.d/update.status
+2017-01-04 00:45:08,203 - DEBUG - scalarizr.updclient.api - Creating SQLite database
+2017-01-04 00:45:12,318 - DEBUG - scalarizr.updclient.api - Initializing database connection
+2017-01-04 00:45:12,318 - DEBUG - scalarizr.config - Bootstrap INI configuration (reload=False)
+2017-01-04 00:45:12,319 - DEBUG - scalarizr.config - Loading main configuration
+2017-01-04 00:45:12,319 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/config.ini
+2017-01-04 00:45:12,319 - DEBUG - scalarizr.config - Loading platform configuration
+2017-01-04 00:45:12,319 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ec2.ini
+2017-01-04 00:45:12,320 - DEBUG - scalarizr.config - Loading behaviours configuration
+2017-01-04 00:45:12,320 - DEBUG - scalarizr.config - Loading handlers configuration
+2017-01-04 00:45:12,320 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/ip_list_builder.ini
+2017-01-04 00:45:12,320 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/script_executor.ini
+2017-01-04 00:45:12,320 - DEBUG - scalarizr.config - Reading configuration file /etc/scalr/public.d/hooks.ini
+2017-01-04 00:45:12,321 - DEBUG - scalarizr.updclient.api - Initializing QueryEnv
+2017-01-04 00:45:12,324 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2012-04-17/get-latest-version
+2017-01-04 00:45:12,324 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-latest-version', 'version': '2012-04-17'}
+2017-01-04 00:45:12,325 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:45:12,362 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): 2015-04-10
+2017-01-04 00:45:12,405 - DEBUG - scalarizr.queryenv - Call QueryEnv: http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env/2015-04-10/get-latest-version
+2017-01-04 00:45:12,405 - DEBUG - scalarizr.queryenv - QueryEnv request: {'operation': 'get-latest-version', 'version': '2015-04-10'}
+2017-01-04 00:45:12,406 - DEBUG - requests.packages.urllib3.connectionpool - Starting new HTTP connection (1): ec2-54-245-26-49.us-west-2.compute.amazonaws.com
+2017-01-04 00:45:12,455 - DEBUG - scalarizr.queryenv - QueryEnv response (parsed): 2015-04-10
+2017-01-04 00:45:12,455 - DEBUG - scalarizr.updclient.api - Initializing messaging
+2017-01-04 00:45:12,455 - INFO - scalarizr.updclient.api - State transition: completed/wait-ack -> completed
+2017-01-04 00:45:12,456 - DEBUG - scalarizr.updclient.api - Saving status: {'candidate': None,
+ 'dist': u'RedHat 7.2 Maipo',
+ 'downgrades_enabled': True,
+ 'error': u'',
+ 'executed_at': u'Wed 04 Jan 2017 05:43:48 UTC',
+ 'farm_role_id': u'4',
+ 'installed': u'4.12.2',
+ 'messaging_url': u'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/messaging',
+ 'package': u'scalarizr-ec2',
+ 'package_type': 'omnibus',
+ 'platform': u'ec2',
+ 'prev_state': u'completed/wait-ack',
+ 'queryenv_url': u'http://ec2-54-245-26-49.us-west-2.compute.amazonaws.com/query-env',
+ 'repo_url': u'http://repo.scalr.net/rpm/stable/rhel/$releasever/$basearch',
+ 'repository': u'stable',
+ 'scalr_id': u'd972ee78',
+ 'scalr_version': u'5.11.22',
+ 'server_id': u'20988d13-3546-4c75-87de-50fe4e8b2af9',
+ 'service_status': 'unknown',
+ 'service_version': '4.12.2',
+ 'ssl_verify_peer': True,
+ 'state': 'completed',
+ 'system_id': u'20988d13-3546-4c75-87de-50fe4e8b2af9',
+ 'system_id_is_server_id': True}
+2017-01-04 00:45:12,457 - INFO - scalarizr.linux.pkgmgr - Ensuring repository "scalr-stable" (file: /etc/yum.repos.d/scalr-stable.repo)
+2017-01-04 00:45:12,457 - DEBUG - scalarizr.util - system: ('/etc/init.d/scalarizr', 'status')
+2017-01-04 00:45:12,624 - DEBUG - root - stdout: ● scalarizr.service - Scalarizr - Guest agent for Scalr.
+   Loaded: loaded (/usr/lib/systemd/system/scalarizr.service; disabled; vendor preset: disabled)
+   Active: active (running) since Wed 2017-01-04 00:44:53 EST; 19s ago
+     Docs: https://github.com/Scalr/scalarizr
+ Main PID: 9341 (scalarizr)
+   CGroup: /system.slice/scalarizr.service
+           └─9341 /opt/scalarizr/embedded/bin/python /usr/bin/scalarizr -c /etc/scalr
+
+Jan 04 00:44:53 ip-172-31-15-60.us-west-2.compute.internal systemd[1]: Started Scalarizr - Guest agent for Scalr..
+Jan 04 00:44:53 ip-172-31-15-60.us-west-2.compute.internal systemd[1]: Starting Scalarizr - Guest agent for Scalr....
+

@@ -1,0 +1,96 @@
+2016-11-30 00:05:55,985-05:00 - INFO - scalarizr.app - [pid: 1406] Starting scalarizr 5.1.7
+2016-11-30 00:05:55,986-05:00 - INFO - scalarizr.node - State: importing
+2016-11-30 00:05:55,986-05:00 - INFO - scalarizr.app - Configuring Scalarizr. This can take a few minutes...
+2016-11-30 00:06:03,502-05:00 - WARNING - scalarizr.util - Adding new-line character before server SSH key in authorized_keys file
+2016-11-30 00:06:03,550-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2016-11-30 00:06:03,551-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2016-11-30 00:06:03,557-05:00 - INFO - scalarizr.handlers.script_executor - Restoring supervision of 0 orchestration scripts
+2016-11-30 00:06:03,568-05:00 - INFO - scalarizr.handlers.lifecycle - Server will be imported into Scalr
+2016-11-30 00:06:03,572-05:00 - INFO - scalarizr.handlers - Detecting supported behaviors...
+2016-11-30 00:06:03,913-05:00 - INFO - scalarizr.handlers - Scalr built-in automation: checking for supported software.
+If installed software isn't detected, review the Scalr Wiki: https://scalr-wiki.atlassian.net/wiki/x/IoB1
+2016-11-30 00:06:03,928-05:00 - INFO - scalarizr.handlers - app: Unavailable. Not installed.
+2016-11-30 00:06:03,929-05:00 - INFO - scalarizr.handlers - chef: Unavailable. Not installed.
+2016-11-30 00:06:03,957-05:00 - INFO - scalarizr.handlers - haproxy: Unavailable. Not installed.
+2016-11-30 00:06:03,998-05:00 - INFO - scalarizr.handlers - mariadb: Unavailable. Not installed.
+2016-11-30 00:06:03,999-05:00 - INFO - scalarizr.handlers - memcached: Unavailable. Not installed.
+2016-11-30 00:06:03,999-05:00 - INFO - scalarizr.handlers - mysql: Unavailable. Not installed.
+2016-11-30 00:06:04,000-05:00 - INFO - scalarizr.handlers - mysql2: Unavailable. Not installed.
+2016-11-30 00:06:04,001-05:00 - INFO - scalarizr.handlers - percona: Unavailable. Not installed.
+2016-11-30 00:06:04,014-05:00 - INFO - scalarizr.handlers - postgresql: Unavailable. Not installed.
+2016-11-30 00:06:04,018-05:00 - INFO - scalarizr.handlers - rabbitmq: Unavailable. Not installed.
+2016-11-30 00:06:04,031-05:00 - INFO - scalarizr.handlers - redis: Unavailable. Not installed.
+2016-11-30 00:06:04,042-05:00 - INFO - scalarizr.handlers - tomcat: Unavailable. Not installed.
+2016-11-30 00:06:04,043-05:00 - INFO - scalarizr.handlers - www: Unavailable. Not installed.
+2016-11-30 00:11:26,772-05:00 - INFO - scalarizr.app - [pid: 1406] Stopping scalarizr 5.1.7
+2016-11-30 00:11:27,937-05:00 - INFO - scalarizr.app - [pid: 1406] Scalarizr terminated
+2016-11-30 00:11:31,289-05:00 - INFO - scalarizr.app - [pid: 1451] Starting scalarizr 5.1.7
+2016-11-30 00:11:31,290-05:00 - INFO - scalarizr.node - State: importing
+2016-11-30 00:11:31,291-05:00 - INFO - scalarizr.app - Configuring Scalarizr. This can take a few minutes...
+2016-11-30 00:11:38,397-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2016-11-30 00:11:38,398-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2016-11-30 00:11:38,404-05:00 - INFO - scalarizr.handlers.script_executor - Restoring supervision of 0 orchestration scripts
+2016-11-30 00:11:38,414-05:00 - INFO - scalarizr.handlers.lifecycle - Server will be imported into Scalr
+2016-11-30 00:11:38,417-05:00 - INFO - scalarizr.handlers - Detecting supported behaviors...
+2016-11-30 00:11:38,757-05:00 - INFO - scalarizr.handlers - Scalr built-in automation: checking for supported software.
+If installed software isn't detected, review the Scalr Wiki: https://scalr-wiki.atlassian.net/wiki/x/IoB1
+2016-11-30 00:11:38,759-05:00 - INFO - scalarizr.handlers - app: Unavailable. Not installed.
+2016-11-30 00:11:38,759-05:00 - INFO - scalarizr.handlers - chef: Unavailable. Not installed.
+2016-11-30 00:11:38,764-05:00 - INFO - scalarizr.handlers - haproxy: Unavailable. Not installed.
+2016-11-30 00:11:38,772-05:00 - INFO - scalarizr.handlers - mariadb: Unavailable. Not installed.
+2016-11-30 00:11:38,772-05:00 - INFO - scalarizr.handlers - memcached: Unavailable. Not installed.
+2016-11-30 00:11:38,773-05:00 - INFO - scalarizr.handlers - mysql: Unavailable. Not installed.
+2016-11-30 00:11:38,773-05:00 - INFO - scalarizr.handlers - mysql2: Unavailable. Not installed.
+2016-11-30 00:11:38,774-05:00 - INFO - scalarizr.handlers - percona: Unavailable. Not installed.
+2016-11-30 00:11:38,776-05:00 - INFO - scalarizr.handlers - postgresql: Unavailable. Not installed.
+2016-11-30 00:11:38,777-05:00 - INFO - scalarizr.handlers - rabbitmq: Unavailable. Not installed.
+2016-11-30 00:11:38,778-05:00 - INFO - scalarizr.handlers - redis: Unavailable. Not installed.
+2016-11-30 00:11:38,787-05:00 - INFO - scalarizr.handlers - tomcat: Unavailable. Not installed.
+2016-11-30 00:11:38,788-05:00 - INFO - scalarizr.handlers - www: Unavailable. Not installed.
+2016-11-30 00:14:48,023-05:00 - INFO - scalarizr.app - [pid: 1451] Stopping scalarizr 5.1.7
+2016-11-30 00:14:48,652-05:00 - INFO - scalarizr.app - [pid: 1451] Scalarizr terminated
+2016-11-30 00:18:35,875-05:00 - INFO - scalarizr.app - [pid: 1541] Starting scalarizr 5.1.7
+2016-11-30 00:18:35,875-05:00 - INFO - scalarizr.node - State: importing
+2016-11-30 00:18:35,876-05:00 - INFO - scalarizr.app - Configuring Scalarizr. This can take a few minutes...
+2016-11-30 00:18:43,025-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2016-11-30 00:18:43,025-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2016-11-30 00:18:43,032-05:00 - INFO - scalarizr.handlers.script_executor - Restoring supervision of 0 orchestration scripts
+2016-11-30 00:18:43,066-05:00 - INFO - scalarizr.handlers.lifecycle - Server will be imported into Scalr
+2016-11-30 00:18:43,069-05:00 - INFO - scalarizr.handlers - Detecting supported behaviors...
+2016-11-30 00:18:43,405-05:00 - INFO - scalarizr.handlers - Scalr built-in automation: checking for supported software.
+If installed software isn't detected, review the Scalr Wiki: https://scalr-wiki.atlassian.net/wiki/x/IoB1
+2016-11-30 00:18:43,407-05:00 - INFO - scalarizr.handlers - app: Unavailable. Not installed.
+2016-11-30 00:18:43,407-05:00 - INFO - scalarizr.handlers - chef: Unavailable. Not installed.
+2016-11-30 00:18:43,412-05:00 - INFO - scalarizr.handlers - haproxy: Unavailable. Not installed.
+2016-11-30 00:18:43,420-05:00 - INFO - scalarizr.handlers - mariadb: Unavailable. Not installed.
+2016-11-30 00:18:43,420-05:00 - INFO - scalarizr.handlers - memcached: Unavailable. Not installed.
+2016-11-30 00:18:43,420-05:00 - INFO - scalarizr.handlers - mysql: Unavailable. Not installed.
+2016-11-30 00:18:43,421-05:00 - INFO - scalarizr.handlers - mysql2: Unavailable. Not installed.
+2016-11-30 00:18:43,421-05:00 - INFO - scalarizr.handlers - percona: Unavailable. Not installed.
+2016-11-30 00:18:43,423-05:00 - INFO - scalarizr.handlers - postgresql: Unavailable. Not installed.
+2016-11-30 00:18:43,424-05:00 - INFO - scalarizr.handlers - rabbitmq: Unavailable. Not installed.
+2016-11-30 00:18:43,425-05:00 - INFO - scalarizr.handlers - redis: Unavailable. Not installed.
+2016-11-30 00:18:43,435-05:00 - INFO - scalarizr.handlers - tomcat: Unavailable. Not installed.
+2016-11-30 00:18:43,435-05:00 - INFO - scalarizr.handlers - www: Unavailable. Not installed.
+2017-01-04 00:43:17,244-05:00 - INFO - scalarizr.scripts.udev - Starting udev script...
+2017-01-04 00:43:17,279-05:00 - INFO - scalarizr.scripts.udev - Starting udev script...
+2017-01-04 00:43:17,313-05:00 - INFO - scalarizr.scripts.udev - Starting udev script...
+2017-01-04 00:44:55,913-05:00 - INFO - scalarizr.app - [pid: 9341] Starting scalarizr 4.12.2
+2017-01-04 00:44:55,913-05:00 - INFO - scalarizr.node - State: unknown
+2017-01-04 00:44:55,952-05:00 - INFO - scalarizr.app - Polling UpdateClient state...
+2017-01-04 00:44:55,967-05:00 - INFO - scalarizr.app - UpdateClient state: completed/wait-ack
+2017-01-04 00:44:55,967-05:00 - INFO - scalarizr.app - UpdateClient completed update and should be restarted, restarting
+2017-01-04 00:44:55,967-05:00 - INFO - scalarizr.util.initdv2 - Stopping scalr-upd-client
+2017-01-04 00:44:56,132-05:00 - INFO - scalarizr.util.initdv2 - Starting scalr-upd-client
+2017-01-04 00:44:56,179-05:00 - INFO - scalarizr.app - This image was bundled with cloud API call. Cleanuping ancestor server data
+2017-01-04 00:45:12,334-05:00 - INFO - scalarizr.node - State: bootstrapping
+2017-01-04 00:45:20,533-05:00 - INFO - scalarizr.messaging.p2p.consumer - Building message consumer server on 0.0.0.0:8013
+2017-01-04 00:45:20,546-05:00 - INFO - scalarizr.app - Starting API server on http://0.0.0.0:8010
+2017-01-04 00:45:20,575-05:00 - INFO - scalarizr.handlers.lifecycle - Starting initialization
+2017-01-04 00:45:22,606-05:00 - INFO - scalarizr.config - State: initializing
+2017-01-04 00:45:22,709-05:00 - INFO - scalarizr.ops.system.init - Configuring storage volumes
+2017-01-04 00:45:28,607-05:00 - INFO - scalarizr.handlers.union.base - Executing 'Install_Puppet_Enterprise' in blocking mode
+2017-01-04 00:45:28,610-05:00 - INFO - agent.tasks.execute - Writing script u'Install_Puppet_Enterprise' to disk (1058 bytes)
+2017-01-04 00:45:28,619-05:00 - INFO - agent.tasks.execute - Executing script u'Install_Puppet_Enterprise' ...
+2017-01-04 00:46:01,458-05:00 - INFO - agent.tasks.execute - Finished script u'Install_Puppet_Enterprise'
+2017-01-04 00:46:35,066-05:00 - ERROR - scalarizr.handlers - 'ascii' codec can't encode character u'\u2018' in position 496: ordinal not in range(128)
