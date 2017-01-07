@@ -23,3 +23,22 @@ data:    microsoftwindowsserver  windowsserver  2016-Technical-Preview-with-Cont
 data:    microsoftwindowsserver  windowsserver  Windows-Server-Technical-Preview        westus
 info:    vm image list-skus command OK
 root@653c8343dcc5:~#
+
+root@653c8343dcc5:~# azure vm image list westus microsoftwindowsserver windowsserver 2012-R2-Datacenter
+info:    Executing command vm image list
+- Getting virtual machine images (Publisher:"microsoftwindowsserver" Offer:"windowsserver" Sku: "2012-R2-Datacenter                                                                                  + Location:"westus")
+data:    Publisher               Offer          Sku                 OS       Version       Location  Urn                                                                                             
+data:    ----------------------  -------------  ------------------  -------  ------------  --------  --------------                                                                                  ------------------------------------------------------
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20151120  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20151120
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20151214  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20151214
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20160126  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20160126
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20160229  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20160229
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20160430  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20160430
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20160617  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20160617
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20160721  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20160721
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20160812  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20160812
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20160915  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20160915
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20161012  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20161012
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20161109  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20161109
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter  Windows  4.0.20161214  westus    microsoftwindo                                                                                  wsserver:windowsserver:2012-R2-Datacenter:4.0.20161214
+info:    vm image list command OK
