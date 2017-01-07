@@ -1,0 +1,25 @@
+docker run -it microsoft/azure-cli
+
+root@653c8343dcc5:~# azure vm image list-skus
+info:    Executing command vm image list-skus
+Location:  westus
+Publisher:  microsoftwindowsserver
+Offer:  windowsserver
++ Getting virtual machine image skus (Publisher:"microsoftwindowsserver" Offer:"windowsserver" Location:"westus")
+data:    Publisher               Offer          sku                                     Location
+data:    ----------------------  -------------  --------------------------------------  --------
+data:    microsoftwindowsserver  windowsserver  2008-R2-SP1                             westus
+data:    microsoftwindowsserver  windowsserver  2008-R2-SP1-BYOL                        westus
+data:    microsoftwindowsserver  windowsserver  2012-Datacenter                         westus
+data:    microsoftwindowsserver  windowsserver  2012-Datacenter-BYOL                    westus
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter                      westus
+data:    microsoftwindowsserver  windowsserver  2012-R2-Datacenter-BYOL                 westus
+data:    microsoftwindowsserver  windowsserver  2016-Datacenter                         westus
+data:    microsoftwindowsserver  windowsserver  2016-Datacenter-Server-Core             westus
+data:    microsoftwindowsserver  windowsserver  2016-Datacenter-with-Containers         westus
+data:    microsoftwindowsserver  windowsserver  2016-Nano-Server                        westus
+data:    microsoftwindowsserver  windowsserver  2016-Nano-Server-Technical-Preview      westus
+data:    microsoftwindowsserver  windowsserver  2016-Technical-Preview-with-Containers  westus
+data:    microsoftwindowsserver  windowsserver  Windows-Server-Technical-Preview        westus
+info:    vm image list-skus command OK
+root@653c8343dcc5:~#
