@@ -11,3 +11,5 @@ Configuration audio{
   }
 }
 audio -ComputerName $env:COMPUTERNAME -OutputPath  C:\dsc
+
+Start-DscConfiguration -path . -wait -verbose
